@@ -1,0 +1,4 @@
+cpp/build/
+python/.venv/
+python/__pycache__/
+rust/target/

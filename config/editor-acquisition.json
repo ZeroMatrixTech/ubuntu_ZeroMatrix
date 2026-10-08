@@ -1,0 +1,65 @@
+[
+  {
+    "id": "ms-vscode.cpptools",
+    "version": "1.34.4",
+    "platform": "linux-x64",
+    "engine": "^1.77.0",
+    "url": "https://ms-vscode.gallerycdn.vsassets.io/extensions/ms-vscode/cpptools/1.34.4/1788980901658/Microsoft.VisualStudio.Services.VSIXPackage",
+    "file": "ms-vscode.cpptools-1.34.4-linux-x64.vsix",
+    "sha256": "a20e25a83228d7854a5623c49f00c33737782bfdde874feff417fe2d9b52c002"
+  },
+  {
+    "id": "ms-python.python",
+    "version": "2026.8.0",
+    "platform": "linux-x64",
+    "engine": "^1.95.0",
+    "url": "https://ms-python.gallerycdn.vsassets.io/extensions/ms-python/python/2026.8.0/1791325637212/Microsoft.VisualStudio.Services.VSIXPackage",
+    "file": "ms-python.python-2026.8.0-linux-x64.vsix",
+    "sha256": "d0f83c9b2673ac5fa7974fbcc85927cdae97fb533d2aebc1db08a38ee0519e3f"
+  },
+  {
+    "id": "ms-python.debugpy",
+    "version": "2026.6.0",
+    "platform": "linux-x64",
+    "engine": "^1.92.0",
+    "url": "https://ms-python.gallerycdn.vsassets.io/extensions/ms-python/debugpy/2026.6.0/1777574573357/Microsoft.VisualStudio.Services.VSIXPackage",
+    "file": "ms-python.debugpy-2026.6.0-linux-x64.vsix",
+    "sha256": "3ae417f78bce17992b9e0efba160a43a85a8b695bd387e150d4df24e366c7b01"
+  },
+  {
+    "id": "ms-python.vscode-pylance",
+    "version": "2026.4.1",
+    "platform": "universal",
+    "engine": "^1.107.0",
+    "url": "https://ms-python.gallerycdn.vsassets.io/extensions/ms-python/vscode-pylance/2026.4.1/1790193667864/Microsoft.VisualStudio.Services.VSIXPackage",
+    "file": "ms-python.vscode-pylance-2026.4.1-universal.vsix",
+    "sha256": "3e6c9d0ba0c6680e6ef28d1af5c6e13844e39a871e5404cbfaaaedb5cd0d8cfb"
+  },
+  {
+    "id": "rust-lang.rust-analyzer",
+    "version": "0.3.3073",
+    "platform": "linux-x64",
+    "engine": "^1.93.0",
+    "url": "https://rust-lang.gallerycdn.vsassets.io/extensions/rust-lang/rust-analyzer/0.3.3073/1791183983629/Microsoft.VisualStudio.Services.VSIXPackage",
+    "file": "rust-lang.rust-analyzer-0.3.3073-linux-x64.vsix",
+    "sha256": "fb8db7cf9f3a8a17ba5a873fad70d650ad32900a8a8465489c2d98fdc389681c"
+  },
+  {
+    "id": "vadimcn.vscode-lldb",
+    "version": "1.12.3",
+    "platform": "linux-x64",
+    "engine": "^1.61.0",
+    "url": "https://github.com/vadimcn/codelldb/releases/download/v1.12.3/codelldb-linux-x64.vsix",
+    "file": "vadimcn.vscode-lldb-1.12.3-linux-x64.vsix",
+    "sha256": "1cd7f386598022b51a5b93b9ffa23e812b23f519cfe1833384ec4bef4bfd1be1"
+  },
+  {
+    "id": "ms-python.vscode-python-envs",
+    "version": "1.38.0",
+    "platform": "linux-x64",
+    "engine": "^1.110.0-20260204",
+    "url": "https://ms-python.gallerycdn.vsassets.io/extensions/ms-python/vscode-python-envs/1.38.0/1790283485404/Microsoft.VisualStudio.Services.VSIXPackage",
+    "file": "ms-python.vscode-python-envs-1.38.0-linux-x64.vsix",
+    "sha256": "54aa8aed887b2c2b5b4bb511d0fe44beb83e2cc047c3c2c196521083dd95a9d2"
+  }
+]

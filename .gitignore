@@ -1,0 +1,16 @@
+*.iso
+*.deb
+__pycache__/
+/build/
+/dist/
+/artifacts/
+/offline/repo/
+
+# Locally supplied, officially verified base ISO checksum
+/config/base-iso.sha256
+
+/offline/editor/
+/offline/workspace/
+*.vsix
+
+/offline/trust/

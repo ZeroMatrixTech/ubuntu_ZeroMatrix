@@ -1,0 +1,16 @@
+# Runtime and development packages; exact package versions are recorded per bundle.
+git
+build-essential
+g++
+rustc
+cargo
+python3
+python3-venv
+bash
+coreutils
+cmake
+ninja-build
+pkg-config
+gdb
+rust-src
+code

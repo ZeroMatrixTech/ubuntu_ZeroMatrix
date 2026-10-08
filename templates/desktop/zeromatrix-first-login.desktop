@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=ZeroMatrix First Login
+Exec=/usr/local/bin/zeromatrix-first-login
+Terminal=false
+X-GNOME-Autostart-enabled=true

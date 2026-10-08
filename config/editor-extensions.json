@@ -1,0 +1,8 @@
+[
+  "ms-vscode.cpptools",
+  "ms-python.python",
+  "ms-python.debugpy",
+  "ms-python.vscode-pylance",
+  "rust-lang.rust-analyzer",
+  "vadimcn.vscode-lldb"
+]

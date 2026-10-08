@@ -1,0 +1,15 @@
+autoinstall:
+  version: 1
+  interactive-sections: ['*']
+  refresh-installer:
+    update: false
+  source:
+    id: ubuntu-desktop
+    search_drivers: false
+  apt:
+    geoip: false
+    fallback: offline-install
+  late-commands:
+    - [mkdir, -p, /target/opt/zeromatrix]
+    - [cp, -a, /cdrom/zeromatrix, /target/opt/zeromatrix/offline]
+    - [curtin, in-target, '--target=/target', '--', bash, /opt/zeromatrix/offline/provision.sh, /opt/zeromatrix/offline]

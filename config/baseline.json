@@ -1,0 +1,12 @@
+{
+  "policy": "ACLt ENV-1",
+  "os": "Ubuntu 26.04.1 LTS",
+  "architecture": "amd64",
+  "git": "2.53.0",
+  "rustc": "1.93.1",
+  "cargo": null,
+  "g++": "15.2.0",
+  "python3": "3.14.4",
+  "bash": "5.3.9",
+  "status": "candidate; exact Cargo version and full acceptance pending"
+}

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+state="$HOME/.local/state/zeromatrix"
+mkdir -p "$state"
+[[ ! -f $state/first-login-complete ]] || exit 0
+exec >> "$state/first-login.log" 2>&1
+if ! python3 /opt/zeromatrix/offline/scripts/user-setup.py; then
+  if command -v notify-send >/dev/null; then
+    notify-send 'ZeroMatrix initialization failed' 'See ~/.local/state/zeromatrix/first-login.log; run zeromatrix-code to retry.' || true
+  fi
+  echo 'first-login exit=1'
+  exit 1
+fi
+touch "$state/first-login-complete"
+exec /usr/local/bin/zeromatrix-code

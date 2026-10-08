@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=ZeroMatrix Development
+Comment=Offline C++, Python, Rust and ACLt workspace
+Exec=/usr/local/bin/zeromatrix-code
+Icon=code
+Terminal=false
+Categories=Development;IDE;

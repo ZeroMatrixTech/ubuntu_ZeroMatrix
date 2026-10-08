@@ -1,0 +1,251 @@
+{
+  "folders": [
+    {
+      "name": "C++",
+      "path": "cpp"
+    },
+    {
+      "name": "Python",
+      "path": "python"
+    },
+    {
+      "name": "Rust",
+      "path": "rust"
+    },
+    {
+      "name": "ACLt",
+      "path": "ACLt"
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder:Python}/.venv/bin/python"
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.cpptools",
+      "ms-python.python",
+      "ms-python.debugpy",
+      "ms-python.vscode-pylance",
+      "rust-lang.rust-analyzer",
+      "vadimcn.vscode-lldb"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "C++: prepare",
+        "type": "process",
+        "command": "/usr/bin/mkdir",
+        "args": [
+          "-p",
+          "${workspaceFolder:C++}/build"
+        ]
+      },
+      {
+        "label": "C++: build",
+        "type": "process",
+        "command": "/usr/bin/g++",
+        "args": [
+          "-std=c++17",
+          "-g",
+          "-O0",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "${workspaceFolder:C++}/main.cpp",
+          "-o",
+          "${workspaceFolder:C++}/build/hello"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:C++}"
+        },
+        "dependsOn": "C++: prepare",
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": "build"
+      },
+      {
+        "label": "C++: run",
+        "type": "process",
+        "command": "${workspaceFolder:C++}/build/hello",
+        "args": [],
+        "options": {
+          "cwd": "${workspaceFolder:C++}"
+        },
+        "dependsOn": "C++: build",
+        "problemMatcher": []
+      },
+      {
+        "label": "Python: run",
+        "type": "process",
+        "command": "${workspaceFolder:Python}/.venv/bin/python",
+        "args": [
+          "main.py"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:Python}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Python: test",
+        "type": "process",
+        "command": "${workspaceFolder:Python}/.venv/bin/python",
+        "args": [
+          "-m",
+          "unittest",
+          "discover",
+          "-v"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:Python}"
+        },
+        "problemMatcher": [],
+        "group": "test"
+      },
+      {
+        "label": "Rust: build",
+        "type": "process",
+        "command": "/usr/bin/cargo",
+        "args": [
+          "build",
+          "--offline"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:Rust}"
+        },
+        "problemMatcher": [
+          "$rustc"
+        ],
+        "group": "build"
+      },
+      {
+        "label": "Rust: test",
+        "type": "process",
+        "command": "/usr/bin/cargo",
+        "args": [
+          "test",
+          "--offline"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:Rust}"
+        },
+        "problemMatcher": [
+          "$rustc"
+        ],
+        "group": "test"
+      },
+      {
+        "label": "Rust: run",
+        "type": "process",
+        "command": "/usr/bin/cargo",
+        "args": [
+          "run",
+          "--offline"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:Rust}"
+        },
+        "problemMatcher": [
+          "$rustc"
+        ]
+      },
+      {
+        "label": "ACLt: full acceptance",
+        "type": "process",
+        "command": "/usr/bin/bash",
+        "args": [
+          "scripts/run-singlehost.sh"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:ACLt}"
+        },
+        "problemMatcher": [],
+        "group": "test"
+      },
+      {
+        "label": "ACLt: daily workflow",
+        "type": "process",
+        "command": "/usr/bin/python3",
+        "args": [
+          "scripts/aclt-flow.py",
+          "run"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:ACLt}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "ACLt: force evidence",
+        "type": "process",
+        "command": "/usr/bin/python3",
+        "args": [
+          "scripts/aclt-flow.py",
+          "run",
+          "--force"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:ACLt}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "ACLt: status",
+        "type": "process",
+        "command": "/usr/bin/python3",
+        "args": [
+          "scripts/aclt-flow.py",
+          "status"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:ACLt}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "System: verify toolchain",
+        "type": "process",
+        "command": "/usr/bin/bash",
+        "args": [
+          "/opt/zeromatrix/offline/verify.sh"
+        ],
+        "problemMatcher": []
+      }
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "C++: GDB",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder:C++}/build/hello",
+        "cwd": "${workspaceFolder:C++}",
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "preLaunchTask": "C++: build"
+      },
+      {
+        "name": "Python: debug",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${workspaceFolder:Python}/main.py",
+        "python": "${workspaceFolder:Python}/.venv/bin/python",
+        "cwd": "${workspaceFolder:Python}",
+        "console": "integratedTerminal"
+      },
+      {
+        "name": "Rust: LLDB",
+        "type": "lldb",
+        "request": "launch",
+        "program": "${workspaceFolder:Rust}/target/debug/zeromatrix_hello",
+        "cwd": "${workspaceFolder:Rust}",
+        "preLaunchTask": "Rust: build"
+      }
+    ]
+  }
+}

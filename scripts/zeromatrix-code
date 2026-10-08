@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+[[ $EUID -ne 0 ]] || { echo 'Use your developer account' >&2; exit 1; }
+python3 /opt/zeromatrix/offline/scripts/user-setup.py
+profile="$HOME/.local/share/zeromatrix/vscode"
+if [[ $# -eq 0 ]]; then
+  set -- "$HOME/workspace/ZeroMatrixTech/ZeroMatrix.code-workspace"
+fi
+exec /usr/bin/code --user-data-dir "$profile/data" --extensions-dir "$profile/extensions" "$@"
