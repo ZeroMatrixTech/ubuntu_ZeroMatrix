@@ -1,0 +1,7 @@
+{
+  "packages": [
+    "linux-firmware"
+  ],
+  "default_graphics": "normal",
+  "search_drivers": true
+}

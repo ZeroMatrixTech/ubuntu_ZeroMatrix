@@ -1,0 +1,36 @@
+--- /build/config/iso-dir/iso-root/casper/minimal.manifest.full	2026-08-26 06:08:27.613523300 +0000
++++ /build/config/iso-dir/iso-root/casper/minimal.zh.manifest.full	2026-08-26 06:30:48.912214296 +0000
+-gnome-user-docs-de	50.0-0ubuntu1
+-gnome-user-docs-es	50.0-0ubuntu1
+-gnome-user-docs-fr	50.0-0ubuntu1
+-gnome-user-docs-it	50.0-0ubuntu1
+-gnome-user-docs-pt	50.0-0ubuntu1
+-gnome-user-docs-ru	50.0-0ubuntu1
+-language-pack-de	1:26.04+20260818
+-language-pack-de-base	1:26.04+20260818
+-language-pack-en	1:26.04+20260818
+-language-pack-en-base	1:26.04+20260818
+-language-pack-es	1:26.04+20260818
+-language-pack-es-base	1:26.04+20260818
+-language-pack-fr	1:26.04+20260818
+-language-pack-fr-base	1:26.04+20260818
+-language-pack-gnome-de	1:26.04+20260818
+-language-pack-gnome-de-base	1:26.04+20260818
+-language-pack-gnome-en	1:26.04+20260818
+-language-pack-gnome-en-base	1:26.04+20260818
+-language-pack-gnome-es	1:26.04+20260818
+-language-pack-gnome-es-base	1:26.04+20260818
+-language-pack-gnome-fr	1:26.04+20260818
+-language-pack-gnome-fr-base	1:26.04+20260818
+-language-pack-gnome-it	1:26.04+20260818
+-language-pack-gnome-it-base	1:26.04+20260818
+-language-pack-gnome-pt	1:26.04+20260818
+-language-pack-gnome-pt-base	1:26.04+20260818
+-language-pack-gnome-ru	1:26.04+20260818
+-language-pack-gnome-ru-base	1:26.04+20260818
+-language-pack-it	1:26.04+20260818
+-language-pack-it-base	1:26.04+20260818
+-language-pack-pt	1:26.04+20260818
+-language-pack-pt-base	1:26.04+20260818
+-language-pack-ru	1:26.04+20260818
+-language-pack-ru-base	1:26.04+20260818

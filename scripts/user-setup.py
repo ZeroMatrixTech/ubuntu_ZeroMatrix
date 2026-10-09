@@ -26,7 +26,9 @@ def seed_project(payload, workspace):
         project = Path(t) / 'ACLt'
         project.mkdir()
         run('git', 'init', str(project))
-        run('git', '-C', str(project), 'fetch', str(payload / 'project/ACLt.bundle'), 'HEAD')
+        run('git', '-C', str(project), 'fetch', record.get('url') or str(payload / 'project/ACLt.bundle'), record['commit'] if record.get('url') else 'HEAD')
+        if record.get('url'):
+            run('git', '-C', str(project), 'remote', 'add', 'origin', record['url'])
         run('git', '-C', str(project), 'checkout', '-b', 'dev/local', record['commit'])
         project.rename(destination)
 
@@ -61,7 +63,7 @@ def setup(payload=PAYLOAD, home=None):
         for record in records:
             run('/usr/bin/code', '--user-data-dir', str(profile / 'data'),
                 '--extensions-dir', str(profile / 'extensions'), '--install-extension',
-                str(payload / 'editor' / record['file']), '--force', '--do-not-include-pack-dependencies')
+                (record['id'] + '@' + record['version']) if record.get('online') else str(payload / 'editor' / record['file']), '--force', '--do-not-include-pack-dependencies')
         python = workspace / 'python/.venv/bin/python'
         if not python.exists():
             run('/usr/bin/python3', '-m', 'venv', str(workspace / 'python/.venv'))

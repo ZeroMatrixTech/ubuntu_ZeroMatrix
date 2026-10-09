@@ -1,0 +1,73 @@
+--- /build/config/iso-dir/iso-root/casper/minimal.manifest.full	2026-08-26 06:08:27.613523300 +0000
++++ /build/config/iso-dir/iso-root/casper/minimal.enhanced-secureboot.manifest.full	2026-08-26 06:15:33.588674114 +0000
+-amd64-microcode	3.20251202.1ubuntu2
+-bpfcc-tools	0.35.0+ds-1ubuntu2
+-bpftool	7.7.0+7.0.0-30.30
+-bpftrace	0.25.0-1ubuntu1
++boot-managed-by-snapd	4build2
++cryptsetup	2:2.8.4-1ubuntu4
++cryptsetup-bin	2:2.8.4-1ubuntu4
+-firmware-sof-signed	2025.12.2-1
+-grub-gfxpayload-lists	0.7build3
+-grub-pc-bin	2.14-2ubuntu2.1
+-hwdata	0.394-1build1
+-ieee-data	20240722build1
+-intel-microcode	3.20260210.1ubuntu2
+-iucode-tool	2.3.1-3build2
+-libbpfcc:amd64	0.35.0+ds-1ubuntu2
+-libc-dev-bin	2.43-2ubuntu2.3
+-libc6-dev:amd64	2.43-2ubuntu2.3
+-libclang-cpp21	1:21.1.8-6ubuntu1
+-libclang1-21	1:21.1.8-6ubuntu1
+-linux-firmware	20260319.git217ca6e4.1ubuntu
+-linux-firmware-amd-graphics	20260319.git217ca6e4-0ubuntu3.1
+-linux-firmware-amd-misc	20260319.git217ca6e4-0ubuntu1.1
+-linux-firmware-broadcom-wireless	20260319.git217ca6e4-0ubuntu1.1
+-linux-firmware-intel-graphics	20260319.git217ca6e4-0ubuntu2.1
+-linux-firmware-intel-misc	20260319.git217ca6e4-0ubuntu1.2
+-linux-firmware-intel-wireless	20260319.git217ca6e4-0ubuntu2.1
+-linux-firmware-marvell-prestera	20260319.git217ca6e4-0ubuntu1.2
+-linux-firmware-marvell-wireless	20260319.git217ca6e4-0ubuntu1.1
+-linux-firmware-mediatek	20260319.git217ca6e4-0ubuntu1.2
+-linux-firmware-mellanox-spectrum	20260319.git217ca6e4-0ubuntu1.1
+-linux-firmware-misc	20260319.git217ca6e4-0ubuntu2.2
+-linux-firmware-netronome	20260319.git217ca6e4-0ubuntu1.1
+-linux-firmware-nvidia-graphics	20260319.git217ca6e4-0ubuntu1.1
+-linux-firmware-qlogic	20260319.git217ca6e4-0ubuntu1.1
+-linux-firmware-qualcomm-graphics	20260319.git217ca6e4-0ubuntu1.1
+-linux-firmware-qualcomm-misc	20260319.git217ca6e4-0ubuntu2.1
+-linux-firmware-qualcomm-wireless	20260319.git217ca6e4-0ubuntu1.2
+-linux-firmware-realtek	20260319.git217ca6e4-0ubuntu1.2
+-linux-generic-hwe-24.04	7.0.0-30.30
+-linux-generic-hwe-26.04	7.0.0-30.30
+-linux-headers-7.0.0-30	7.0.0-30.30
+-linux-headers-7.0.0-30-generic	7.0.0-30.30
+-linux-headers-generic-hwe-26.04	7.0.0-30.30
+-linux-image-generic-hwe-26.04	7.0.0-30.30
+-linux-libc-dev:amd64	7.0.0-30.30
+-linux-perf	7.0.0-30.30
+-linux-tools-7.0.0-30	7.0.0-30.30
+-linux-tools-7.0.0-30-generic	7.0.0-30.30
+-linux-tools-common	7.0.0-30.30
+-manpages-dev	6.17-1
+-pnp.ids	0.394-1build1
+-python3-bpfcc	0.35.0+ds-1ubuntu2
+-python3-netaddr	1.3.0-1build1
+-rpcsvc-proto	1.4.3-1build1
+-sbsigntool	0.9.4-3.1ubuntu9
+-thermald	2.5.11-0ubuntu1
+-ubuntu-kernel-accessories	1.570.3
+-wireless-regdb	2026.02.04-0ubuntu1
+-snap:core24	stable	1643
+-snap:snapd	stable	27710
+-snap:desktop-security-center	1/stable/ubuntu-26.04	151
+-snap:firefox	stable/ubuntu-26.04	8763
+-snap:firmware-updater	1/stable/ubuntu-26.04	226
+-snap:gnome-46-2404	stable/ubuntu-26.04	164
+-snap:bare	stable	5
+-snap:gtk-common-themes	stable/ubuntu-26.04	1535
+-snap:hwctl	stable/ubuntu-26.04	123
+-snap:mesa-2404	stable/ubuntu-26.04	1839
+-snap:prompting-client	1/stable/ubuntu-26.04	222
+-snap:snap-store	2/stable/ubuntu-26.04	1390
+-snap:snapd-desktop-integration	stable/ubuntu-26.04	391

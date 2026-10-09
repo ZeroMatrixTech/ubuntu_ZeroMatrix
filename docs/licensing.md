@@ -1,3 +1,11 @@
+# Current online baseline / 当前在线基线
+
+0.2.x defaults to target-side downloads of VS Code, Marketplace extensions and the configured company project. These binaries and project history are excluded from new ISO payloads. Downloaded components retain their original licenses. Original Ubuntu ISO chunks remain Ubuntu/third-party material and are not Apache-2.0. Public redistribution still requires Ubuntu branding and component/source compliance review. Historical offline policy below applies to 0.1.x artifacts only.
+
+0.2.x 默认由目标电脑在线获取 Code、扩展和项目，新 ISO 不包含这些二进制或项目历史。下载组件保留原许可；Ubuntu 原始镜像分块仍须遵守原有许可、商标及源码提供义务。历史离线政策仅适用于旧产物。
+
+---
+
 # 许可与发行政策 / Licensing and distribution policy
 
 ## 项目许可 / Project license

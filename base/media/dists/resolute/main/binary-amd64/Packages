@@ -1,0 +1,2849 @@
+Package: amd64-microcode
+Architecture: amd64
+Version: 3.20251202.1ubuntu2
+Priority: standard
+Section: non-free-firmware/admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Henrique de Moraes Holschuh <hmh@debian.org>
+Installed-Size: 885
+Depends: 3cpio
+Recommends: dracut (>= 044) | initramfs-tools (>= 0.113~) | tiny-initramfs
+Breaks: intel-microcode (<< 2)
+Filename: pool/main/a/amd64-microcode/amd64-microcode_3.20251202.1ubuntu2_amd64.deb
+Size: 458364
+SHA256: 1880a63dc981bfc2fe2c9d18354c3cdea17f925dc77177eb8d68aabec02f716b
+Description: Platform firmware and microcode for AMD CPUs and SoCs
+ This package contains microcode patches for AMD AMD64
+ processors.  AMD releases microcode patches to correct
+ processor behavior as documented in the respective processor
+ revision guides.
+ .
+ This package includes the required firmware to enable AMD
+ SEV (Secure Encrypted Virtualization) functionality.
+ .
+ This package also includes AMD TAs (Trusted Applications)
+ required by AMD platform drivers such as AMD PMF (Platform
+ Management Framework).
+ .
+ For Intel processors, please refer to the intel-microcode package.
+
+Package: b43-fwcutter
+Architecture: amd64
+Version: 1:019-14build1
+Priority: optional
+Section: contrib/utils
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian QA Group <packages@qa.debian.org>
+Installed-Size: 97
+Depends: debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.34)
+Filename: pool/main/b/b43-fwcutter/b43-fwcutter_1%3a019-14build1_amd64.deb
+Size: 28400
+SHA256: d4fcafefcdb26892564f95121d2bd95a8f1ee6a684b5b89a8294bc51577444de
+Homepage: https://wireless.wiki.kernel.org/en/users/drivers/b43
+Description: utility for extracting Broadcom 43xx firmware
+ This package provides a tool for extracting BCM43xx wireless chip
+ firmware from Broadcom's proprietary driver files.
+ .
+ It is used by the firmware-b43(legacy)-installer packages as part of
+ the automated process of downloading and installing firmware.
+
+Package: bcache-tools
+Architecture: amd64
+Version: 1.0.8-5ubuntu1
+Priority: optional
+Section: utils
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: David Mohr <david@mcbf.net>
+Installed-Size: 109
+Depends: libblkid1 (>= 2.17.2), libc6 (>= 2.38), libuuid1 (>= 2.16), gawk
+Recommends: dracut | linux-initramfs-tool
+Filename: pool/main/b/bcache-tools/bcache-tools_1.0.8-5ubuntu1_amd64.deb
+Size: 19866
+SHA256: 0efaecf635fa7955b3e721d3fab975d1c3a97e4601e6e1552074932d212b9b3d
+Homepage: https://bcache.evilpiepirate.org/
+Description: bcache userspace tools
+ Bcache allows the use of SSDs to cache other block devices.
+ .
+ Documentation for the run-time interface is included in the kernel tree; in
+ Documentation/bcache.txt.
+ .
+ This package includes udev rules, initramfs support, and the utilities to
+ create a new bcache as well as inspect existing bcache partitions.
+
+Package: btrfs-progs
+Architecture: amd64
+Version: 6.17.1-1build1
+Multi-Arch: foreign
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Nicholas D Steeves <sten@debian.org>
+Installed-Size: 5073
+Depends: libblkid1 (>= 2.17.2), libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libext2fs2t64 (>= 1.42), liblzo2-2 (>= 2.02), libudev1 (>= 183), libuuid1 (>= 2.16), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.0)
+Suggests: duperemove
+Filename: pool/main/b/btrfs-progs/btrfs-progs_6.17.1-1build1_amd64.deb
+Size: 1033914
+SHA256: 89fb4fe8fce0d2ca42d2f26d626c7f46181ef6c7c8e2656ea1462579ec9b67e8
+Homepage: http://btrfs.wiki.kernel.org/
+Description: Checksumming Copy on Write Filesystem utilities
+ Btrfs is a copy on write filesystem for Linux aimed at implementing
+ advanced features while focusing on fault tolerance, repair and easy
+ administration.
+ .
+ This package contains utilities (mkfs, fsck) used to work with btrfs
+ and an utility (btrfs-convert) to make a btrfs filesystem from an ext3.
+
+Package: build-essential
+Architecture: amd64
+Version: 12.12ubuntu2.26.04.2
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Installed-Size: 18
+Depends: libc6-dev | libc-dev, gcc (>= 4:14.2), g++ (>= 4:14.2), make, dpkg-dev (>= 1.22.11), libcrypt-dev, coreutils-from-uutils
+Filename: pool/main/b/build-essential/build-essential_12.12ubuntu2.26.04.2_amd64.deb
+Size: 5158
+SHA256: 2c71d57ea0c4107f652896b91566a4b8b694f8fa75e53df96420b4c6747a6dae
+Description: Informational list of build-essential packages
+ If you do not plan to build Debian packages, you don't need this
+ package.  Starting with dpkg (>= 1.14.18) this package is required
+ for building Debian packages.
+ .
+ This package contains an informational list of packages which are
+ considered essential for building Debian packages.  This package also
+ depends on the packages on that list, to make it easy to have the
+ build-essential packages installed.
+ .
+ If you have this package installed, you only need to install whatever
+ a package specifies as its build-time dependencies to build the
+ package.  Conversely, if you are determining what your package needs
+ to build-depend on, you can always leave out the packages this
+ package depends on.
+ .
+ This package is NOT the definition of what packages are
+ build-essential; the real definition is in the Debian Policy Manual.
+ This package contains merely an informational list, which is all
+ most people need.   However, if this package and the manual disagree,
+ the manual is correct.
+
+Package: bzip2
+Architecture: amd64
+Version: 1.0.8-6build2
+Multi-Arch: foreign
+Priority: standard
+Section: utils
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Installed-Size: 111
+Depends: libbz2-1.0 (= 1.0.8-6build2), libc6 (>= 2.34)
+Suggests: bzip2-doc
+Replaces: libbz2 (<< 0.9.5d-3)
+Filename: pool/main/b/bzip2/bzip2_1.0.8-6build2_amd64.deb
+Size: 34288
+SHA256: 763fa3325cb0cb5dff197ddfce2671da824c8af9ddb98a585c1fad0419870124
+Homepage: https://sourceware.org/bzip2/
+Description: high-quality block-sorting file compressor - utilities
+ bzip2 is a freely available, patent free, data compressor.
+ .
+ bzip2 compresses files using the Burrows-Wheeler block-sorting text
+ compression algorithm, and Huffman coding.  Compression is generally
+ considerably better than that achieved by more conventional
+ LZ77/LZ78-based compressors, and approaches the performance of the PPM
+ family of statistical compressors.
+ .
+ The archive file format of bzip2 (.bz2) is incompatible with that of its
+ predecessor, bzip (.bz).
+
+Package: cryptsetup-bin
+Architecture: amd64
+Version: 2:2.8.4-1ubuntu4
+Multi-Arch: foreign
+Priority: optional
+Section: admin
+Source: cryptsetup
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Cryptsetup Team <pkg-cryptsetup-devel@alioth-lists.debian.net>
+Installed-Size: 652
+Depends: libblkid1 (>= 2.24.2), libc6 (>= 2.38), libcryptsetup12 (>= 2:2.8), libpopt0 (>= 1.14), libuuid1 (>= 2.16)
+Filename: pool/main/c/cryptsetup/cryptsetup-bin_2%3a2.8.4-1ubuntu4_amd64.deb
+Size: 230228
+SHA256: fc946c43ca12dc7230df72503cc1ee69e11ca994172cd8d72b4868cb78a7b6e2
+Homepage: https://gitlab.com/cryptsetup/cryptsetup
+Description: disk encryption support - command line tools
+ Cryptsetup provides an interface for configuring encryption on block
+ devices (such as /home or swap partitions), using the Linux kernel
+ device mapper target dm-crypt. It features integrated Linux Unified Key
+ Setup (LUKS) support.
+ .
+ This package provides the cryptsetup, integritysetup and veritysetup
+ utilities.
+
+Package: cryptsetup
+Architecture: amd64
+Version: 2:2.8.4-1ubuntu4
+Multi-Arch: foreign
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Cryptsetup Team <pkg-cryptsetup-devel@alioth-lists.debian.net>
+Installed-Size: 464
+Depends: cryptsetup-bin (>= 2:2.7.2-1), dmsetup, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38)
+Recommends: dracut | cryptsetup-initramfs
+Suggests: dosfstools, keyutils, liblocale-gettext-perl
+Conflicts: cryptsetup-nuke-password (<< 5~)
+Filename: pool/main/c/cryptsetup/cryptsetup_2%3a2.8.4-1ubuntu4_amd64.deb
+Size: 224568
+SHA256: 1bf2d86b003c2b534100d8dc976fac51837e210b1c88c5843344b8105724155d
+Homepage: https://gitlab.com/cryptsetup/cryptsetup
+Description: disk encryption support - startup scripts
+ Cryptsetup provides an interface for configuring encryption on block
+ devices (such as /home or swap partitions), using the Linux kernel
+ device mapper target dm-crypt. It features integrated Linux Unified Key
+ Setup (LUKS) support.
+ .
+ Cryptsetup is backwards compatible with the on-disk format of cryptoloop,
+ but also supports more secure formats. This package includes support for
+ automatically configuring encrypted devices at boot time via the config
+ file /etc/crypttab. Additional features are cryptoroot support through
+ initramfs-tools and several supported ways to read a passphrase or key.
+ .
+ This package provides the cryptdisks_start and _stop wrappers, as well as
+ luksformat.
+
+Package: dkms
+Architecture: all
+Version: 3.2.2-1ubuntu1
+Multi-Arch: foreign
+Priority: optional
+Section: kernel
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Dynamic Kernel Module System Team <dkms@packages.debian.org>
+Installed-Size: 237
+Provides: dkms-autopkgtest (= 3.2.2-1ubuntu1)
+Depends: kmod, gcc, dpkg-dev, make | build-essential, patch
+Recommends: fakeroot, sudo, linux-headers-generic | linux-headers-686-pae | linux-headers-amd64 | linux-headers
+Suggests: menu, e2fsprogs
+Breaks: adv-17v35x-dkms (<< 5.0.7.0-1.0), asic0x-dkms (<< 1.0.1-1.0), aufs-dkms (<< 5.2+20190909-1.1.0), backfire-dkms (<< 1.0-1.0), batman-adv-dkms (<< 2011.1.0-1.0), batmand-gateway-dkms (<< 0.3.2-9.0), bbswitch-dkms (<< 0.8-12~), blcr-dkms (<< 0.8.6~b3-1.0), blktap-dkms (<< 2.0.93-0.10.0), broadcom-sta-dkms (<< 6.30.223.271-25.1~), dahdi-dkms (<< 1:3.1.0+git20230717~dfsg-10.1~), dpdk-igb-uio-dkms (<< 20.08-1.0), dpdk-rte-kni-dkms (<< 18.11.11-1.0), fglrx-modules-dkms (<< 1:15.12-2.0), flashcache-dkms (<< 3.1.3+git20150701-5.0), fuse4bsd-dkms (<< 0.3.9~pre1.20080208-8.0), iscsitarget-dkms (<< 1.4.20.3+svn502-2.0), kpatch-dkms (<< 0.6.0-0.2.0), mali-midgard-dkms (<< 16.0+pristine-4.0), nat-rtsp-dkms (<< 0.7+5.3-0.3~), ndiswrapper-dkms (<< 1.60-8.0), nvidia-kernel-dkms (<< 535.230), nvidia-tesla-535-kernel-dkms (<< 535.230), open-vm-tools-dkms (<< 2:10.1.15-1.0), openswan-modules-dkms (<< 1:2.6.38-1.0), openvswitch-datapath-dkms (<< 2.1.0+git20140411-3.0), oss4-dkms (<< 4.2-build2020-5~), sl-modem-dkms (<< 2.9.11~20110321-16.0), spl-dkms (<< 2.1), sysdig-dkms (<< 0.27.1-0.3.0), tp-smapi-dkms (<< 0.44-1.2~), virtualbox-dkms (<< 5), virtualbox-guest-dkms (<< 7), virtualbox-ose-dkms (<< 5), virtualbox-ose-guest-dkms (<< 5), wireguard-dkms (<< 1.0.20210606-1.0)
+Filename: pool/main/d/dkms/dkms_3.2.2-1ubuntu1_all.deb
+Size: 62962
+SHA256: ee54ecfaa27b77207b27a5836670f14fe00161059eb07a0de6d4a73669480f61
+Homepage: https://github.com/dell/dkms
+Description: Dynamic Kernel Module System (DKMS)
+ DKMS is a framework designed to allow individual kernel modules to be upgraded
+ without changing the whole kernel. It is also very easy to rebuild modules as
+ you upgrade kernels.
+
+Package: dpkg-dev
+Architecture: all
+Version: 1.23.7ubuntu1
+Multi-Arch: foreign
+Priority: optional
+Section: utils
+Source: dpkg
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
+Installed-Size: 1767
+Provides: dpkg-build-api (= 0), dpkg-build-api (= 1)
+Depends: perl:any, libdpkg-perl (= 1.23.7ubuntu1), tar (>= 1.28-1), bzip2, xz-utils (>= 5.4.0), patch (>= 2.7), make (>= 4.4), binutils, lto-disabled-list
+Recommends: build-essential, gcc | c-compiler, fakeroot, gnupg | sq | sqop | rsop | gosop | pgpainless-cli | gpg-sq, gpgv | sqv | sqopv | rsopv | sopv | gosop | pgpainless-cli | gpgv-sq, libalgorithm-merge-perl
+Suggests: debian-keyring, debian-tag2upload-keyring
+Breaks: debhelper (<< 10.10.1~), debian-keyring (<< 2025.04.25~), devuan-keyring (<< 2025.07.30~), gosop (<< 1.1.0~), libsop-java-java (<< 4.0.7~), pgpainless-cli (<< 1.3.13~), rsop (<< 0.4.0~), sq (<< 0.40.0~), sqop (<< 0.27.2~), sqv (<< 1.3.0~)
+Filename: pool/main/d/dpkg/dpkg-dev_1.23.7ubuntu1_all.deb
+Size: 1061798
+SHA256: 507b526fd78f9dff89696bbc3085af3117059f37fd281542778ac8b97be44690
+Homepage: https://wiki.debian.org/Teams/Dpkg
+Description: Debian package development tools
+ This package provides the development tools (including dpkg-source)
+ required to unpack, build and upload Debian source packages.
+ .
+ Most Debian source packages will require additional tools to build;
+ for example, most packages need make and the C compiler gcc.
+
+Package: libdpkg-perl
+Architecture: all
+Version: 1.23.7ubuntu1
+Multi-Arch: foreign
+Priority: optional
+Section: perl
+Source: dpkg
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
+Installed-Size: 1788
+Depends: perl:any, dpkg (>= 1.18.11)
+Recommends: libfile-fcntllock-perl, liblocale-gettext-perl, bzip2, xz-utils (>= 5.4.0)
+Suggests: debian-keyring, debian-tag2upload-keyring, sq | sqop | rsop | gosop | pgpainless-cli | gpg-sq | gnupg, sqv | sqopv | rsopv | sopv | gosop | pgpainless-cli | gpgv-sq | gpgv, gcc | c-compiler, binutils, patch, sensible-utils, git, bzr
+Breaks: debian-keyring (<< 2025.04.25~), devuan-keyring (<< 2025.07.30~), dgit (<< 3.13~), dh-exec (<< 0.31~), gosop (<< 1.1.0~), libsop-java-java (<< 4.0.7~), pgpainless-cli (<< 1.3.13~), pkg-kde-tools (<< 0.15.28~), rsop (<< 0.4.0~), sq (<< 0.40.0~), sqop (<< 0.27.2~), sqv (<< 1.3.0~)
+Filename: pool/main/d/dpkg/libdpkg-perl_1.23.7ubuntu1_all.deb
+Size: 289184
+SHA256: 984ca70b4b4af43812abeb6aa890ed0e8b7a725c9ac193b00d4df470fca1c1fe
+Homepage: https://wiki.debian.org/Teams/Dpkg
+Description: Dpkg perl modules
+ This package provides the perl modules used by the scripts
+ in dpkg-dev. They cover a wide range of functionality. Among them
+ there are the following public modules:
+ .
+  - Dpkg: core variables
+  - Dpkg::Arch: architecture handling functions
+  - Dpkg::BuildFlags: set, modify and query compilation build flags
+  - Dpkg::BuildInfo: build information functions
+  - Dpkg::BuildOptions: parse and manipulate DEB_BUILD_OPTIONS
+  - Dpkg::BuildProfiles: parse and manipulate build profiles
+  - Dpkg::Changelog: parse changelogs
+  - Dpkg::Changelog::Entry: represents a changelog entry
+  - Dpkg::Changelog::Parse: generic changelog parser for dpkg-parsechangelog
+  - Dpkg::Checksums: generate and parse checksums
+  - Dpkg::Compression: simple database of available compression methods
+  - Dpkg::Compression::FileHandle: transparently (de)compress files
+  - Dpkg::Compression::Process: wrapper around compression tools
+  - Dpkg::Conf: parse dpkg configuration files
+  - Dpkg::Control: parse and manipulate Debian control information
+    (.dsc, .changes, Packages/Sources entries, etc.)
+  - Dpkg::Control::Changelog: represent fields output by dpkg-parsechangelog
+  - Dpkg::Control::Fields: manage (list of known) control fields
+  - Dpkg::Control::Hash: parse and manipulate a block of RFC822-like fields
+  - Dpkg::Control::Info: parse files like debian/control
+  - Dpkg::Control::Tests: parse files like debian/tests/control
+  - Dpkg::Control::Tests::Entry: represents a debian/tests/control stanza
+  - Dpkg::Deps: parse and manipulate dependencies
+  - Dpkg::Deps::Simple: represents a single dependency statement
+  - Dpkg::Deps::Multiple: base module to represent multiple dependencies
+  - Dpkg::Deps::Union: list of unrelated dependencies
+  - Dpkg::Deps::AND: list of AND dependencies
+  - Dpkg::Deps::OR: list of OR dependencies
+  - Dpkg::Deps::KnownFacts: list of installed and virtual packages
+  - Dpkg::Exit: push, pop and run exit handlers
+  - Dpkg::Gettext: wrapper around Locale::gettext
+  - Dpkg::IPC: spawn sub-processes and feed/retrieve data
+  - Dpkg::Index: collections of Dpkg::Control (Packages/Sources files for
+    example)
+  - Dpkg::Interface::Storable: base object serializer
+  - Dpkg::Path: common path handling functions
+  - Dpkg::Source::Format: manipulate debian/source/format files
+  - Dpkg::Source::Package: extract Debian source packages
+  - Dpkg::Substvars: substitute variables in strings
+  - Dpkg::Vendor: identify current distribution vendor
+  - Dpkg::Version: parse and manipulate Debian package versions
+ .
+ All the packages listed in Suggests or Recommends are used by some of the
+ modules.
+
+Package: efibootmgr
+Architecture: amd64
+Version: 18-4ubuntu1
+Multi-Arch: foreign
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian UEFI Maintainers <debian-efi@lists.debian.org>
+Installed-Size: 93
+Depends: libc6 (>= 2.38), libefiboot1t64 (>= 39), libefivar1t64 (>= 39), libpopt0 (>= 1.14)
+Filename: pool/main/e/efibootmgr/efibootmgr_18-4ubuntu1_amd64.deb
+Size: 31854
+SHA256: 305489ba976e17320f8bd8b90010c26006ab6935d8c9cc2d989526afe27a8abd
+Homepage: https://github.com/rhboot/efibootmgr
+Description: Interact with the EFI Boot Manager
+ This is a Linux user-space application to modify the Intel Extensible
+ Firmware Interface (EFI) Boot Manager configuration. This application can
+ create and destroy boot entries, change the boot order, change the next
+ running boot option, and more.
+ .
+ Additional information about (U)EFI can be found at http://www.uefi.org/.
+ .
+ Note: efibootmgr requires that the kernel module efivars be loaded prior
+ to use. 'modprobe efivars' should do the trick if it does not
+ automatically load.
+
+Package: libnvidia-egl-wayland1
+Architecture: amd64
+Version: 1:1.1.21-1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: egl-wayland
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Timo Aaltonen <tjaalton@debian.org>
+Installed-Size: 98
+Depends: libc6 (>= 2.38), libdrm2 (>= 2.4.99), libwayland-client0 (>= 1.20.0), libwayland-server0 (>= 1.2.0)
+Conflicts: libnvidia-gl-390, libnvidia-gl-410 (<< 410.93), libnvidia-legacy-390xx-egl-wayland1, nvidia-egl-wayland-common
+Replaces: libnvidia-gl-390, libnvidia-gl-410 (<< 410.93), libnvidia-legacy-390xx-egl-wayland1, nvidia-egl-wayland-common
+Filename: pool/main/e/egl-wayland/libnvidia-egl-wayland1_1%3a1.1.21-1_amd64.deb
+Size: 34534
+SHA256: d3fcdb27b69f8a3ea826e47578bdf52ac5e7f486b9c872fe4884ab0ccbe48793
+Homepage: https://github.com/NVIDIA/egl-wayland
+Description: Wayland EGL External Platform library -- shared library
+ This is a work-in-progress implementation of a EGL (Embedded-System
+ Graphics Library) External Platform library to add client-side Wayland
+ support to EGL on top of EGLDevice and EGLStream families of extensions.
+ .
+ This library implements an EGL External Platform interface to work along
+ with EGL drivers that support the external platform mechanism. More
+ information about EGL External platforms and the interface can be found at:
+ .
+ https://github.com/NVIDIA/eglexternalplatform
+ .
+ This package contains the shared library.
+
+Package: fakeroot
+Architecture: amd64
+Version: 1.37.2-1
+Multi-Arch: foreign
+Priority: optional
+Section: utils
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Clint Adams <clint@debian.org>
+Installed-Size: 221
+Depends: libfakeroot (>= 1.37.2-1), libc6 (>= 2.38)
+Filename: pool/main/f/fakeroot/fakeroot_1.37.2-1_amd64.deb
+Size: 68294
+SHA256: 4e230221e4bf5f5d4413da0067b25e38d9a7b2aa37de1b800aac7836e4877425
+Description: tool for simulating superuser privileges
+ fakeroot provides a fake "root environment" by means of LD_PRELOAD and
+ SysV IPC (or TCP) trickery. It puts wrappers around getuid(), chown(),
+ stat(), and other file-manipulation functions, so that unprivileged
+ users can (for instance) populate .deb archives with root-owned files;
+ various build tools use fakeroot for this by default.
+ .
+ This package contains fakeroot command and the daemon that remembers
+ fake ownership/permissions of files manipulated by fakeroot
+ processes.
+
+Package: libfakeroot
+Architecture: amd64
+Version: 1.37.2-1
+Multi-Arch: same
+Priority: optional
+Section: utils
+Source: fakeroot
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Clint Adams <clint@debian.org>
+Installed-Size: 153
+Depends: libc6 (>= 2.38)
+Breaks: fakeroot (<< 1.20-2~)
+Replaces: fakeroot (<< 1.20-2~)
+Filename: pool/main/f/fakeroot/libfakeroot_1.37.2-1_amd64.deb
+Size: 33964
+SHA256: 85e6183cd1aebea3ffe587231df52c1288da585bbb231c6ed7fb19d7c6a0f41b
+Description: tool for simulating superuser privileges - shared libraries
+ fakeroot provides a fake "root environment" by means of LD_PRELOAD and
+ SysV IPC (or TCP) trickery. It puts wrappers around getuid(), chown(),
+ stat(), and other file-manipulation functions, so that unprivileged
+ users can (for instance) populate .deb archives with root-owned files;
+ various build tools use fakeroot for this by default.
+ .
+ This package contains the LD_PRELOAD libraries.
+
+Package: finalrd
+Architecture: all
+Version: 9build2
+Priority: optional
+Section: utils
+Maintainer: Dimitri John Ledkov <xnox@ubuntu.com>
+Installed-Size: 29
+Recommends: initramfs-tools-core
+Filename: pool/main/f/finalrd/finalrd_9build2_all.deb
+Size: 7072
+SHA256: 36cea5f03de3e96e90c8b02fe6d63a618c3a96e874b0aceea7f6209332069aa7
+Homepage: https://launchpad.net/finalrd
+Description: final runtime directory for shutdown
+ Generates a systemd compatible shutdown runtime directory. This
+ enables to execute scripts and binaries to clean up shutdown.
+ .
+ Also supports hookless operation, to simply facilitate clean shutdowns.
+ .
+ Approximate tmpfs RAM requirement is 14MB on shutdown.
+
+Package: gawk
+Architecture: amd64
+Version: 1:5.3.2-1ubuntu1.1
+Multi-Arch: foreign
+Priority: optional
+Section: interpreters
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Adrian Bunk <bunk@debian.org>
+Installed-Size: 1924
+Provides: awk
+Pre-Depends: libc6 (>= 2.38), libgmp10 (>= 2:6.3.0+dfsg), libmpfr6 (>= 3.1.3), libreadline8t64 (>= 6.0)
+Suggests: gawk-doc
+Filename: pool/main/g/gawk/gawk_1%3a5.3.2-1ubuntu1.1_amd64.deb
+Size: 526516
+SHA256: 125782ea78a32a9df4e9b7ef49f458dc57f2b81473658c73a5a5930f950ea330
+Homepage: http://www.gnu.org/software/gawk/
+Description: GNU awk, a pattern scanning and processing language
+ `awk', a program that you can use to select particular records in a
+ file and perform operations upon them.
+ .
+ Gawk is the GNU Project's implementation of the AWK programming language.
+ It conforms to the definition of the language in the POSIX 1003.2 Command
+ Language And Utilities Standard. This version in turn is based on the
+ description in The AWK Programming Language, by Aho, Kernighan, and
+ Weinberger, with the additional features defined in the System V Release
+ 4 version of UNIX awk. Gawk also provides more recent Bell Labs awk
+ extensions, and some GNU-specific extensions.
+
+Package: g++-15-x86-64-linux-gnu
+Architecture: amd64
+Version: 15.2.0-16ubuntu1
+Multi-Arch: foreign
+Priority: optional
+Section: devel
+Source: gcc-15
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 40822
+Provides: c++-compiler-x86-64-linux-gnu
+Depends: gcc-15-base (= 15.2.0-16ubuntu1), gcc-15-x86-64-linux-gnu (= 15.2.0-16ubuntu1), libstdc++-15-dev (= 15.2.0-16ubuntu1), libc6 (>= 2.38), libgmp10 (>= 2:6.3.0+dfsg), libisl23 (>= 0.15), libmpc3 (>= 1.1.0), libmpfr6 (>= 3.1.3), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.2)
+Suggests: gcc-15-doc (>= 15)
+Filename: pool/main/g/gcc-15/g++-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb
+Size: 14444618
+SHA256: 8673a23519f570b4a5b4a663a9ce3b0e2f0be50c7250ce7fdae19eb064c3d6aa
+Homepage: http://gcc.gnu.org/
+Description: GNU C++ compiler for the x86_64-linux-gnu architecture
+ This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
+ .
+ This package contains C++ cross-compiler for the
+ x86_64-linux-gnu architecture.
+
+Package: g++-15
+Architecture: amd64
+Version: 15.2.0-16ubuntu1
+Priority: optional
+Section: devel
+Source: gcc-15
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 40
+Provides: c++-compiler, c++abi2-dev
+Depends: g++-15-x86-64-linux-gnu (= 15.2.0-16ubuntu1), gcc-15-base (= 15.2.0-16ubuntu1), gcc-15 (= 15.2.0-16ubuntu1)
+Suggests: g++-15-multilib, gcc-15-doc (>= 15)
+Filename: pool/main/g/gcc-15/g++-15_15.2.0-16ubuntu1_amd64.deb
+Size: 26746
+SHA256: cb7771861d821e48d38253f2397217920d5cf8020ed9de8372a625d080dcc6be
+Homepage: http://gcc.gnu.org/
+Description: GNU C++ compiler
+ This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
+
+Package: gcc-15-x86-64-linux-gnu
+Architecture: amd64
+Version: 15.2.0-16ubuntu1
+Multi-Arch: foreign
+Priority: optional
+Section: devel
+Source: gcc-15
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 75729
+Provides: c-compiler-x86-64-linux-gnu
+Depends: cpp-15-x86-64-linux-gnu (= 15.2.0-16ubuntu1), gcc-15-base (= 15.2.0-16ubuntu1), libcc1-0 (>= 15.2.0-16ubuntu1), binutils-x86-64-linux-gnu (>= 2.39), libgcc-15-dev (= 15.2.0-16ubuntu1), libc6 (>= 2.38), libgcc-s1 (>= 3.0), libgmp10 (>= 2:6.3.0+dfsg), libisl23 (>= 0.15), libmpc3 (>= 1.1.0), libmpfr6 (>= 3.1.3), libstdc++6 (>= 5), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Recommends: libc6-dev (>= 2.13-0ubuntu6)
+Suggests: gcc-15-doc (>= 15), gcc-15-locales (>= 15)
+Filename: pool/main/g/gcc-15/gcc-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb
+Size: 25433044
+SHA256: df0e5375c9e981b18e396c2e9ec1e359f226576a9b94a311bf07603f3ca6023a
+Homepage: http://gcc.gnu.org/
+Description: GNU C compiler for the x86_64-linux-gnu architecture
+ This is the GNU C compiler for the x86_64-linux-gnu architecture,
+ a fairly portable optimizing compiler for C.
+
+Package: gcc-15
+Architecture: amd64
+Version: 15.2.0-16ubuntu1
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 607
+Provides: c-compiler
+Depends: gcc-15-x86-64-linux-gnu (= 15.2.0-16ubuntu1), gcc-15-base (= 15.2.0-16ubuntu1), cpp-15 (= 15.2.0-16ubuntu1), binutils (>= 2.39)
+Recommends: libc6-dev (>= 2.13-0ubuntu6)
+Suggests: gcc-15-multilib, gcc-15-doc (>= 15), gcc-15-locales (>= 15)
+Replaces: cpp-15 (<< 7.1.1-8)
+Filename: pool/main/g/gcc-15/gcc-15_15.2.0-16ubuntu1_amd64.deb
+Size: 539118
+SHA256: 28da225c111d3ce9d230209cca24db46ec645f631f593f188bef718d8a1e4711
+Homepage: http://gcc.gnu.org/
+Description: GNU C compiler
+ This is the GNU C compiler, a fairly portable optimizing compiler for C.
+
+Package: libgcc-15-dev
+Architecture: amd64
+Version: 15.2.0-16ubuntu1
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: gcc-15
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 18201
+Depends: gcc-15-base (= 15.2.0-16ubuntu1), libgcc-s1 (>= 15.2.0-16ubuntu1), libgomp1 (>= 15.2.0-16ubuntu1), libitm1 (>= 15.2.0-16ubuntu1), libatomic1 (>= 15.2.0-16ubuntu1), libasan8 (>= 15.2.0-16ubuntu1), liblsan0 (>= 15.2.0-16ubuntu1), libtsan2 (>= 15.2.0-16ubuntu1), libubsan1 (>= 15.2.0-16ubuntu1), libhwasan0 (>= 15.2.0-16ubuntu1), libquadmath0 (>= 15.2.0-16ubuntu1)
+Recommends: libc6-dev (>= 2.13-0ubuntu6)
+Breaks: libtsan2 (<< 12-20211113-2~)
+Replaces: libtsan2 (<< 12-20211113-2~)
+Filename: pool/main/g/gcc-15/libgcc-15-dev_15.2.0-16ubuntu1_amd64.deb
+Size: 2866236
+SHA256: 32fa5bde1891f46fd4f422e466c863fb78e834b634e1aa08211c8eea68870af5
+Homepage: http://gcc.gnu.org/
+Description: GCC support library (development files)
+ This package contains the headers and static library files necessary for
+ building C programs which use libgcc, libgomp, libquadmath, libssp or libitm.
+
+Package: libstdc++-15-dev
+Architecture: amd64
+Version: 15.2.0-16ubuntu1
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: gcc-15
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 25491
+Provides: libstdc++-dev
+Depends: gcc-15-base (= 15.2.0-16ubuntu1), libgcc-15-dev (= 15.2.0-16ubuntu1), libstdc++6 (>= 15.2.0-16ubuntu1), libc6-dev (>= 2.13-0ubuntu6)
+Suggests: libstdc++-15-doc
+Filename: pool/main/g/gcc-15/libstdc++-15-dev_15.2.0-16ubuntu1_amd64.deb
+Size: 2920128
+SHA256: 9a400597b1db45cf51238c9eb556e211ec092d363cfb7ebebac627750ba56433
+Homepage: http://gcc.gnu.org/
+Description: GNU Standard C++ Library v3 (development files)
+ This package contains the headers and static library files necessary for
+ building C++ programs which use libstdc++.
+ .
+ libstdc++-v3 is a complete rewrite from the previous libstdc++-v2, which
+ was included up to g++-2.95. The first version of libstdc++-v3 appeared
+ in g++-3.0.
+
+Package: libasan8
+Architecture: amd64
+Version: 16-20260322-1ubuntu1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: gcc-16
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 11430
+Depends: gcc-16-base (= 16-20260322-1ubuntu1), libc6 (>= 2.34), libgcc-s1 (>= 3.3)
+Filename: pool/main/g/gcc-16/libasan8_16-20260322-1ubuntu1_amd64.deb
+Size: 3184374
+SHA256: d59b3a851c0b58759e9f940fa407f68a6ef46401381e5389c74e5ded5419262d
+Homepage: http://gcc.gnu.org/
+Description: AddressSanitizer -- a fast memory error detector
+ AddressSanitizer (ASan) is a fast memory error detector.  It finds
+ use-after-free and {heap,stack,global}-buffer overflow bugs in C/C++ programs.
+
+Package: libcc1-0
+Architecture: amd64
+Version: 16-20260322-1ubuntu1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: gcc-16
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 156
+Depends: gcc-16-base (= 16-20260322-1ubuntu1), libc6 (>= 2.15), libgcc-s1 (>= 3.0), libstdc++6 (>= 13)
+Filename: pool/main/g/gcc-16/libcc1-0_16-20260322-1ubuntu1_amd64.deb
+Size: 51154
+SHA256: 484ac5fd30a19bfade8db336fe70f3c046beccd1c9a9ac327fcd89d29dd5a125
+Homepage: http://gcc.gnu.org/
+Description: GCC cc1 plugin for GDB
+ libcc1 is a plugin for GDB.
+
+Package: libhwasan0
+Architecture: amd64
+Version: 16-20260322-1ubuntu1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: gcc-16
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 5144
+Depends: gcc-16-base (= 16-20260322-1ubuntu1), libc6 (>= 2.34), libgcc-s1 (>= 3.3)
+Filename: pool/main/g/gcc-16/libhwasan0_16-20260322-1ubuntu1_amd64.deb
+Size: 1731164
+SHA256: 6bd25c936289463c6472290d3b4377edf8dd4f5e3a07f356fb0adf2de04a8055
+Homepage: http://gcc.gnu.org/
+Description: AddressSanitizer -- a fast memory error detector
+ AddressSanitizer (HWASan) is a fast memory error detector.  It finds
+ use-after-free and {heap,stack,global}-buffer overflow bugs in C/C++ programs.
+
+Package: libitm1
+Architecture: amd64
+Version: 16-20260322-1ubuntu1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: gcc-16
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 119
+Depends: gcc-16-base (= 16-20260322-1ubuntu1), libc6 (>= 2.34)
+Filename: pool/main/g/gcc-16/libitm1_16-20260322-1ubuntu1_amd64.deb
+Size: 30036
+SHA256: ef841c269b5e9f324e38b1069f712a13c29237051f037847d1de79441dc3a9a2
+Homepage: http://gcc.gnu.org/
+Description: GNU Transactional Memory Library
+ GNU Transactional Memory Library (libitm) provides transaction support for
+ accesses to the memory of a process, enabling easy-to-use synchronization of
+ accesses to shared memory by several threads.
+
+Package: liblsan0
+Architecture: amd64
+Version: 16-20260322-1ubuntu1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: gcc-16
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 4023
+Depends: gcc-16-base (= 16-20260322-1ubuntu1), libc6 (>= 2.34), libgcc-s1 (>= 3.3)
+Filename: pool/main/g/gcc-16/liblsan0_16-20260322-1ubuntu1_amd64.deb
+Size: 1394078
+SHA256: c90895d3b6cd164fcb54def68c7dff74419f869c837fa607e3f54c1a0e742263
+Homepage: http://gcc.gnu.org/
+Description: LeakSanitizer -- a memory leak detector (runtime)
+ LeakSanitizer (Lsan) is a memory leak detector which is integrated
+ into AddressSanitizer.
+
+Package: libquadmath0
+Architecture: amd64
+Version: 16-20260322-1ubuntu1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: gcc-16
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 304
+Depends: gcc-16-base (= 16-20260322-1ubuntu1), libc6 (>= 2.38)
+Filename: pool/main/g/gcc-16/libquadmath0_16-20260322-1ubuntu1_amd64.deb
+Size: 155450
+SHA256: 420e777fef436f397a85ddedde53fbb44f92c7ca8e87d581f9d86573859e1aa4
+Homepage: http://gcc.gnu.org/
+Description: GCC Quad-Precision Math Library
+ A library, which provides quad-precision mathematical functions on targets
+ supporting the __float128 datatype. The library is used to provide on such
+ targets the REAL(16) type in the GNU Fortran compiler.
+
+Package: libtsan2
+Architecture: amd64
+Version: 16-20260322-1ubuntu1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: gcc-16
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 9295
+Depends: gcc-16-base (= 16-20260322-1ubuntu1), libc6 (>= 2.34), libgcc-s1 (>= 3.4)
+Filename: pool/main/g/gcc-16/libtsan2_16-20260322-1ubuntu1_amd64.deb
+Size: 2848714
+SHA256: 95b7a9b63096840cb960562d190a802a541055366eb4bc756c763d7de6e174d8
+Homepage: http://gcc.gnu.org/
+Description: ThreadSanitizer -- a Valgrind-based detector of data races (runtime)
+ ThreadSanitizer (Tsan) is a data race detector for C/C++ programs.
+ The Linux and Mac versions are based on Valgrind.
+
+Package: libubsan1
+Architecture: amd64
+Version: 16-20260322-1ubuntu1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: gcc-16
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 3527
+Depends: gcc-16-base (= 16-20260322-1ubuntu1), libc6 (>= 2.34), libgcc-s1 (>= 3.3), libstdc++6 (>= 4.1.1)
+Filename: pool/main/g/gcc-16/libubsan1_16-20260322-1ubuntu1_amd64.deb
+Size: 1239750
+SHA256: cde09806b1b60d0ab8ab96033177cb21a0290333a946f25572de8f72b4403695
+Homepage: http://gcc.gnu.org/
+Description: UBSan -- undefined behaviour sanitizer (runtime)
+ UndefinedBehaviorSanitizer can be enabled via -fsanitize=undefined.
+ Various computations will be instrumented to detect undefined behavior
+ at runtime. Available for C and C++.
+
+Package: g++-x86-64-linux-gnu
+Architecture: amd64
+Version: 4:15.2.0-5ubuntu1
+Multi-Arch: foreign
+Priority: optional
+Section: devel
+Source: gcc-defaults (1.230ubuntu1)
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 11
+Depends: cpp-x86-64-linux-gnu (= 4:15.2.0-5ubuntu1), gcc-x86-64-linux-gnu (= 4:15.2.0-5ubuntu1), g++-15-x86-64-linux-gnu (>= 15.2.0-2~)
+Breaks: g++ (<< 4:13.2.0-3)
+Replaces: g++ (<< 4:13.2.0-3)
+Filename: pool/main/g/gcc-defaults/g++-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb
+Size: 968
+SHA256: 45d8edc3e6775179bee9ecb0211727e3e8d53ee3caf4ddb2e1310ac28080053d
+Description: GNU C++ compiler for the amd64 architecture
+ This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
+ .
+ This is a dependency package providing the default GNU C++ cross-compiler
+ for the amd64 architecture.
+
+Package: g++
+Architecture: amd64
+Version: 4:15.2.0-5ubuntu1
+Priority: optional
+Section: devel
+Source: gcc-defaults (1.230ubuntu1)
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 13
+Provides: c++-compiler
+Depends: cpp (= 4:15.2.0-5ubuntu1), cpp-x86-64-linux-gnu (= 4:15.2.0-5ubuntu1), gcc (= 4:15.2.0-5ubuntu1), g++-15 (>= 15.2.0-2~), g++-x86-64-linux-gnu (= 4:15.2.0-5ubuntu1), gcc-15 (>= 15.2.0-2~)
+Suggests: g++-multilib
+Filename: pool/main/g/gcc-defaults/g++_4%3a15.2.0-5ubuntu1_amd64.deb
+Size: 1100
+SHA256: 2be84461c2f47fd7ce2cfea2e35d775d0e30582879bf1c0e80a1c22f92a2cdac
+Description: GNU C++ compiler
+ This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
+ .
+ This is a dependency package providing the default GNU C++ compiler.
+
+Package: gcc-x86-64-linux-gnu
+Architecture: amd64
+Version: 4:15.2.0-5ubuntu1
+Multi-Arch: foreign
+Priority: optional
+Section: devel
+Source: gcc-defaults (1.230ubuntu1)
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 25
+Depends: cpp-x86-64-linux-gnu (= 4:15.2.0-5ubuntu1), gcc-15-x86-64-linux-gnu (>= 15.2.0-2~)
+Recommends: libc6-dev, libc-dev
+Suggests: make, manpages-dev, autoconf, automake, libtool, flex, bison, gdb-x86-64-linux-gnu, gcc-doc
+Breaks: gcc (<< 4:13.2.0-3)
+Replaces: gcc (<< 4:13.2.0-3)
+Filename: pool/main/g/gcc-defaults/gcc-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb
+Size: 1208
+SHA256: 7393f33be5584941bcfbd03a25901058c708046ee5dded01c21d56652a2d0eb7
+Description: GNU C compiler for the amd64 architecture
+ This is the GNU C compiler, a fairly portable optimizing compiler for C.
+ .
+ This is a dependency package providing the default GNU C cross-compiler
+ for the amd64 architecture.
+
+Package: gcc
+Architecture: amd64
+Version: 4:15.2.0-5ubuntu1
+Priority: optional
+Section: devel
+Source: gcc-defaults (1.230ubuntu1)
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 37
+Provides: c-compiler
+Depends: cpp (= 4:15.2.0-5ubuntu1), cpp-x86-64-linux-gnu (= 4:15.2.0-5ubuntu1), gcc-15 (>= 15.2.0-2~), gcc-x86-64-linux-gnu (= 4:15.2.0-5ubuntu1)
+Recommends: libc6-dev | libc-dev
+Suggests: gcc-multilib, make, manpages-dev, autoconf, automake, libtool, flex, bison, gdb, gcc-doc
+Conflicts: gcc-doc (<< 1:2.95.3)
+Filename: pool/main/g/gcc-defaults/gcc_4%3a15.2.0-5ubuntu1_amd64.deb
+Size: 5010
+SHA256: d780844418b745c432a5d6c85f055625f37e27523b026baee0c87d386a0aab0a
+Description: GNU C compiler
+ This is the GNU C compiler, a fairly portable optimizing compiler for C.
+ .
+ This is a dependency package providing the default GNU C compiler.
+
+Package: libc-dev-bin
+Architecture: amd64
+Version: 2.43-2ubuntu2.3
+Multi-Arch: foreign
+Priority: optional
+Section: libdevel
+Source: glibc
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Installed-Size: 114
+Depends: libc6 (>> 2.43), libc6 (<< 2.44)
+Recommends: manpages, manpages-dev
+Suggests: libc-devtools (>> 2.43)
+Filename: pool/main/g/glibc/libc-dev-bin_2.43-2ubuntu2.3_amd64.deb
+Size: 23332
+SHA256: c3a76666e9831f02dcd594a8edb0105126a8e780889fb9659ab0610525844a4a
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description: GNU C Library: Development binaries
+ This package contains utility programs related to the GNU C Library
+ development package.
+ .
+  * gencat: generate message catalogs
+Original-Vcs-Browser: https://salsa.debian.org/glibc-team/glibc
+Original-Vcs-Git: https://salsa.debian.org/glibc-team/glibc.git
+
+Package: libc6-dev
+Architecture: amd64
+Version: 2.43-2ubuntu2.3
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: glibc
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Installed-Size: 13792
+Provides: libc-dev (= 2.43-2ubuntu2.3)
+Depends: libc6 (= 2.43-2ubuntu2.3), libc-dev-bin (= 2.43-2ubuntu2.3), linux-libc-dev, rpcsvc-proto
+Suggests: glibc-doc, manpages-dev
+Conflicts: libc0.3-dev, libc6.1-dev
+Breaks: catch (<< 1.12.2-0.1), libc6-dev-amd64-cross (<< 2.43~), libdpkg-perl (<< 1.22.22), libmysqlclient-dev (<= 8.0.29-1)
+Filename: pool/main/g/glibc/libc6-dev_2.43-2ubuntu2.3_amd64.deb
+Size: 2294508
+SHA256: f48da8b7bae5c05106034d54bf6c8ea2a54654f52e11bd75dc2b991d2ef24a49
+Homepage: https://www.gnu.org/software/libc/libc.html
+Description: GNU C Library: Development Libraries and Header Files
+ Contains the symlinks, headers, and object files needed to compile
+ and link programs which use the standard C library.
+Original-Vcs-Browser: https://salsa.debian.org/glibc-team/glibc
+Original-Vcs-Git: https://salsa.debian.org/glibc-team/glibc.git
+
+Package: grub-gfxpayload-lists
+Architecture: amd64
+Version: 0.7build3
+Priority: optional
+Section: admin
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Installed-Size: 21
+Depends: grub-pc (>= 1.99~20101210-1ubuntu2)
+Filename: pool/main/g/grub-gfxpayload-lists/grub-gfxpayload-lists_0.7build3_amd64.deb
+Size: 3518
+SHA256: 5b3f92119494baa15b9089fcaa8a8ca418b26a9843c8ccaaf323f95033193fb3
+Description: GRUB gfxpayload blacklist
+ The 'set gfxpayload=keep' facility in GRUB provides smooth graphical
+ handover to the Linux kernel.  Unfortunately, this does not work on all
+ systems, resulting in a black or corrupt display.  This package provides a
+ blacklist of PCI IDs which fail.
+ .
+ We maintain this separately from GRUB because it is likely to be updated on
+ a different schedule.
+
+Package: grub-efi-amd64-signed
+Architecture: amd64
+Version: 1.215+2.14-2ubuntu1
+Built-Using: grub2 (= 2.14-2ubuntu1)
+Priority: optional
+Section: utils
+Source: grub2-signed (1.215)
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 7482
+Depends: debconf (>= 0.5) | debconf-2.0, grub-efi-amd64-bin (= 2.14-2ubuntu1), grub-efi-amd64 | grub-pc, grub2-common (>= 2.02+dfsg1-5)
+Recommends: secureboot-db
+Filename: pool/main/g/grub2-signed/grub-efi-amd64-signed_1.215+2.14-2ubuntu1_amd64.deb
+Size: 1441368
+SHA256: 603fe7db065634780d9576bab48fce8143a0451697c5be75a6cdb1f6a5e39188
+Description: GRand Unified Bootloader, version 2 (EFI-AMD64 version, signed)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains a version of GRUB built for use with the EFI-AMD64
+ architecture, signed with Canonical's UEFI signing key.
+
+Package: grub-efi-amd64-bin
+Architecture: amd64
+Version: 2.14-2ubuntu1
+Multi-Arch: foreign
+Priority: optional
+Section: admin
+Source: grub2-unsigned
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@alioth-lists.debian.net>
+Installed-Size: 3664
+Depends: grub-common (>= 2.02~beta2-9), grub-efi-amd64-unsigned
+Recommends: grub-efi-amd64-signed, efibootmgr
+Breaks: grub-efi-amd64-signed (<< 1+2.12~rc1)
+Replaces: grub2 (<< 2.14-2ubuntu1)
+Filename: pool/main/g/grub2-unsigned/grub-efi-amd64-bin_2.14-2ubuntu1_amd64.deb
+Size: 934984
+SHA256: 9dbe44fb101e428c674b299011d1f20248222ce781e7f9bd2d0336a3b39520b1
+Homepage: https://www.gnu.org/software/grub/
+Description: GRand Unified Bootloader, version 2 (EFI-AMD64 modules)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains GRUB modules that have been built for use with the
+ EFI-AMD64 architecture, as used by Intel Macs (unless a BIOS interface has
+ been activated).  It can be installed in parallel with other flavours, but
+ will not automatically install GRUB as the active boot loader nor
+ automatically update grub.cfg on upgrade unless grub-efi-amd64 is also
+ installed.
+Efi-Vendor: ubuntu
+
+Package: grub-efi-amd64-unsigned
+Architecture: amd64
+Version: 2.14-2ubuntu1
+Multi-Arch: foreign
+Priority: optional
+Section: admin
+Source: grub2-unsigned
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@alioth-lists.debian.net>
+Installed-Size: 7539
+Depends: grub-common (>= 2.02~beta2-9)
+Breaks: grub-efi-amd64-bin (<< 2.12-3~)
+Replaces: grub-efi-amd64-bin (<< 2.12-3~)
+Filename: pool/main/g/grub2-unsigned/grub-efi-amd64-unsigned_2.14-2ubuntu1_amd64.deb
+Size: 1436320
+SHA256: bf135b5f3c2b1610929254722483e6bf46ffd7647902b3592d188c8982f72860
+Homepage: https://www.gnu.org/software/grub/
+Description: GRand Unified Bootloader, version 2 (EFI-AMD64 images)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This package contains GRUB images that have been built for use with the
+ EFI-AMD64 architecture, as used by Intel Macs (unless a BIOS interface has
+ been activated).  It can be installed in parallel with other flavours, but
+ will not automatically install GRUB as the active boot loader nor
+ automatically update grub.cfg on upgrade unless grub-efi-amd64 is also
+ installed.
+Efi-Vendor: ubuntu
+
+Package: grub-efi-amd64
+Architecture: amd64
+Version: 2.14-2ubuntu1
+Multi-Arch: foreign
+Priority: optional
+Section: admin
+Source: grub2-unsigned
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@alioth-lists.debian.net>
+Installed-Size: 162
+Depends: debconf (>= 0.5) | debconf-2.0, grub-efi-amd64-bin (= 2.14-2ubuntu1), grub2-common (>= 2.02~beta2-9), ucf
+Conflicts: elilo, grub, grub-coreboot, grub-efi-ia32, grub-ieee1275, grub-legacy, grub-pc, grub-xen
+Replaces: grub, grub-coreboot, grub-efi-ia32, grub-ieee1275, grub-legacy, grub-pc, grub2 (<< 2.14-2ubuntu1)
+Filename: pool/main/g/grub2-unsigned/grub-efi-amd64_2.14-2ubuntu1_amd64.deb
+Size: 49312
+SHA256: d5375e281bf58c0456d30be29d9153e88dc364fd79f263b6ccd3acf208824fb9
+Homepage: https://www.gnu.org/software/grub/
+Description: GRand Unified Bootloader, version 2 (EFI-AMD64 version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use with the EFI-AMD64 architecture, as used by Intel Macs (unless a BIOS
+ interface has been activated).  Installing this package indicates that this
+ version of GRUB should be the active boot loader.
+
+Package: grub-pc-bin
+Architecture: amd64
+Version: 2.14-2ubuntu2.1
+Multi-Arch: foreign
+Priority: optional
+Section: admin
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@alioth-lists.debian.net>
+Installed-Size: 3768
+Depends: libc6 (>= 2.38), libdevmapper1.02.1 (>= 2:1.02.197), grub2-common (= 2.14-2ubuntu2.1)
+Suggests: desktop-base
+Replaces: grub2 (<< 2.14-2ubuntu2.1)
+Filename: pool/main/g/grub2/grub-pc-bin_2.14-2ubuntu2.1_amd64.deb
+Size: 1325286
+SHA256: 10b85a5db3c5ad8062548641e559b71fb4aac94903ca1a0ad6d95ee44b785462
+Homepage: https://www.gnu.org/software/grub/
+Description: GRand Unified Bootloader, version 2 (PC/BIOS modules)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+  - VESA-based graphical mode with background image support and complete 24-bit
+    color set.
+  - Support for extended charsets.  Users can write UTF-8 text to their menu
+    entries.
+ .
+ This package contains GRUB modules that have been built for use with the
+ traditional PC/BIOS architecture.  It can be installed in parallel with
+ other flavours, but will not automatically install GRUB as the active boot
+ loader nor automatically update grub.cfg on upgrade unless grub-pc is also
+ installed.
+
+Package: grub-pc
+Architecture: amd64
+Version: 2.14-2ubuntu2.1
+Multi-Arch: foreign
+Priority: optional
+Section: admin
+Source: grub2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@alioth-lists.debian.net>
+Installed-Size: 500
+Depends: debconf (>= 0.5) | debconf-2.0, grub2-common (= 2.14-2ubuntu2.1), grub-pc-bin (= 2.14-2ubuntu2.1), ucf, grub-gfxpayload-lists
+Conflicts: grub-coreboot, grub-efi-amd64, grub-efi-ia32, grub-ieee1275, grub-xen
+Breaks: grub-legacy (<< 0.97-84~)
+Replaces: grub, grub-coreboot, grub-efi-amd64, grub-efi-ia32, grub-ieee1275, grub-legacy, grub2 (<< 2.14-2ubuntu2.1)
+Filename: pool/main/g/grub2/grub-pc_2.14-2ubuntu2.1_amd64.deb
+Size: 123572
+SHA256: e686d1d5ddb70a56cba35942d853f3acf21c50cc7ce29ad587bedd02e7c33c3c
+Homepage: https://www.gnu.org/software/grub/
+Description: GRand Unified Bootloader, version 2 (PC/BIOS version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+  - VESA-based graphical mode with background image support and complete 24-bit
+    color set.
+  - Support for extended charsets.  Users can write UTF-8 text to their menu
+    entries.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use with the traditional PC/BIOS architecture.  Installing this package
+ indicates that this version of GRUB should be the active boot loader.
+
+Package: intel-microcode
+Architecture: amd64
+Version: 3.20260210.1ubuntu2
+Priority: standard
+Section: non-free-firmware/admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Henrique de Moraes Holschuh <hmh@debian.org>
+Installed-Size: 20949
+Depends: iucode-tool (>= 1.0)
+Recommends: dracut (>= 044) | initramfs-tools (>= 0.113~) | tiny-initramfs
+Conflicts: microcode.ctl (<< 0.18~0)
+Filename: pool/main/i/intel-microcode/intel-microcode_3.20260210.1ubuntu2_amd64.deb
+Size: 13541026
+SHA256: 169b82f23260f6cc918e56601595890f969d9c262c6646f6ab8025c6196938cc
+Homepage: https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files
+Description: Processor microcode firmware for Intel CPUs
+ This package contains updated system processor microcode for
+ Intel i686 and Intel X86-64 processors.  Intel releases microcode
+ updates to correct processor behavior as documented in the
+ respective processor specification updates.
+ .
+ For AMD processors, please refer to the amd64-microcode package.
+
+Package: iucode-tool
+Architecture: amd64
+Version: 2.3.1-3build2
+Priority: optional
+Section: utils
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Henrique de Moraes Holschuh <hmh@debian.org>
+Installed-Size: 100
+Depends: libc6 (>= 2.38)
+Suggests: intel-microcode (>= 1)
+Filename: pool/main/i/iucode-tool/iucode-tool_2.3.1-3build2_amd64.deb
+Size: 44184
+SHA256: 37db865b2f774ae9138f3a5e9ef369a4f39a75775dd78cdcbcb5ba8ce6503f91
+Homepage: https://gitlab.com/iucode-tool
+Description: Intel processor microcode tool
+ iucode_tool is a program to manipulate Intel® X86 and X86-64 processor
+ microcode collections, and to use the kernel facilities to upgrade the
+ microcode on Intel system processors.
+ .
+ It can load microcode data files in text and binary format, sort, list and
+ filter the microcodes contained in these files, write selected microcodes to a
+ new file in binary format, or upload them to the kernel.
+ .
+ It operates on non-free microcode data downloaded directly from Intel or
+ installed by the intel-microcode package.
+
+Package: jfsutils
+Architecture: amd64
+Version: 1.1.15-7
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Installed-Size: 1004
+Depends: libc6 (>= 2.38), libuuid1 (>= 2.16)
+Filename: pool/main/j/jfsutils/jfsutils_1.1.15-7_amd64.deb
+Size: 190406
+SHA256: 10f8dff02b692e50c8fc58bb2fc24e102ab3da6c706699c6a9cea6dffe6947dc
+Homepage: https://jfs.sourceforge.net/
+Description: utilities for managing the JFS filesystem
+ Utilities for managing IBM's Journaled File System (JFS) under Linux.
+ .
+ IBM's journaled file system technology, currently used in IBM
+ enterprise servers, is designed for high-throughput server
+ environments, key to running intranet and other high-performance
+ e-business file servers.
+ .
+ The following utilities are available:
+  * fsck.jfs - initiate replay of the JFS transaction log, and check and
+    repair a JFS formatted device.
+  * logdump - dump a JFS formatted device's journal log.
+  * logredo - "replay" a JFS formatted device's journal log.
+  * mkfs.jfs - create a JFS formatted partition.
+  * xchkdmp - dump the contents of a JFS fsck log file created with
+    xchklog.
+  * xchklog - extract a log from the JFS fsck workspace into a file.
+  * xpeek - shell-type JFS file system editor.
+
+Package: linux-main-modules-ipu6-7.0.0-30-generic
+Architecture: amd64
+Version: 7.0.0-30.30
+Priority: optional
+Section: kernel
+Source: linux-main-signed
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 242
+Provides: intel-ipu6-dkms, ipu6-modules
+Depends: kmod, linux-image-7.0.0-30-generic | linux-image-unsigned-7.0.0-30-generic
+Filename: pool/main/l/linux-main-signed/linux-main-modules-ipu6-7.0.0-30-generic_7.0.0-30.30_amd64.deb
+Size: 227214
+SHA256: 9ecb035f1d8340fe61f76a484a9be8e12f0f56cec9c2c2b635fb7cc2234ff5c5
+Description: Signed ipu6 module for 7.0.0-30
+ This package contains the signed ipu6 modules.
+ .
+ You likely do not want to install this package directly, Instead, install
+ the linux-ipu6-generic meta-package, which will ensure that
+ upgrades work correctly, and that supporting packages are also installed.
+
+Package: linux-main-modules-ipu7-7.0.0-30-generic
+Architecture: amd64
+Version: 7.0.0-30.30
+Priority: optional
+Section: kernel
+Source: linux-main-signed
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 89
+Provides: intel-ipu7-dkms, ipu7-modules
+Depends: kmod, linux-image-7.0.0-30-generic | linux-image-unsigned-7.0.0-30-generic
+Filename: pool/main/l/linux-main-signed/linux-main-modules-ipu7-7.0.0-30-generic_7.0.0-30.30_amd64.deb
+Size: 73642
+SHA256: 1e4e7a84eae89adae2fd85aa1f24994e9bc09746e74347dbacd417e87d2576c9
+Description: Signed ipu7 module for 7.0.0-30
+ This package contains the signed ipu7 modules.
+ .
+ You likely do not want to install this package directly, Instead, install
+ the linux-ipu7-generic meta-package, which will ensure that
+ upgrades work correctly, and that supporting packages are also installed.
+
+Package: linux-main-modules-iwlwifi-7.0.0-30-generic
+Architecture: amd64
+Version: 7.0.0-30.30
+Priority: optional
+Section: kernel
+Source: linux-main-signed
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 2502
+Provides: backport-iwlwifi-dkms, iwlwifi-modules
+Depends: kmod, linux-image-7.0.0-30-generic | linux-image-unsigned-7.0.0-30-generic
+Filename: pool/main/l/linux-main-signed/linux-main-modules-iwlwifi-7.0.0-30-generic_7.0.0-30.30_amd64.deb
+Size: 2540956
+SHA256: db6fbbd71e60b03dffdcb56fb4243b5bfa50b1999e2a0a8a259cb624754d635f
+Description: Signed iwlwifi module for 7.0.0-30
+ This package contains the signed iwlwifi modules.
+ .
+ You likely do not want to install this package directly, Instead, install
+ the linux-iwlwifi-generic meta-package, which will ensure that
+ upgrades work correctly, and that supporting packages are also installed.
+
+Package: linux-main-modules-zfs-7.0.0-30-generic
+Architecture: amd64
+Version: 7.0.0-30.30
+Priority: optional
+Section: kernel
+Source: linux-main-signed
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 2390
+Provides: spl-dkms, spl-modules, zfs-dkms, zfs-modules
+Depends: kmod, linux-image-7.0.0-30-generic | linux-image-unsigned-7.0.0-30-generic
+Filename: pool/main/l/linux-main-signed/linux-main-modules-zfs-7.0.0-30-generic_7.0.0-30.30_amd64.deb
+Size: 2419480
+SHA256: 7fe5040ee65a203f3487ee6a5c41158d4ebb5c913d5ade60bf861148b5ea6d3e
+Description: Signed zfs module for 7.0.0-30
+ This package contains the signed zfs modules.
+ .
+ You likely do not want to install this package directly, Instead, install
+ the linux-zfs-generic meta-package, which will ensure that
+ upgrades work correctly, and that supporting packages are also installed.
+
+Package: linux-modules-ipu6-generic-hwe-26.04
+Architecture: amd64
+Version: 7.0.0-30.30
+Priority: optional
+Section: kernel
+Source: linux-main-signed
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 8
+Depends: kmod, linux-main-modules-ipu6-7.0.0-30-generic
+Filename: pool/main/l/linux-main-signed/linux-modules-ipu6-generic-hwe-26.04_7.0.0-30.30_amd64.deb
+Size: 1948
+SHA256: 6c360d15759f2c9d1d26974c4a13c087550d9e2ea5a49c65b0dd4f7061743d18
+Description: Extra drivers for ipu6 for the generic flavour
+ Install extra signed ipu6 modules compatible with the generic flavour
+
+Package: linux-modules-ipu7-generic-hwe-26.04
+Architecture: amd64
+Version: 7.0.0-30.30
+Priority: optional
+Section: kernel
+Source: linux-main-signed
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 8
+Depends: kmod, linux-main-modules-ipu7-7.0.0-30-generic
+Filename: pool/main/l/linux-main-signed/linux-modules-ipu7-generic-hwe-26.04_7.0.0-30.30_amd64.deb
+Size: 1950
+SHA256: 71d9833fff98850006b517475913af2668edd6c256792b618671d110d394112d
+Description: Extra drivers for ipu7 for the generic flavour
+ Install extra signed ipu7 modules compatible with the generic flavour
+
+Package: linux-modules-iwlwifi-generic-hwe-26.04
+Architecture: amd64
+Version: 7.0.0-30.30
+Priority: optional
+Section: kernel
+Source: linux-main-signed
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 8
+Depends: kmod, linux-main-modules-iwlwifi-7.0.0-30-generic
+Filename: pool/main/l/linux-main-signed/linux-modules-iwlwifi-generic-hwe-26.04_7.0.0-30.30_amd64.deb
+Size: 1954
+SHA256: 0aab96b4e41f663f12658822ad47ff284a92110ba02c2ea9caee6187d06da1e5
+Description: Extra drivers for iwlwifi for the generic flavour
+ Install extra signed iwlwifi modules compatible with the generic flavour
+
+Package: linux-headers-generic
+Architecture: amd64
+Version: 7.0.0-30.30
+Priority: optional
+Section: kernel
+Source: linux-meta
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 13
+Depends: linux-headers-7.0.0-30-generic
+Filename: pool/main/l/linux-meta/linux-headers-generic_7.0.0-30.30_amd64.deb
+Size: 2322
+SHA256: f86fb611bb095bbf7a7a0a4e4cb99bd6c62ee0ded9ebebd60567cfec08e1f9fe
+Description: Generic Linux kernel headers
+ This package will always depend on the latest generic kernel headers
+ available.
+
+Package: linux-image-7.0.0-30-generic
+Architecture: amd64
+Version: 7.0.0-30.30
+Built-Using: linux (= 7.0.0-30.30)
+Priority: optional
+Section: kernel
+Source: linux-signed
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 16912
+Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, redhat-cluster-modules, virtualbox-guest-modules
+Depends: kmod, linux-base (>= 4.5ubuntu1~16.04.1), linux-modules-7.0.0-30-generic
+Recommends: grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo, dracut | linux-initramfs-tool
+Suggests: bpftool, linux-perf, linux-tools, linux-headers-7.0.0-30-generic
+Conflicts: linux-image-unsigned-7.0.0-30-generic
+Filename: pool/main/l/linux-signed/linux-image-7.0.0-30-generic_7.0.0-30.30_amd64.deb
+Size: 17021974
+SHA256: 6f01659ea129099601984347b52a498b6e35e86f5716ecf8e2da8a54b3f8e5c2
+Description: Signed kernel image generic
+ A kernel image for generic.  This version of it is signed with
+ Canonical's signing key.
+
+Package: linux-headers-7.0.0-30-generic
+Architecture: amd64
+Version: 7.0.0-30.30
+Priority: optional
+Section: devel
+Source: linux
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 31682
+Provides: linux-headers, linux-headers-3.0
+Depends: linux-headers-7.0.0-30, libc6 (>= 2.38), libdw1t64 (>= 0.171), libelf1t64 (>= 0.144), libgcc-s1 (>= 4.2), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.2.3.4)
+Filename: pool/main/l/linux/linux-headers-7.0.0-30-generic_7.0.0-30.30_amd64.deb
+Size: 4165558
+SHA256: f3be8e8d73b1f6050c406c04e372f6d556811d548fd12fc4eef32128b11f0e14
+Description: Linux kernel headers for version 7.0.0
+ This package provides kernel header files for version 7.0.0.
+ .
+ This is for sites that want the latest kernel headers.  Please read
+ /usr/share/doc/linux-headers-7.0.0-30/debian.README.gz for details.
+
+Package: linux-headers-7.0.0-30
+Architecture: all
+Version: 7.0.0-30.30
+Multi-Arch: foreign
+Priority: optional
+Section: devel
+Source: linux
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 92448
+Depends: coreutils
+Filename: pool/main/l/linux/linux-headers-7.0.0-30_7.0.0-30.30_all.deb
+Size: 14838496
+SHA256: c1d753e46aa8423756ac33401933ef743ef6f9a48a6e15d09638c16b167e5c67
+Description: Header files related to Linux kernel version 7.0.0
+ This package provides kernel header files for version 7.0.0, for sites
+ that want the latest kernel headers. Please read
+ /usr/share/doc/linux-headers-7.0.0-30/debian.README.gz for details
+
+Package: linux-libc-dev
+Architecture: amd64
+Version: 7.0.0-30.30
+Multi-Arch: same
+Priority: optional
+Section: devel
+Source: linux
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 7893
+Provides: aufs-dev, linux-kernel-headers
+Conflicts: linux-kernel-headers
+Replaces: linux-kernel-headers
+Filename: pool/main/l/linux/linux-libc-dev_7.0.0-30.30_amd64.deb
+Size: 1619218
+SHA256: 887ad4feddc7fe9e70ea558cb3c526d7a5147e28ef67a80547a425097f5aefa0
+Description: Linux Kernel Headers for development
+ This package provides headers from the Linux kernel.  These headers
+ are used by the installed headers for GNU glibc and other system
+ libraries. They are NOT meant to be used to build third-party modules for
+ your kernel. Use linux-headers-* packages for that.
+
+Package: linux-modules-7.0.0-30-generic
+Architecture: amd64
+Version: 7.0.0-30.30
+Priority: optional
+Section: kernel
+Source: linux
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 163345
+Depends: linux-main-modules-zfs-7.0.0-30-generic, wireless-regdb
+Filename: pool/main/l/linux/linux-modules-7.0.0-30-generic_7.0.0-30.30_amd64.deb
+Size: 169185472
+SHA256: d61aa07f5bed438788bbad6c5c95dd15e9bf02cbe949183959abe90107955292
+Description: Linux kernel modules for version 7.0.0
+ Contains the corresponding System.map file, the modules built by the
+ packager, and scripts that try to ensure that the system is not left in an
+ unbootable state after an update.
+ .
+ Supports Generic processors.
+ .
+ Geared toward desktop and server systems.
+ .
+ You likely do not want to install this package directly. Instead, install
+ the linux-generic meta-package, which will ensure that upgrades work
+ correctly, and that supporting packages are also installed.
+
+Package: lto-disabled-list
+Architecture: all
+Version: 79
+Priority: optional
+Section: devel
+Maintainer: Matthias Klose <doko@ubuntu.com>
+Installed-Size: 41
+Filename: pool/main/l/lto-disabled-list/lto-disabled-list_79_all.deb
+Size: 14208
+SHA256: 4201421a400172721d7e8f39db7f4ae1b65fe06f6ed8151b3346a2809871583b
+Description: list of packages not to build with LTO
+ A list of source packages not to build with link time
+ optimization (LTO).
+ .
+ Entries in this list should have a bug report filed with
+ the (user) tag 'lto'.
+
+Package: dmeventd
+Architecture: amd64
+Version: 2:1.02.205-2ubuntu3
+Priority: optional
+Section: admin
+Source: lvm2 (2.03.31-2ubuntu3)
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <team+lvm@tracker.debian.org>
+Installed-Size: 236
+Depends: libc6 (>= 2.38), libdevmapper-event1.02.1 (>= 2:1.02.110), libdevmapper1.02.1 (>= 2:1.02.197), liblvm2cmd2.03 (>= 2.03.31)
+Filename: pool/main/l/lvm2/dmeventd_2%3a1.02.205-2ubuntu3_amd64.deb
+Size: 40088
+SHA256: 457caaf1d5b047a56f7a8322028a84acee98aea570dfd2c91a1f2ebaab126bed
+Homepage: https://sourceware.org/lvm2/
+Description: Linux Kernel Device Mapper event daemon
+ The Linux Kernel Device Mapper is the LVM (Linux Logical Volume Management)
+ Team's implementation of a minimalistic kernel-space driver that handles
+ volume management, while keeping knowledge of the underlying device layout
+ in user-space.  This makes it useful for not only LVM, but software raid,
+ and other drivers that create "virtual" block devices.
+ .
+ This package contains a daemon to monitor events of devmapper devices.
+
+Package: libdevmapper-event1.02.1
+Architecture: amd64
+Version: 2:1.02.205-2ubuntu3
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: lvm2 (2.03.31-2ubuntu3)
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <team+lvm@tracker.debian.org>
+Installed-Size: 57
+Depends: libc6 (>= 2.38), libdevmapper1.02.1 (>= 2:1.02.197)
+Filename: pool/main/l/lvm2/libdevmapper-event1.02.1_2%3a1.02.205-2ubuntu3_amd64.deb
+Size: 13038
+SHA256: a8a50f95fa70966e9f3212bcbc9aa0e7fb5817615ce6652beab8c0ab3590f396
+Homepage: https://sourceware.org/lvm2/
+Description: Linux Kernel Device Mapper event support library
+ The Linux Kernel Device Mapper is the LVM (Linux Logical Volume Management)
+ Team's implementation of a minimalistic kernel-space driver that handles
+ volume management, while keeping knowledge of the underlying device layout
+ in user-space.  This makes it useful for not only LVM, but software raid,
+ and other drivers that create "virtual" block devices.
+ .
+ This package contains the userspace library to help with event monitoring
+ for devmapper devices, in conjunction with the dmevent daemon.
+
+Package: liblvm2cmd2.03
+Architecture: amd64
+Version: 2.03.31-2ubuntu3
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: lvm2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <team+lvm@tracker.debian.org>
+Installed-Size: 3049
+Depends: libaio1t64 (>= 0.3.93), libblkid1 (>= 2.24.2), libc6 (>= 2.38), libdevmapper-event1.02.1 (>= 2:1.02.74), libselinux1 (>= 3.1~), libsystemd0 (>= 233), libudev1 (>= 183), dmeventd
+Filename: pool/main/l/lvm2/liblvm2cmd2.03_2.03.31-2ubuntu3_amd64.deb
+Size: 842118
+SHA256: 97da111f1acf2b4b320dc81130a3c5653b0d7efabd9e7be67dff09792d179049
+Homepage: https://sourceware.org/lvm2/
+Description: LVM2 command library
+ This package contains the lvm2cmd shared library.
+
+Package: lvm2
+Architecture: amd64
+Version: 2.03.31-2ubuntu3
+Multi-Arch: foreign
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <team+lvm@tracker.debian.org>
+Installed-Size: 4035
+Depends: libaio1t64 (>= 0.3.93), libblkid1 (>= 2.24.2), libc6 (>= 2.38), libdevmapper-event1.02.1 (>= 2:1.02.74), libedit2 (>= 2.11-20080614-0), libselinux1 (>= 3.1~), libsystemd0 (>= 233), libudev1 (>= 183), dmsetup (>= 2:1.02.205-2ubuntu3~), dmeventd (>= 2:1.02.205-2ubuntu3~)
+Recommends: thin-provisioning-tools
+Filename: pool/main/l/lvm2/lvm2_2.03.31-2ubuntu3_amd64.deb
+Size: 1247112
+SHA256: d45e54e0a8dd46ec2a695f0cb75e81b07335c180e958e8a5bb37f060b3428b99
+Homepage: https://sourceware.org/lvm2/
+Description: Linux Logical Volume Manager
+ This is LVM2, the rewrite of The Linux Logical Volume Manager.  LVM
+ supports enterprise level volume management of disk and disk subsystems
+ by grouping arbitrary disks into volume groups. The total capacity of
+ volume groups can be allocated to logical volumes, which are accessed as
+ regular block devices.
+
+Package: libaio1t64
+Architecture: amd64
+Version: 0.3.113-8build1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: libaio
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Guillem Jover <guillem@debian.org>
+Installed-Size: 38
+Depends: libc6 (>= 2.4)
+Filename: pool/main/liba/libaio/libaio1t64_0.3.113-8build1_amd64.deb
+Size: 7356
+SHA256: b8e32a2b871e65a85b3dd882b096a0a3020006bea74233479b0b08543b6808df
+Homepage: https://pagure.io/libaio
+Description: Linux kernel AIO access library - shared library
+ This library enables userspace to use Linux kernel asynchronous I/O
+ system calls, important for the performance of databases and other
+ advanced applications.
+ .
+ This package contains the shared library.
+
+Package: libalgorithm-diff-perl
+Architecture: all
+Version: 1.201-1
+Multi-Arch: foreign
+Priority: optional
+Section: perl
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Installed-Size: 127
+Depends: perl:any
+Recommends: libalgorithm-diff-xs-perl
+Filename: pool/main/liba/libalgorithm-diff-perl/libalgorithm-diff-perl_1.201-1_all.deb
+Size: 41804
+SHA256: 2920d81cf0ac368b2fc52b892bb731ce7ce624a2cf51badbd55f801ba75d076f
+Homepage: https://metacpan.org/release/Algorithm-Diff
+Description: module to find differences between files
+ Algorithm::Diff is a Perl module that allows users to analyze text based on a
+ Longest Common Subsequence (LCS) algorithm. It can compare two files and find
+ the differences between them, which can produce the same information as the
+ common Unix tool 'diff'.
+ .
+ There is an XS-optimized implementation of the core loop, which accelerates
+ some types of diff output (see libalgorithm-diff-xs-perl).
+
+Package: libalgorithm-diff-xs-perl
+Architecture: amd64
+Version: 0.04-9
+Priority: optional
+Section: perl
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Installed-Size: 46
+Depends: perl (>= 5.40.1-2), perlapi-5.40.1, libc6 (>= 2.4), libalgorithm-diff-perl
+Filename: pool/main/liba/libalgorithm-diff-xs-perl/libalgorithm-diff-xs-perl_0.04-9_amd64.deb
+Size: 11476
+SHA256: 6294592156e8bb14e30b88e8a2cd6f73a61c0ad1d1aab066b7e35a8848b078e6
+Homepage: https://metacpan.org/release/Algorithm-Diff-XS
+Description: module to find differences between files (XS accelerated)
+ Algorithm::Diff::XS is a Perl diff utility module based on Joe Schaefer's
+ excellent but not very well-known Algorithm::LCS module, with a drop-in
+ interface identical to Algorithm::Diff.
+ .
+ Note that only the LCSidx function is optimized in XS at the moment, which
+ means only compact_diff will get significantly faster for large data sets,
+ while diff and sdiff will run in identical speed as Algorithm::Diff.
+
+Package: libalgorithm-merge-perl
+Architecture: all
+Version: 0.08-5
+Multi-Arch: foreign
+Priority: optional
+Section: perl
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Installed-Size: 42
+Depends: perl:any, libalgorithm-diff-perl
+Filename: pool/main/liba/libalgorithm-merge-perl/libalgorithm-merge-perl_0.08-5_all.deb
+Size: 11382
+SHA256: 0ede1dbc3f899353bea903e071dbc86eb94bf90bc0d4fd626dbe6adb12b5db33
+Homepage: https://metacpan.org/release/Algorithm-Merge
+Description: Perl module for three-way merge of textual data
+ Algorithm::Merge provides three-way merge and diff functions, complementing
+ the functionality offered by Algorithm::Diff (libalgorithm-diff-perl). Given
+ three sets of items, known as the original, left and right, this module can
+ take a three-way difference or merge them. Taking a difference provides an
+ array reference that is very similar to the behaviour of Algorithm::Diff. One
+ can also implement custom conflict resolution using the CONFLICT callback.
+
+Package: libfile-fcntllock-perl
+Architecture: amd64
+Version: 0.22-4ubuntu6
+Priority: optional
+Section: perl
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Installed-Size: 127
+Depends: perl (>= 5.40.0-6), perlapi-5.40.0, libc6 (>= 2.28)
+Suggests: gcc | c-compiler
+Filename: pool/main/libf/libfile-fcntllock-perl/libfile-fcntllock-perl_0.22-4ubuntu6_amd64.deb
+Size: 32836
+SHA256: 841baf9f948db37d257345d5a1f9c42e6294076c97d4848bcd8199c879d819be
+Homepage: https://metacpan.org/release/File-FcntlLock
+Description: Perl module for file locking with fcntl(2)
+ File::FcntlLock is a Perl module to do file locking in an object oriented
+ fashion using the fcntl(2) system call. This allows locks on parts of a file
+ as well as on the whole file and overcomes some known problems with flock(2),
+ on which Perl's flock() function is based.
+ .
+ Furthermore due to its design it supports reliable locking over NFS.
+
+Package: libvdpau1
+Architecture: amd64
+Version: 1.5-4
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: libvdpau
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 107
+Depends: libc6 (>= 2.38), libx11-6 (>= 2:1.4.99.1), libxext6
+Filename: pool/main/libv/libvdpau/libvdpau1_1.5-4_amd64.deb
+Size: 27750
+SHA256: 17eb769efb57cd6281b7cdb55587fd7e45e53816d4b1b89bbf9f78781ec46f15
+Homepage: https://www.freedesktop.org/wiki/Software/VDPAU/
+Description: Video Decode and Presentation API for Unix (libraries)
+ VDPAU (Video Decode and Presentation API for Unix) is an open source
+ library (libvdpau) and API designed by NVIDIA originally for its GeForce
+ 8 series and later GPU hardware, targeted at the X Window System on Unix
+ operating-systems (including Linux, FreeBSD, and Solaris). This VDPAU API
+ allows video programs to offload portions of the video decoding process
+ and video post-processing to the GPU video-hardware.
+ .
+ This package contains the VDPAU wrapper and trace libraries.
+
+Package: libcrypt-dev
+Architecture: amd64
+Version: 1:4.5.1-1
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: libxcrypt
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Marco d'Itri <md@linux.it>
+Installed-Size: 375
+Provides: libcrypt1-dev
+Depends: libcrypt1 (= 1:4.5.1-1)
+Conflicts: libcrypt1-dev, libcrypt2-dev
+Breaks: libc6-dev (<< 2.29-4), manpages-dev (<< 5.01-1)
+Replaces: libc6-dev (<< 2.29-4), libcrypt1-dev, libcrypt2-dev, manpages-dev (<< 5.01-1)
+Filename: pool/main/libx/libxcrypt/libcrypt-dev_1%3a4.5.1-1_amd64.deb
+Size: 121788
+SHA256: a5d86db4dde3de557a419aa3199e916de30b356717c4c1e8974270fda615c051
+Description: libcrypt development files
+ This package contains the files needed for developing applications that
+ use libcrypt.
+
+Package: xcvt
+Architecture: amd64
+Version: 0.1.3-1build1
+Priority: optional
+Section: x11
+Source: libxcvt
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 29
+Depends: libc6 (>= 2.38), libxcvt0 (>= 0.1.0)
+Breaks: xserver-xorg-core (<< 2:21.0.99.1~)
+Replaces: xserver-xorg-core (<< 2:21.0.99.1~)
+Filename: pool/main/libx/libxcvt/xcvt_0.1.3-1build1_amd64.deb
+Size: 7082
+SHA256: a3114a86fdaf7fda89e941163e278f029187511175be19229175f95f8ee8ddf1
+Description: VESA CVT standard timing modelines generator
+ libxcvt is a library providing a standalone version of the X server
+ implementation of the VESA CVT standard timing modelines generator.
+ .
+ This package includes the commandline tool 'cvt'.
+
+Package: make
+Architecture: amd64
+Version: 4.4.1-3
+Multi-Arch: allowed
+Priority: optional
+Section: devel
+Source: make-dfsg
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Stephen Kitt <skitt@debian.org>
+Installed-Size: 440
+Depends: libc6 (>= 2.38)
+Suggests: make-doc
+Conflicts: make-guile
+Replaces: make-guile
+Filename: pool/main/m/make-dfsg/make_4.4.1-3_amd64.deb
+Size: 196620
+SHA256: a86f39d57a32b7c919c0ad721fc2f17ab533a42fda348c8d81a4eea1577a014f
+Homepage: https://www.gnu.org/software/make/
+Description: utility for directing compilation
+ GNU Make is a utility which controls the generation of executables
+ and other target files of a program from the program's source
+ files. It determines automatically which pieces of a large program
+ need to be (re)created, and issues the commands to (re)create
+ them. Make can be used to organize any task in which targets (files)
+ are to be automatically updated based on input files whenever the
+ corresponding input is newer --- it is not limited to building
+ computer programs. Indeed, Make is a general purpose dependency
+ solver.
+
+Package: manpages-dev
+Architecture: all
+Version: 6.17-1
+Multi-Arch: foreign
+Priority: optional
+Section: doc
+Source: manpages
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Dr. Tobias Quathamer <toddy@debian.org>
+Installed-Size: 4147
+Depends: manpages
+Suggests: man-browser
+Breaks: glibc-doc (<< 2.37-16), inn2-dev (<< 2.7.0-1), manpages (<< 6.7-1)
+Replaces: glibc-doc (<< 2.37-16), inn2-dev (<< 2.7.0-1), manpages (<< 6.7-1)
+Filename: pool/main/m/manpages/manpages-dev_6.17-1_all.deb
+Size: 2183058
+SHA256: b2eb5f3127e86c85d9f15a2ca7bfac3c965f0b2e03717496a263ee3e44f92296
+Homepage: https://www.kernel.org/doc/man-pages/
+Description: Manual pages about using GNU/Linux for development
+ These man pages describe the Linux programming interface, including
+ these two sections:
+  2 = Linux system calls.
+  3 = Library calls (note that a more comprehensive source of information
+      may be found in the glibc-doc and glibc-doc-reference packages).
+
+Package: mdadm
+Architecture: amd64
+Version: 4.5-5ubuntu1
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Daniel Baumann <daniel@debian.org>
+Installed-Size: 1202
+Depends: udev, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libudev1 (>= 183)
+Recommends: finalrd (>= 3~), kmod
+Suggests: default-mta | mail-transport-agent
+Filename: pool/main/m/mdadm/mdadm_4.5-5ubuntu1_amd64.deb
+Size: 474884
+SHA256: b13aef9ebcde07c7ce7929e4cec4e7f6b2656d3ccc7b6cb02e0f45901971e23d
+Homepage: https://github.com/md-raid-utilities/mdadm
+Description: tool for managing Linux MD devices (software RAID)
+ The mdadm tool is used to create, manage, and monitor Linux MD (software
+ RAID) devices.
+ .
+ This package configures mdadm to by default assemble arrays automatically
+ during the system startup process.
+
+Package: kpartx
+Architecture: amd64
+Version: 0.14.3-2ubuntu1
+Priority: optional
+Section: admin
+Source: multipath-tools
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian DM Multipath Team <team+linux-blocks@tracker.debian.org>
+Installed-Size: 76
+Depends: dmsetup (>= 2:1.02.196-1~), udev, libc6 (>= 2.38), libdevmapper1.02.1 (>= 2:1.02.197), libgcc-s1 (>= 3.3.1)
+Filename: pool/main/m/multipath-tools/kpartx_0.14.3-2ubuntu1_amd64.deb
+Size: 32160
+SHA256: 03eaf6de7a336a01e94f6a2bf4aea95348532fe3f3ac7797da45954114ce5270
+Homepage: http://christophe.varoqui.free.fr/
+Description: create device mappings for partitions
+ Kpartx can be used to set up device mappings for the partitions of any
+ partitioned block device.
+ .
+ It is part of the Linux multipath-tools, but is useful on any
+ device-mapper using system.
+
+Package: libmpathcmd0
+Architecture: amd64
+Version: 0.14.3-2ubuntu1
+Priority: optional
+Section: libs
+Source: multipath-tools
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian DM Multipath Team <team+linux-blocks@tracker.debian.org>
+Installed-Size: 35
+Depends: libc6 (>= 2.28)
+Breaks: multipath-tools (<< 0.11.1-3~)
+Replaces: multipath-tools (<< 0.11.1-3~)
+Filename: pool/main/m/multipath-tools/libmpathcmd0_0.14.3-2ubuntu1_amd64.deb
+Size: 13278
+SHA256: 9496fa468ad9fecc9cd14f8bfa5a2ba3923e2302e8c48f7713d552bf8494877e
+Homepage: http://christophe.varoqui.free.fr/
+Description: multipath command library
+ This is the runtime library for submitting commands to the multipath
+ system / daemon.
+
+Package: libmpathpersist0
+Architecture: amd64
+Version: 0.14.3-2ubuntu1
+Priority: optional
+Section: libs
+Source: multipath-tools
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian DM Multipath Team <team+linux-blocks@tracker.debian.org>
+Installed-Size: 64
+Depends: libc6 (>= 2.38), libdevmapper1.02.1 (>= 2:1.02.20), libgcc-s1 (>= 3.3.1), libmpathcmd0 (= 0.14.3-2ubuntu1), libmultipath0 (= 0.14.3-2ubuntu1)
+Breaks: multipath-tools (<< 0.11.1-3~)
+Replaces: multipath-tools (<< 0.11.1-3~)
+Filename: pool/main/m/multipath-tools/libmpathpersist0_0.14.3-2ubuntu1_amd64.deb
+Size: 18244
+SHA256: d2028797a57a2b7355e9890931a7baefc649422c8f7767bdb2c21ac6c8a5a3c2
+Homepage: http://christophe.varoqui.free.fr/
+Description: multipath persist library
+ This is the runtime library for managing SCSI persistent reservations
+ on multipath devices.
+
+Package: libmultipath0
+Architecture: amd64
+Version: 0.14.3-2ubuntu1
+Priority: optional
+Section: libs
+Source: multipath-tools
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian DM Multipath Team <team+linux-blocks@tracker.debian.org>
+Installed-Size: 500
+Depends: libaio1t64 (>= 0.3.93), libc6 (>= 2.38), libdevmapper1.02.1 (>= 2:1.02.197), libgcc-s1 (>= 3.3.1), libmount1 (>= 2.24.2), libmpathcmd0 (= 0.14.3-2ubuntu1), libudev1 (>= 199), liburcu8t64 (>= 0.13.0)
+Breaks: multipath-tools (<< 0.11.1-3~)
+Replaces: multipath-tools (<< 0.11.1-3~)
+Filename: pool/main/m/multipath-tools/libmultipath0_0.14.3-2ubuntu1_amd64.deb
+Size: 166302
+SHA256: ee956e9782407ef8fa7c42c424f89b77c754816ae1898409bdae9628de772909
+Homepage: http://christophe.varoqui.free.fr/
+Description: multipath-tools internal libraries
+ This package contains libraries considered internal to the multipath
+ system / daemon.
+ No package apart from src:multipath-tools is allowed to use symbols
+ from libraries shipped by this package.
+
+Package: multipath-tools-boot
+Architecture: all
+Version: 0.14.3-2ubuntu1
+Priority: optional
+Section: admin
+Source: multipath-tools
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian DM Multipath Team <team+linux-blocks@tracker.debian.org>
+Installed-Size: 36
+Depends: initramfs-tools | linux-initramfs-tool, multipath-tools (<< 0.14.3-2ubuntu1.1~), multipath-tools (>= 0.14.3-2ubuntu1)
+Filename: pool/main/m/multipath-tools/multipath-tools-boot_0.14.3-2ubuntu1_all.deb
+Size: 3504
+SHA256: 89f7c58cf6bbf5bdf2aa40817d4278384cd86ca05a33e7cee24002abfdfd7bfb
+Homepage: http://christophe.varoqui.free.fr/
+Description: Support booting from multipath devices
+ This package contains the necessary support for booting from a multipath
+ device:
+ .
+  * copy over multipath.conf and persistent bindings if necessary
+  * load the necessary kernel modules
+  * detect multipath block devices
+ .
+ Don't install this package if you're not booting from a multipath device.
+
+Package: multipath-tools
+Architecture: amd64
+Version: 0.14.3-2ubuntu1
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian DM Multipath Team <team+linux-blocks@tracker.debian.org>
+Installed-Size: 699
+Depends: kpartx (>= 0.14.3-2ubuntu1), sg3-utils-udev, systemd (>= 245~), udev, libaio1t64 (>= 0.3.93), libc6 (>= 2.38), libdevmapper1.02.1 (>= 2:1.02.98), libedit2 (>= 2.11-20080614-0), libgcc-s1 (>= 3.3.1), libmpathcmd0 (= 0.14.3-2ubuntu1), libmpathpersist0 (= 0.14.3-2ubuntu1), libmultipath0 (= 0.14.3-2ubuntu1), libsystemd0, libudev1 (>= 183), liburcu8t64 (>= 0.13.0)
+Suggests: multipath-tools-boot
+Filename: pool/main/m/multipath-tools/multipath-tools_0.14.3-2ubuntu1_amd64.deb
+Size: 170772
+SHA256: c6f74fdd153bf30a6c207424ffc5b7ae7386e4025d9e6acdf7a37ceb8b8712a4
+Homepage: http://christophe.varoqui.free.fr/
+Description: maintain multipath block device access
+ These tools are in charge of maintaining the disk multipath device maps and
+ react to path and map events.
+ .
+ If you install this package you may have to change the way you address block
+ devices. See README.Debian for details.
+
+Package: ncurses-term
+Architecture: all
+Version: 6.6+20251231-1
+Multi-Arch: foreign
+Priority: standard
+Section: misc
+Source: ncurses
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ncurses Maintainers <ncurses@packages.debian.org>
+Installed-Size: 4421
+Provides: foot-terminfo (= 6.6+20251231-1)
+Depends: ncurses-base (= 6.6+20251231-1)
+Breaks: foot-terminfo (<< 1.15.1-2), vim-common (<< 2:9.0.1000-2)
+Replaces: alacritty (<< 0.3.4~), foot-terminfo (<< 1.15.1-2), jfbterm (<< 0.4.7-10), kon2 (<< 0.3.9b-21), libiterm1 (<< 0.5-9), ncurses-base (<< 6.4+20230625), tn5250 (<< 0.17.4-3)
+Filename: pool/main/n/ncurses/ncurses-term_6.6+20251231-1_all.deb
+Size: 279792
+SHA256: 23b67d85b6c8857fd40aded8554f59751460c8d35f0a0573562021480acbca62
+Homepage: https://invisible-island.net/ncurses/
+Description: additional terminal type definitions
+ The ncurses library routines are a terminal-independent method of
+ updating character screens with reasonable optimization.
+ .
+ This package contains all of the numerous terminal definitions not found in
+ the ncurses-base package.
+
+Package: nvidia-prime
+Architecture: all
+Version: 0.8.17.2build1
+Priority: optional
+Section: admin
+Maintainer: Alberto Milone <alberto.milone@canonical.com>
+Installed-Size: 49
+Provides: hybrid-graphics
+Depends: python3:any
+Conflicts: hybrid-graphics
+Breaks: ubuntu-drivers-common (<< 1:0.2.89)
+Replaces: hybrid-graphics
+Filename: pool/main/n/nvidia-prime/nvidia-prime_0.8.17.2build1_all.deb
+Size: 10496
+SHA256: c5f1e0744fde82b54cb54ca0a3ffb5d76d8d1f2c83ca582dea91ea1f377bba12
+Description: Tools to enable NVIDIA's Prime
+ This is a set of tools which will enable
+ NVIDIA's Prime on MUXless systems.
+
+Package: libxnvctrl0
+Architecture: amd64
+Version: 510.47.03-0ubuntu7
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: nvidia-settings
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 53
+Depends: libc6 (>= 2.14), libx11-6 (>= 2:1.4.99.1), libxext6
+Filename: pool/main/n/nvidia-settings/libxnvctrl0_510.47.03-0ubuntu7_amd64.deb
+Size: 13164
+SHA256: 9a224f37cf991e627b0c8ea0b0871e43182c214f2111474b5ea281510ca5bf54
+Description: NV-CONTROL X extension (runtime library)
+ The NV-CONTROL X extension provides a mechanism for X clients to
+ query and set configuration parameters of the NVIDIA X driver.
+ State set by the NV-CONTROL X extension is assumed to be persistent
+ only for the current server generation.
+ .
+ This package contains the shared library.
+
+Package: nvidia-settings
+Architecture: amd64
+Version: 510.47.03-0ubuntu7
+Priority: optional
+Section: contrib/x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Installed-Size: 1595
+Provides: nvidia-settings-binary
+Depends: pkg-config, screen-resolution-extra (>= 0.18~), libvdpau1, libc6 (>= 2.38), libcairo2 (>= 1.2.4), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.34.0), libgtk-3-0t64 (>= 3.0.0), libjansson4 (>= 2.14), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libx11-6, libxnvctrl0, libxxf86vm1 (>= 1:1.1.4)
+Conflicts: nvidia-settings-binary
+Replaces: nvidia-settings-binary
+Filename: pool/main/n/nvidia-settings/nvidia-settings_510.47.03-0ubuntu7_amd64.deb
+Size: 775534
+SHA256: 66298f567a03641f4c63caf28d2689639806922f0c76400ce875daea70938af3
+Description: Tool for configuring the NVIDIA graphics driver
+ The nvidia-settings utility is a tool for configuring the NVIDIA
+ Linux graphics driver.  It operates by communicating with the NVIDIA
+ X driver, querying and updating state as appropriate.  This
+ communication is done with the NV-CONTROL X extension.
+ .
+ Values such as brightness and gamma, XVideo attributes, temperature,
+ and OpenGL settings can be queried and configured via nvidia-settings.
+
+Package: ocl-icd-libopencl1
+Architecture: amd64
+Version: 2.3.4-1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: ocl-icd
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenCL Maintainers <pkg-opencl-devel@lists.alioth.debian.org>
+Installed-Size: 157
+Provides: libopencl-1.1-1, libopencl-1.2-1, libopencl-2.0-1, libopencl-2.1-1, libopencl-2.2-1, libopencl-3.0-1, libopencl1
+Depends: libc6 (>= 2.38)
+Suggests: opencl-icd
+Conflicts: amd-app, libopencl1, nvidia-libopencl1-dev
+Replaces: amd-app, libopencl1, nvidia-libopencl1-dev
+Filename: pool/main/o/ocl-icd/ocl-icd-libopencl1_2.3.4-1_amd64.deb
+Size: 40916
+SHA256: 35e68bb0edf3e1a45c9461b2b311b60438fbf36b135c66f6da09a14dba7f5cf5
+Homepage: https://github.com/OCL-dev/ocl-icd
+Description: Generic OpenCL ICD Loader
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package contains an installable client driver loader (ICD Loader)
+ library that can be used to load any (free or non-free) installable client
+ driver (ICD) for OpenCL. It acts as a demultiplexer so several ICD can
+ be installed and used together.
+
+Package: oem-qemu-meta
+Architecture: all
+Version: 20.04~ubuntu8
+Priority: optional
+Section: misc
+Maintainer: Commercial Engineering <commercial-engineering@canonical.com>
+Installed-Size: 13
+Depends: ubuntu-oem-keyring
+Filename: pool/main/o/oem-qemu-meta/oem-qemu-meta_20.04~ubuntu8_all.deb
+Size: 2488
+SHA256: 46b35d326b6099c753a0cb1f34118ef4046cf30086c61c775348c6eaa7fb925d
+Description: Meta package for QEMU
+ This is a metapackage for QEMU. It is intended for installer testing and
+ development only.
+Modaliases: meta(dmi:*:pnUBUNTUQEMUTEST:*)
+Ubuntu-Oem-Kernel-Flavour: default
+
+Package: libopeniscsiusr
+Architecture: amd64
+Version: 2.1.11-3ubuntu3
+Priority: optional
+Section: net
+Source: open-iscsi
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian iSCSI Maintainers <open-iscsi@packages.debian.org>
+Installed-Size: 159
+Depends: libc6 (>= 2.38), libkmod2 (>= 5~)
+Enhances: open-iscsi
+Filename: pool/main/o/open-iscsi/libopeniscsiusr_2.1.11-3ubuntu3_amd64.deb
+Size: 45998
+SHA256: 4afa25ce4a47c7bb31a3bc445259e0bc50df7a9ba60a5c040d233e62c5e39109
+Homepage: https://www.open-iscsi.com/
+Description: iSCSI userspace library
+ The Open-iSCSI project is a high-performance, transport independent,
+ multi-platform implementation of RFC3720 iSCSI.
+ .
+ Open-iSCSI is partitioned into user and kernel parts.
+ .
+ The kernel portion of Open-iSCSI is a from-scratch code
+ licensed under GPL. The kernel part implements iSCSI data path
+ (that is, iSCSI Read and iSCSI Write), and consists of three
+ loadable modules: scsi_transport_iscsi.ko, libiscsi.ko and iscsi_tcp.ko.
+ .
+ User space contains the entire control plane: configuration
+ manager, iSCSI Discovery, Login and Logout processing,
+ connection-level error processing, Nop-In and Nop-Out handling,
+ and (in the future:) Text processing, iSNS, SLP, Radius, etc.
+ .
+ The user space Open-iSCSI consists of a daemon process called
+ iscsid, and a management utility iscsiadm.
+ .
+ This package contains the iSCSI userspace library.
+
+Package: open-iscsi
+Architecture: amd64
+Version: 2.1.11-3ubuntu3
+Multi-Arch: foreign
+Priority: optional
+Section: net
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian iSCSI Maintainers <open-iscsi@packages.debian.org>
+Installed-Size: 1170
+Pre-Depends: debconf | debconf-2.0
+Depends: libopeniscsiusr (= 2.1.11-3ubuntu3), udev, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.38), libisns0t64, libkmod2 (>= 5~), libmount1 (>= 2.24.2), libssl3t64 (>= 3.0.0), libsystemd0
+Recommends: busybox-initramfs, finalrd (>= 3)
+Filename: pool/main/o/open-iscsi/open-iscsi_2.1.11-3ubuntu3_amd64.deb
+Size: 328576
+SHA256: a680a7edde3c299ba4a83ede366fd62fd2b6aeee99aaecfaef896f2a03004ac1
+Homepage: https://www.open-iscsi.com/
+Description: iSCSI initiator tools
+ The Open-iSCSI project is a high-performance, transport independent,
+ multi-platform implementation of RFC3720 iSCSI.
+ .
+ Open-iSCSI is partitioned into user and kernel parts.
+ .
+ The kernel portion of Open-iSCSI is a from-scratch code
+ licensed under GPL. The kernel part implements iSCSI data path
+ (that is, iSCSI Read and iSCSI Write), and consists of three
+ loadable modules: scsi_transport_iscsi.ko, libiscsi.ko and iscsi_tcp.ko.
+ .
+ User space contains the entire control plane: configuration
+ manager, iSCSI Discovery, Login and Logout processing,
+ connection-level error processing, Nop-In and Nop-Out handling,
+ and (in the future:) Text processing, iSNS, SLP, Radius, etc.
+ .
+ The user space Open-iSCSI consists of a daemon process called
+ iscsid, and a management utility iscsiadm.
+ .
+ This package includes a daemon, iscsid, and a management utility,
+ iscsiadm.
+
+Package: libisns0t64
+Architecture: amd64
+Version: 0.101-2.1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: open-isns
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian iSCSI Maintainers <open-isns@packages.debian.org>
+Installed-Size: 499
+Provides: libisns0 (= 0.101-2.1)
+Depends: libc6 (>= 2.38), libssl3t64 (>= 3.0.0)
+Recommends: netbase
+Breaks: libisns0 (<< 0.101-2.1)
+Replaces: libisns0
+Filename: pool/main/o/open-isns/libisns0t64_0.101-2.1_amd64.deb
+Size: 94574
+SHA256: c5242440fd2803d7f81ce5258f031505b2218939c677731dda9e9bd973684529
+Homepage: https://github.com/open-iscsi/open-isns
+Description: Internet Storage Name Service - shared libraries
+ Open-iSNS is an implementation of the Internet Storage Name Service
+ (iSNS), according to RFC 4171, which facilitates automated discovery,
+ management, and configuration of iSCSI and Fibre Channel devices on a
+ TCP/IP network.
+ .
+ This package provides the libisns shared library for use in client
+ applications.
+
+Package: openssh-server
+Architecture: amd64
+Version: 1:10.2p1-2ubuntu3.5
+Multi-Arch: foreign
+Priority: optional
+Section: net
+Source: openssh
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Installed-Size: 2835
+Provides: ssh-server
+Depends: libpam-modules, libpam-runtime, lsb-base, openssh-client (= 1:10.2p1-2ubuntu3.5), openssh-sftp-server, procps, ucf, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers, libaudit1 (>= 1:2.2.1), libc6 (>= 2.42), libcom-err2 (>= 1.43.9), libcrypt1 (>= 1:4.1.0), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.13~alpha1+dfsg), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), libwrap0 (>= 7.6-4~), zlib1g (>= 1:1.1.4)
+Recommends: default-logind | logind | libpam-systemd, ncurses-term, xauth, ssh-import-id
+Suggests: molly-guard, monkeysphere, ssh-askpass, ufw
+Replaces: openssh-client (<< 1:7.9p1-8), ssh, ssh-krb5
+Filename: pool/main/o/openssh/openssh-server_1%3a10.2p1-2ubuntu3.5_amd64.deb
+Size: 621510
+SHA256: 1d09ade727becb474b78b180902760448f2f8dbdb59df0950f19890402bd1508
+Homepage: https://www.openssh.com/
+Description: secure shell (SSH) server, for secure access from remote machines
+ This is the portable version of OpenSSH, a free implementation of
+ the Secure Shell protocol as specified by the IETF secsh working
+ group.
+ .
+ Ssh (Secure Shell) is a program for logging into a remote machine
+ and for executing commands on a remote machine.
+ It provides secure encrypted communications between two untrusted
+ hosts over an insecure network. X11 connections and arbitrary TCP/IP
+ ports can also be forwarded over the secure channel.
+ It can be used to provide applications with a secure communication
+ channel.
+ .
+ This package provides the sshd server.
+ .
+ In some countries it may be illegal to use any encryption at all
+ without a special permit.
+ .
+ sshd replaces the insecure rshd program, which is obsolete for most
+ purposes.
+
+Package: openssh-sftp-server
+Architecture: amd64
+Version: 1:10.2p1-2ubuntu3.5
+Multi-Arch: foreign
+Priority: optional
+Section: net
+Source: openssh
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Installed-Size: 101
+Depends: openssh-client (= 1:10.2p1-2ubuntu3.5), libc6 (>= 2.38)
+Recommends: openssh-server | ssh-server
+Breaks: openssh-server (<< 1:6.5p1-5)
+Replaces: openssh-server (<< 1:6.5p1-5)
+Enhances: openssh-server, ssh-server
+Filename: pool/main/o/openssh/openssh-sftp-server_1%3a10.2p1-2ubuntu3.5_amd64.deb
+Size: 37442
+SHA256: 3732dcfb5da9f375ecd42eece93aeceb0e95d3c8d8df4d94b906dcf863403ef3
+Homepage: https://www.openssh.com/
+Description: secure shell (SSH) sftp server module, for SFTP access from remote machines
+ This is the portable version of OpenSSH, a free implementation of
+ the Secure Shell protocol as specified by the IETF secsh working
+ group.
+ .
+ Ssh (Secure Shell) is a program for logging into a remote machine
+ and for executing commands on a remote machine.
+ It provides secure encrypted communications between two untrusted
+ hosts over an insecure network. X11 connections and arbitrary TCP/IP
+ ports can also be forwarded over the secure channel.
+ It can be used to provide applications with a secure communication
+ channel.
+ .
+ This package provides the SFTP server module for the SSH server. It
+ is needed if you want to access your SSH server with SFTP. The SFTP
+ server module also works with other SSH daemons like dropbear.
+ .
+ OpenSSH's sftp and sftp-server implement revision 3 of the SSH filexfer
+ protocol described in:
+ .
+  http://www.openssh.com/txt/draft-ietf-secsh-filexfer-02.txt
+ .
+ Newer versions of the draft will not be supported, though some features
+ are individually implemented as extensions.
+
+Package: libpkgconf7
+Architecture: amd64
+Version: 2.5.1-4
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: pkgconf
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Andrej Shadura <andrewsh@debian.org>
+Installed-Size: 127
+Depends: libc6 (>= 2.38)
+Filename: pool/main/p/pkgconf/libpkgconf7_2.5.1-4_amd64.deb
+Size: 38796
+SHA256: 353f622f6432a3d65bedd3c23e0af98c2c438650b497b355772a56a05ebf7dd0
+Homepage: http://pkgconf.org/
+Description: shared library for pkgconf
+ pkgconf is an implementation of the pkg-config system, which helps to configure
+ compiler and linker flags for development frameworks.
+ .
+ pkgconf is a replacement for pkg-config, providing additional functionality
+ while also maintaining compatibility.
+ .
+ libpkgconf is a library which provides access to most of pkgconf's
+ functionality, to allow other tooling such as compilers and IDEs to
+ discover and use libraries configured by pkgconf.
+ .
+ This package ships a shared library for libpkgconf.
+
+Package: pkg-config
+Architecture: amd64
+Version: 2.5.1-4
+Multi-Arch: same
+Priority: optional
+Section: oldlibs
+Source: pkgconf
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Andrej Shadura <andrewsh@debian.org>
+Installed-Size: 34
+Depends: pkgconf (>= 2.5.1-4)
+Filename: pool/main/p/pkgconf/pkg-config_2.5.1-4_amd64.deb
+Size: 7684
+SHA256: 0ec36b7cce8fa2072260020a42d2b77ddc31b2eba606356ccc4120f4caddb805
+Homepage: http://pkgconf.org/
+Description: manage compile and link flags for libraries (transitional package)
+ pkgconf is an implementation of the pkg-config system, which helps to configure
+ compiler and linker flags for development frameworks.
+ .
+ pkgconf is a replacement for pkg-config, providing additional functionality
+ while also maintaining compatibility.
+ .
+ This package only provides a dependency link to the pkgconf package to help
+ with package upgrades. It can be safely removed.
+
+Package: pkgconf-bin
+Architecture: amd64
+Version: 2.5.1-4
+Multi-Arch: foreign
+Priority: optional
+Section: devel
+Source: pkgconf
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Andrej Shadura <andrewsh@debian.org>
+Installed-Size: 85
+Depends: libc6 (>= 2.34), libpkgconf7 (>= 2.5.1)
+Breaks: pkgconf (<< 1.8.0-2~)
+Replaces: pkg-config (<< 1.8), pkgconf (<< 1.8.0-2~)
+Filename: pool/main/p/pkgconf/pkgconf-bin_2.5.1-4_amd64.deb
+Size: 22724
+SHA256: 9690471f395b6652f2cd8962334b9400e26a10daf4af7bf2f2c1a0325c193f0b
+Homepage: http://pkgconf.org/
+Description: manage compile and link flags for libraries (binaries)
+ pkgconf is an implementation of the pkg-config system, which helps to configure
+ compiler and linker flags for development frameworks.
+ .
+ pkgconf is a replacement for pkg-config, providing additional functionality
+ while also maintaining compatibility.
+ .
+ This package contains the pkgconf binary and related files.
+
+Package: pkgconf
+Architecture: amd64
+Version: 2.5.1-4
+Multi-Arch: same
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Andrej Shadura <andrewsh@debian.org>
+Installed-Size: 73
+Provides: pkg-config (= 2.5.1-4)
+Depends: pkgconf-bin (>= 2.5.1-4)
+Breaks: pkg-config (<< 1.8)
+Replaces: pkg-config (<< 1.8)
+Filename: pool/main/p/pkgconf/pkgconf_2.5.1-4_amd64.deb
+Size: 20022
+SHA256: 9d23ccd2a24d8618ca8bc7f1e14e1d02b9632854d69c82b6f8753dc5c1a98b16
+Homepage: http://pkgconf.org/
+Description: manage compile and link flags for libraries
+ pkgconf is an implementation of the pkg-config system, which helps to configure
+ compiler and linker flags for development frameworks.
+ .
+ pkgconf is a replacement for pkg-config, providing additional functionality
+ while also maintaining compatibility.
+
+Package: realmd
+Architecture: amd64
+Version: 0.17.1-3build3
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Installed-Size: 844
+Depends: libc6 (>= 2.34), libglib2.0-0t64 (>= 2.39.1), libkrb5-3 (>= 1.10+dfsg~alpha1), libldap2 (>= 2.6.2), libpolkit-gobject-1-0 (>= 0.99), libsystemd0
+Recommends: polkitd
+Filename: pool/main/r/realmd/realmd_0.17.1-3build3_amd64.deb
+Size: 162892
+SHA256: e0d9ee3755344283ac6fbb80ddc2551e25ab6cee489893a69a20b3f5379a9fc3
+Homepage: https://www.freedesktop.org/software/realmd/
+Description: DBus service for configuring kerberos and other online identities
+ realmd is a D-Bus system service that manages discovery and enrollment in
+ realms/domains like Active Directory or IPA.
+ .
+ realmd can configure either SSSD or Windbind as client software. It will also
+ automatically install the required packages using PackageKit if needed.
+
+Package: rpcsvc-proto
+Architecture: amd64
+Version: 1.4.3-1build1
+Multi-Arch: foreign
+Priority: optional
+Section: libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Installed-Size: 249
+Depends: libc6 (>= 2.38)
+Breaks: libc-dev-bin (<< 2.31-14), libc6-dev (<< 2.31-14)
+Replaces: libc-dev-bin (<< 2.31-14), libc6-dev (<< 2.31-14)
+Filename: pool/main/r/rpcsvc-proto/rpcsvc-proto_1.4.3-1build1_amd64.deb
+Size: 68294
+SHA256: d7102b9d3fd35fd7a66d94ba0765a9c8e87b2b80e3633ef4af401dd0c952bafd
+Homepage: https://github.com/thkukuk/rpcsvc-proto
+Description: RPC protocol compiler and definitions
+ rpcgen is a tool that generates C code to implement an RPC protocol. The input
+ to rpcgen is a language similar to C known as RPC Language (Remote Procedure
+ Call Language).
+ .
+ This package also includes several rpcsvc header files and RPC protocol
+ definitions from SunRPC sources that were previously shipped by glibc.
+
+Package: screen-resolution-extra
+Architecture: all
+Version: 0.18.5build1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alberto Milone (tseliot) <albertomilone@alice.it>
+Installed-Size: 25
+Depends: python3:any (>= 3.2~), python3-xkit (>= 0.5.0), pkexec, python3-gi
+Filename: pool/main/s/screen-resolution-extra/screen-resolution-extra_0.18.5build1_all.deb
+Size: 4426
+SHA256: 9606b7d12b159978b99cabaf9c1bbc4f44ba072748f5f89b5043c1a6eb195df1
+Description: Extension for the nvidia-settings control panel
+ Extra features for the nvidia-settings control panel.
+
+Package: setserial
+Architecture: amd64
+Version: 2.17-58build1
+Priority: optional
+Section: comm
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thorsten Alteholz <debian@alteholz.de>
+Installed-Size: 104
+Depends: libc6 (>= 2.38), debconf (>= 0.5) | debconf-2.0, lsb-base (>= 3.0-6)
+Filename: pool/main/s/setserial/setserial_2.17-58build1_amd64.deb
+Size: 35780
+SHA256: 21f2c69ffba2228587f92143c4d195f0929f0d9b6e10291f4bf5674a213d1ded
+Description: controls configuration of serial ports
+ setserial is a program which allows you to look at and change various
+ attributes of a serial device.
+ .
+ This version has a completely new approach to configuration.
+
+Package: libsgutils2-1.48
+Architecture: amd64
+Version: 1.48-3ubuntu3.1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: sg3-utils
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ritesh Raj Sarraf <rrs@debian.org>
+Installed-Size: 355
+Depends: libc6 (>= 2.38)
+Suggests: sg3-utils
+Filename: pool/main/s/sg3-utils/libsgutils2-1.48_1.48-3ubuntu3.1_amd64.deb
+Size: 119594
+SHA256: 2f3f212330781c1ac9386aedbdde9e57a309f9a375333b7482c3525aa736ba91
+Homepage: https://sg.danny.cz/sg/
+Description: utilities for devices using the SCSI command set (shared libraries)
+ Most OSes have SCSI pass-through interfaces that enable user space programs
+ to send SCSI commands to a device and fetch the response. With SCSI to ATA
+ Translation (SAT) many ATA disks now can process SCSI commands. Typically
+ each utility in this package implements one SCSI command. See the draft
+ standards at www.t10.org for SCSI command definitions plus SAT. ATA
+ commands are defined in the draft standards at www.t13.org . For a mapping
+ between supported SCSI and ATA commands and utility names in this package
+ see the COVERAGE file
+ .
+ Shared library used by the utilities in the sg3-utils package.
+
+Package: sg3-utils-udev
+Architecture: all
+Version: 1.48-3ubuntu3.1
+Priority: optional
+Section: admin
+Source: sg3-utils
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ritesh Raj Sarraf <rrs@debian.org>
+Installed-Size: 35
+Depends: sg3-utils, dracut | linux-initramfs-tool
+Filename: pool/main/s/sg3-utils/sg3-utils-udev_1.48-3ubuntu3.1_all.deb
+Size: 6610
+SHA256: fe34b8586796af771f06419dcd78b16e51cb4736cd3f7c074a5f5b3b5f755b28
+Homepage: https://sg.danny.cz/sg/
+Description: utilities for devices using the SCSI command set (udev rules)
+ Most OSes have SCSI pass-through interfaces that enable user space programs
+ to send SCSI commands to a device and fetch the response. With SCSI to ATA
+ Translation (SAT) many ATA disks now can process SCSI commands. Typically
+ each utility in this package implements one SCSI command. See the draft
+ standards at www.t10.org for SCSI command definitions plus SAT. ATA
+ commands are defined in the draft standards at www.t13.org . For a mapping
+ between supported SCSI and ATA commands and utility names in this package
+ see the COVERAGE file.
+ .
+ udev rules which are associated with the utilities in the sg3-utils package.
+
+Package: sg3-utils
+Architecture: amd64
+Version: 1.48-3ubuntu3.1
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ritesh Raj Sarraf <rrs@debian.org>
+Installed-Size: 3333
+Depends: libc6 (>= 2.38), libsgutils2-1.48 (>= 1.48)
+Conflicts: cdwrite, sg-utils
+Replaces: sg-utils
+Filename: pool/main/s/sg3-utils/sg3-utils_1.48-3ubuntu3.1_amd64.deb
+Size: 1019978
+SHA256: 7cc13b24a3bf6e3e73218ed52c47dd98efbdd31568227393dc5f7673630a0c87
+Homepage: https://sg.danny.cz/sg/
+Description: utilities for devices using the SCSI command set
+ Most OSes have SCSI pass-through interfaces that enable user space programs
+ to send SCSI commands to a device and fetch the response. With SCSI to ATA
+ Translation (SAT) many ATA disks now can process SCSI commands. Typically
+ each utility in this package implements one SCSI command. See the draft
+ standards at www.t10.org for SCSI command definitions plus SAT. ATA
+ commands are defined in the draft standards at www.t13.org . For a mapping
+ between supported SCSI and ATA commands and utility names in this package
+ see the COVERAGE file.
+
+Package: shim-signed
+Architecture: amd64
+Version: 1.59+15.8-0ubuntu2
+Built-Using: shim (= 15.8-0ubuntu2)
+Priority: optional
+Protected: yes
+Important: yes
+Section: utils
+Source: shim-signed (1.59)
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 6621
+Depends: debconf (>= 0.5) | debconf-2.0, grub-efi-amd64-signed (>= 1.204~) | grub-efi-arm64-signed (>= 1.204~), grub2-common (>= 2.04-1ubuntu24), mokutil (>= 0.3.0+1538710437.fb6250f-0ubuntu2), sbsigntool
+Recommends: secureboot-db
+Breaks: fwupd-signed (<< 1.44.1~), grub-common (= 2.12-1ubuntu3), shim (<< 15.3)
+Replaces: shim (<< 15.3)
+Filename: pool/main/s/shim-signed/shim-signed_1.59+15.8-0ubuntu2_amd64.deb
+Size: 667236
+SHA256: f8ed71ce2d91a304b6d5eb84997f846f331b554578bc02dbfe78e13ad8ac81a9
+Description: Secure Boot chain-loading bootloader (Microsoft-signed binary)
+ This package provides a minimalist boot loader which allows verifying
+ signatures of other UEFI binaries against either the Secure Boot DB/DBX or
+ against a built-in signature database.  Its purpose is to allow a small,
+ infrequently-changing binary to be signed by the UEFI CA, while allowing
+ an OS distributor to revision their main bootloader independently of the CA.
+ .
+ This package contains the version of the bootloader binary signed by the
+ Microsoft UEFI CA.
+
+Package: ssh-import-id
+Architecture: all
+Version: 5.11-0ubuntu4
+Priority: optional
+Section: misc
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Andrew Starr-Bochicchio <asb@debian.org>
+Installed-Size: 50
+Depends: ca-certificates, openssh-client, python3-distro, python3-launchpadlib, wget, python3:any
+Recommends: openssh-server
+Filename: pool/main/s/ssh-import-id/ssh-import-id_5.11-0ubuntu4_all.deb
+Size: 10244
+SHA256: 901e1f40654bf083c1eabb7b09baec0fcc3fe23bcc6cdc07f7af99015d254029
+Homepage: http://launchpad.net/ssh-import-id
+Description: securely retrieve an SSH public key and install it locally
+ This utility will securely contact a public keyserver (Launchpad.net by
+ default, but Github.com is also supported), retrieve one or more user's
+ public keys, and append these to the current user's ~/.ssh/authorized_keys
+ file.
+
+Package: thin-provisioning-tools
+Architecture: amd64
+Version: 1.1.0-4ubuntu2
+Static-Built-Using: rust-defaults (= 1.88.0ubuntu3)
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <team+lvm@tracker.debian.org>
+Installed-Size: 3382
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2), libudev1 (>= 183)
+Filename: pool/main/t/thin-provisioning-tools/thin-provisioning-tools_1.1.0-4ubuntu2_amd64.deb
+Size: 1113172
+SHA256: 0f0d7e338609a700f71bd91fd66b8452d844e0b1c617dd736d71f2f934ac7acf
+Description: Tools for handling thinly provisioned device-mapper meta-data
+ This package contains tools to handle meta-data from the device-mapper
+ thin target.  This target allows the use of a single backing store for multiple
+ thinly provisioned volumes.  Numerous snapshots can be taken from such
+ volumes.  The tools can check the meta-data for consistency, repair damaged
+ information and dump or restore the meta-data in textual form.
+X-Cargo-Built-Using: rust-defaults (= 1.88.0ubuntu3)
+
+Package: ubuntu-oem-keyring
+Architecture: all
+Version: 2023.11.28.1build1
+Priority: optional
+Section: misc
+Source: ubuntu-keyring
+Maintainer: Dimitri John Ledkov <dimitri.ledkov@canonical.com>
+Installed-Size: 18
+Filename: pool/main/u/ubuntu-keyring/ubuntu-oem-keyring_2023.11.28.1build1_all.deb
+Size: 4742
+SHA256: 9c0c556ae470b329bbe51ed8fc5c1403af2d0557b2a8fb7e5dadf8f2d008e2d9
+Description: GnuPG keys of the Ubuntu OEM Vendor Archive
+ The Ubuntu project digitally signs its Release files. This package
+ contains the archive keys used for the oem.archive.canonical.com
+ repository.
+
+Package: xfsprogs
+Architecture: amd64
+Version: 6.18.0-3
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: XFS Development Team <linux-xfs@vger.kernel.org>
+Installed-Size: 3728
+Provides: fsck-backend
+Depends: libblkid1 (>= 2.17.2), libc6 (>= 2.38), libdevmapper1.02.1 (>= 2:1.02.197), libedit2 (>= 2.11-20080614-0), libicu78 (>= 78.1-1~), libinih1 (>= 53), liburcu8t64 (>= 0.13.0), libuuid1 (>= 2.16), python3-dbus, python3:any
+Suggests: xfsdump, acl, attr, quota
+Breaks: xfsdump (<< 3.0.0)
+Replaces: xfsdump (<< 3.0.0)
+Filename: pool/main/x/xfsprogs/xfsprogs_6.18.0-3_amd64.deb
+Size: 1105832
+SHA256: 110f9eaa1476e38ced178ea5e392efa8c7f22edcd8a6b4f3f9fbd22c6b0739da
+Homepage: https://xfs.wiki.kernel.org/
+Description: Utilities for managing the XFS filesystem
+ A set of commands to use the XFS filesystem, including mkfs.xfs.
+ .
+ XFS is a high performance journaling filesystem which originated
+ on the SGI IRIX platform.  It is completely multi-threaded, can
+ support large files and large filesystems, extended attributes,
+ variable block sizes, is extent based, and makes extensive use of
+ Btrees (directories, extents, free space) to aid both performance
+ and scalability.
+ .
+ Refer to the documentation at https://xfs.wiki.kernel.org/
+ for complete details.
+
+Package: xserver-xorg-core
+Architecture: amd64
+Version: 2:21.1.22-1ubuntu1
+Priority: optional
+Section: x11
+Source: xorg-server
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 3978
+Provides: xorg-input-abi-24, xorg-video-abi-25, xserver-xorg-video-modesetting
+Depends: xserver-common (>= 2:21.1.22-1ubuntu1), keyboard-configuration, udev (>= 149), libegl1, libaudit1 (>= 1:2.2.1), libc6 (>= 2.42), libdbus-1-3 (>= 1.10), libdrm2 (>= 2.4.107-5~), libepoxy0 (>= 1.5.4), libgbm1 (>= 17.1.0~rc2), libgl1, libnettle8t64, libpciaccess0 (>= 0.12.902), libpixman-1-0 (>= 0.30.0), libselinux1 (>= 3.1~), libsystemd0, libudev1 (>= 183), libunwind8, libxau6 (>= 1:1.0.11), libxcvt0 (>= 0.1.0), libxdmcp6 (>= 1:1.1.5), libxfont2 (>= 1:2.0.1), libxshmfence1
+Recommends: libgl1-mesa-dri (>= 7.10.2-4), default-logind | logind, xcvt
+Suggests: xfonts-100dpi | xfonts-75dpi, xfonts-scalable
+Conflicts: xserver-xorg-input-evtouch, xserver-xorg-video-modesetting
+Breaks: libgl1-mesa-dri (<< 18.0.5), systemd (<< 226-4~), xserver-xorg (<< 1:7.7+10~)
+Replaces: xserver-xorg (<< 1:7.7+10~), xserver-xorg-video-modesetting
+Filename: pool/main/x/xorg-server/xserver-xorg-core_2%3a21.1.22-1ubuntu1_amd64.deb
+Size: 1524806
+SHA256: d57a180707a4ef7ced547e2fd7c254c05212d389a5a31566fb67f2dd576f2a5c
+Homepage: https://www.x.org/
+Description: Xorg X server - core server
+ The Xorg X server is an X server for several architectures and operating
+ systems, which is derived from the XFree86 4.x series of X servers.
+ .
+ The Xorg server supports most modern graphics hardware from most vendors,
+ and supersedes all XFree86 X servers.
+ .
+ More information about X.Org can be found at:
+ <URL:https://www.x.org>
+ .
+ This package is built from the X.org xserver module.
+
+Package: libnvpair3linux
+Architecture: amd64
+Version: 2.4.1-1ubuntu5
+Multi-Arch: same
+Priority: optional
+Section: contrib/libs
+Source: zfs-linux
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net
+Installed-Size: 191
+Depends: libc6 (>= 2.38), libtirpc3t64 (>= 1.0.2)
+Breaks: libnvpair1, libnvpair3
+Replaces: libnvpair1, libnvpair3
+Filename: pool/main/z/zfs-linux/libnvpair3linux_2.4.1-1ubuntu5_amd64.deb
+Size: 58606
+SHA256: 08d83c7ffee68ff996e8e1bcab599619e3c669c5f762e9de8f09748a27e2c8a0
+Homepage: https://zfsonlinux.org/
+Description: Solaris name-value library for Linux
+ This library provides routines for packing and unpacking nv pairs for
+ transporting data across process boundaries, transporting between
+ kernel and userland, and possibly saving onto disk files.
+
+Package: libuutil3linux
+Architecture: amd64
+Version: 2.4.1-1ubuntu5
+Multi-Arch: same
+Priority: optional
+Section: contrib/libs
+Source: zfs-linux
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net
+Installed-Size: 150
+Depends: libc6 (>= 2.38)
+Breaks: libuutil1, libuutil3
+Replaces: libuutil1, libuutil3
+Filename: pool/main/z/zfs-linux/libuutil3linux_2.4.1-1ubuntu5_amd64.deb
+Size: 49756
+SHA256: 709608d10726a154a4c3b689e0b99405f9576ffc9cc76d74c7c6a7cc319e5560
+Homepage: https://zfsonlinux.org/
+Description: Solaris userland utility library for Linux
+ This library provides a variety of glue functions for ZFS on Linux:
+  * libspl: The Solaris Porting Layer userland library, which provides APIs
+    that make it possible to run Solaris user code in a Linux environment
+    with relatively minimal modification.
+  * libavl: The Adelson-Velskii Landis balanced binary tree manipulation
+    library.
+  * libefi: The Extensible Firmware Interface library for GUID disk
+    partitioning.
+  * libshare: NFS, SMB, and iSCSI service integration for ZFS.
+
+Package: libzfs7linux
+Architecture: amd64
+Version: 2.4.1-1ubuntu5
+Multi-Arch: same
+Priority: optional
+Section: contrib/libs
+Source: zfs-linux
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net
+Installed-Size: 678
+Depends: libblkid1 (>= 2.16), libc6 (>= 2.38), libnvpair3linux (>= 0.8.2), libssl3t64 (>= 3.0.0), libudev1 (>= 183), libuuid1 (>= 2.16), libuutil3linux (>= 0.8.2), zlib1g (>= 1:1.1.4)
+Recommends: libcurl4
+Breaks: libzfs2, libzfs4, libzfs4linux, libzfs6linux
+Replaces: libzfs2, libzfs4, libzfs4linux, libzfs6linux
+Filename: pool/main/z/zfs-linux/libzfs7linux_2.4.1-1ubuntu5_amd64.deb
+Size: 234996
+SHA256: 01a76bf0190bf99d9944574c0ac905fa1328e204c79883934330974bbfb0aabe
+Homepage: https://zfsonlinux.org/
+Description: OpenZFS filesystem library for Linux - general support
+ OpenZFS is a storage platform that encompasses the functionality of
+ traditional filesystems and volume managers. It supports data checksums,
+ compression, encryption, snapshots, and more.
+ .
+ The OpenZFS library provides support for managing OpenZFS filesystems.
+
+Package: libzpool7linux
+Architecture: amd64
+Version: 2.4.1-1ubuntu5
+Multi-Arch: same
+Priority: optional
+Section: contrib/libs
+Source: zfs-linux
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net
+Installed-Size: 4307
+Depends: libblkid1 (>= 2.16), libc6 (>= 2.38), libnvpair3linux (>= 2.4.0), libudev1 (>= 183), libuuid1 (>= 2.16), zlib1g (>= 1:1.1.4)
+Breaks: libzpool2, libzpool5
+Replaces: libzpool2, libzpool5
+Filename: pool/main/z/zfs-linux/libzpool7linux_2.4.1-1ubuntu5_amd64.deb
+Size: 1482794
+SHA256: a0bfcc076b106638ef5131cb8bb75ec9896011adf3b63f45095de7790216930c
+Homepage: https://zfsonlinux.org/
+Description: OpenZFS pool library for Linux
+ OpenZFS is a storage platform that encompasses the functionality of
+ traditional filesystems and volume managers. It supports data checksums,
+ compression, encryption, snapshots, and more.
+ .
+ This zpool library provides support for managing zpools.
+
+Package: zfs-dracut
+Architecture: all
+Version: 2.4.1-1ubuntu5
+Multi-Arch: foreign
+Priority: optional
+Section: contrib/kernel
+Source: zfs-linux
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net
+Installed-Size: 105
+Depends: dracut, systemd-cryptsetup, zfsutils-linux (>= 2.4.1-1ubuntu5)
+Filename: pool/main/z/zfs-linux/zfs-dracut_2.4.1-1ubuntu5_all.deb
+Size: 23958
+SHA256: 102fdc8abc145bbab5bde4aec8ef62ebdf7738b34adad6a5f907e935597beefa
+Homepage: https://zfsonlinux.org/
+Description: OpenZFS root filesystem capabilities for Linux - dracut
+ OpenZFS is a storage platform that encompasses the functionality of
+ traditional filesystems and volume managers. It supports data checksums,
+ compression, encryption, snapshots, and more.
+ .
+ This package adds OpenZFS to the system initramfs with a hook
+ for the dracut infrastructure.
+
+Package: zfs-zed
+Architecture: amd64
+Version: 2.4.1-1ubuntu5
+Priority: optional
+Section: contrib/admin
+Source: zfs-linux
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net
+Installed-Size: 275
+Depends: zfsutils-linux (>= 2.4.1-1ubuntu5), libc6 (>= 2.38), libnvpair3linux (>= 0.8.2), libudev1 (>= 183), libuuid1 (>= 2.16), libuutil3linux (>= 0.8.2), libzfs7linux (>= 2.2.3)
+Filename: pool/main/z/zfs-linux/zfs-zed_2.4.1-1ubuntu5_amd64.deb
+Size: 71276
+SHA256: 371e25da789c1ca196db6f3f2b8f5c68cc18110c92c5f4dd4b5fe0c4c3a26a3d
+Homepage: https://zfsonlinux.org/
+Description: OpenZFS Event Daemon
+ OpenZFS is a storage platform that encompasses the functionality of
+ traditional filesystems and volume managers. It supports data checksums,
+ compression, encryption, snapshots, and more.
+ .
+ ZED (ZFS Event Daemon) monitors events generated by the ZFS kernel
+ module. When a zevent (ZFS Event) is posted, ZED will run any ZEDLETs
+ (ZFS Event Daemon Linkage for Executable Tasks) that have been enabled
+ for the corresponding zevent class.
+ .
+ This package provides the OpenZFS Event Daemon (zed).
+
+Package: zfsutils-linux
+Architecture: amd64
+Version: 2.4.1-1ubuntu5
+Priority: optional
+Section: contrib/admin
+Source: zfs-linux
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net
+Installed-Size: 1912
+Provides: zfsutils
+Depends: libnvpair3linux (= 2.4.1-1ubuntu5), libuutil3linux (= 2.4.1-1ubuntu5), libzfs7linux (= 2.4.1-1ubuntu5), libzpool7linux (= 2.4.1-1ubuntu5), python3, gawk, libblkid1 (>= 2.16), libc6 (>= 2.38), libssl3t64 (>= 3.0.0), libudev1 (>= 183), libuuid1 (>= 2.16)
+Recommends: zfs-zed
+Suggests: nfs-kernel-server, samba-common-bin (>= 3.0.23), zfs-initramfs | zfs-dracut
+Conflicts: zfs, zfs-fuse
+Breaks: spl (<< 0.7.9-2), spl-dkms (<< 0.8.0~rc1)
+Replaces: spl (<< 0.7.9-2), spl-dkms
+Filename: pool/main/z/zfs-linux/zfsutils-linux_2.4.1-1ubuntu5_amd64.deb
+Size: 606182
+SHA256: 424fca61f52c069dc9c402b9236c57ed24d7dfba701381d474eb0ad135a96c2d
+Homepage: https://zfsonlinux.org/
+Description: command-line tools to manage OpenZFS filesystems
+ OpenZFS is a storage platform that encompasses the functionality of
+ traditional filesystems and volume managers. It supports data checksums,
+ compression, encryption, snapshots, and more.
+ .
+ This package provides the zfs and zpool commands to create and administer
+ OpenZFS filesystems.
+

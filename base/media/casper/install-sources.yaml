@@ -1,0 +1,62 @@
+kernel:
+  default: linux-generic-hwe-24.04
+sources:
+- default: true
+  description:
+    en: A minimal but usable Ubuntu Desktop.
+  id: ubuntu-desktop-minimal
+  locale_support: langpack
+  name:
+    en: Ubuntu Desktop (minimized)
+  path: minimal.squashfs
+  preinstalled_langs:
+  - de
+  - en
+  - es
+  - fr
+  - it
+  - pt
+  - ru
+  - zh
+  - ''
+  size: 6506545152
+  type: fsimage-layered
+  variant: desktop
+  variations:
+    minimal:
+      path: minimal.squashfs
+      size: 3436847104
+    minimal-enhanced-secureboot:
+      path: minimal.enhanced-secureboot.squashfs
+      size: 3436847104
+      snapd_system_label: enhanced-secureboot-desktop
+- default: false
+  description:
+    en: A full featured Ubuntu Desktop.
+  id: ubuntu-desktop
+  locale_support: langpack
+  name:
+    en: Ubuntu Desktop
+  path: minimal.standard.squashfs
+  preinstalled_langs:
+  - de
+  - en
+  - es
+  - fr
+  - it
+  - pt
+  - ru
+  - zh
+  - ''
+  size: 8270364672
+  type: fsimage-layered
+  variant: desktop
+  variations:
+    enhanced-secureboot:
+      path: minimal.standard.enhanced-secureboot.squashfs
+      size: 4934475776
+      snapd_system_label: enhanced-secureboot-desktop
+    standard:
+      path: minimal.standard.squashfs
+      size: 4934475776
+version: 2

@@ -1,0 +1,22 @@
+# Exact package families, not arbitrary file deletion. Missing packages are skipped.
+# Preserve browser, mail, file manager, archive tools, terminal, settings,
+# NetworkManager, audio, Bluetooth, printers, firmware and normal GNOME desktop.
+aisleriot
+gnome-mahjongg
+gnome-mines
+gnome-sudoku
+quadrapassel
+five-or-more
+four-in-a-row
+hitori
+lightsoff
+swell-foop
+tali
+iagno
+libreoffice-*
+rhythmbox
+rhythmbox-data
+rhythmbox-plugins
+rhythmbox-plugin-alternative-toolbar
+shotwell
+shotwell-common

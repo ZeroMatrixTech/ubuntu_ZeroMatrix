@@ -1,0 +1,14 @@
+Origin: Ubuntu
+Label: Ubuntu
+Suite: resolute
+Version: 26.04
+Codename: resolute
+Date: Thu, 23 Apr 2026 17:07:15 UTC
+Architectures: amd64
+Components: main restricted
+Description: Ubuntu Resolute 26.04
+SHA256:
+ e06f4401d9257be0180ce8eb1ecece7396c8d9d4a53c10689202e4c162319137           125415 main/binary-amd64/Packages
+ 8f3bd4d0b3a731264b69aa7fbcd6c41ac29bd40797e6af15ab35c5ac341563f8            31972 main/binary-amd64/Packages.gz
+ 8f2fdbdf103d14b247a8801077a02abfcfc0f1ad2af2580a85e801b36edaae44           100074 restricted/binary-amd64/Packages
+ 4af0ea76ed60c9e1c715f9920ff56f701941d559102e18bf04354d72a6d3b0c0            14469 restricted/binary-amd64/Packages.gz

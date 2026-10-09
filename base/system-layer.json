@@ -1,0 +1,267 @@
+{
+  "original_layer_sha256": "b5ec27b9570e77abb62831a8b652b50eaf089d537e62046189a52231a4fa9bec",
+  "core": "base/media/casper/minimal.core.squashfs",
+  "core_sha256": "23cd1fc27f590db32b503d55a9c81306f9671473028c8f81119165eb0cb921ac",
+  "snaps": [
+    {
+      "file": "base/snaps/bare_5.snap",
+      "path": "var/lib/snapd/seed/snaps/bare_5.snap",
+      "bytes": 4096,
+      "sha256": "03d0a2eb62e1b8861e557f7875f2d74f59f56c89ac0b4775fbe6d00c465fc84b",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722450
+    },
+    {
+      "file": "base/snaps/core24_1643.snap",
+      "path": "var/lib/snapd/seed/snaps/core24_1643.snap",
+      "bytes": 70049792,
+      "sha256": "1c63b692a11edab44387e97911b9681d9010305cb9f9218c38bfbe2bedb50e45",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722426
+    },
+    {
+      "file": "base/snaps/desktop-security-center_151.snap",
+      "path": "var/lib/snapd/seed/snaps/desktop-security-center_151.snap",
+      "bytes": 20930560,
+      "sha256": "a4584bd1cf43c549cc869ed4600333c69d1f3772da1e831960448ac6cd2ceb9e",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722425
+    },
+    {
+      "file": "base/snaps/firefox_8763.snap",
+      "path": "var/lib/snapd/seed/snaps/firefox_8763.snap",
+      "bytes": 272957440,
+      "sha256": "f29dcac9ba739c603454550b8ca6db2b0de6ce75a497148a4247824fe8254aeb",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722431
+    },
+    {
+      "file": "base/snaps/firmware-updater_226.snap",
+      "path": "var/lib/snapd/seed/snaps/firmware-updater_226.snap",
+      "bytes": 17301504,
+      "sha256": "2022fcb179cd02a8e8d26329f1e4e7bf8b3865467d5bbbefd0add8e497d6c6b9",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722434
+    },
+    {
+      "file": "base/snaps/gnome-46-2404_164.snap",
+      "path": "var/lib/snapd/seed/snaps/gnome-46-2404_164.snap",
+      "bytes": 644382720,
+      "sha256": "42b7b1ef333784b7fb1c6188bd490b5f8e2fd52807a081e4591b8eb287b3f769",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722440
+    },
+    {
+      "file": "base/snaps/gtk-common-themes_1535.snap",
+      "path": "var/lib/snapd/seed/snaps/gtk-common-themes_1535.snap",
+      "bytes": 96141312,
+      "sha256": "e64ec1ad03ac012ba3539a9e61cfe2007f102140dbb03a009e82a53fccf7f6a5",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722448
+    },
+    {
+      "file": "base/snaps/hwctl_123.snap",
+      "path": "var/lib/snapd/seed/snaps/hwctl_123.snap",
+      "bytes": 1581056,
+      "sha256": "42d95336a5967df32e7145bf52b427bcd765e8e412186430795b927689a4b17e",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722450
+    },
+    {
+      "file": "base/snaps/mesa-2404_1839.snap",
+      "path": "var/lib/snapd/seed/snaps/mesa-2404_1839.snap",
+      "bytes": 421507072,
+      "sha256": "8962b397993d74a452accdab3dc07696703d814ac480aa4fbeef5bde1a1dd236",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722455
+    },
+    {
+      "file": "base/snaps/prompting-client_222.snap",
+      "path": "var/lib/snapd/seed/snaps/prompting-client_222.snap",
+      "bytes": 19746816,
+      "sha256": "c7d4eb9755cec71d5dffb354c334ca064de8a0251713bcc05fd4c872330cbf99",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722460
+    },
+    {
+      "file": "base/snaps/snap-store_1390.snap",
+      "path": "var/lib/snapd/seed/snaps/snap-store_1390.snap",
+      "bytes": 12382208,
+      "sha256": "98547b1117a1690c7b9e3c574f10e61a212edf06c6d554c1f1bb3860cb2cd2e5",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722460
+    },
+    {
+      "file": "base/snaps/snapd-desktop-integration_391.snap",
+      "path": "var/lib/snapd/seed/snaps/snapd-desktop-integration_391.snap",
+      "bytes": 847872,
+      "sha256": "0614bdab1466197d6bfaf131095c6ee6357192e1516255ed1dc1d7daad0fb889",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722461
+    },
+    {
+      "file": "base/snaps/snapd_27710.snap",
+      "path": "var/lib/snapd/seed/snaps/snapd_27710.snap",
+      "bytes": 52535296,
+      "sha256": "62d5f40157079784d6aa78a1e41c894e078e71da6acb174005d5ce70bf15e630",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722427
+    },
+    {
+      "file": "base/snaps/bare_5.snap",
+      "path": "var/lib/snapd/snaps/bare_5.snap",
+      "bytes": 4096,
+      "sha256": "03d0a2eb62e1b8861e557f7875f2d74f59f56c89ac0b4775fbe6d00c465fc84b",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722450
+    },
+    {
+      "file": "base/snaps/core24_1643.snap",
+      "path": "var/lib/snapd/snaps/core24_1643.snap",
+      "bytes": 70049792,
+      "sha256": "1c63b692a11edab44387e97911b9681d9010305cb9f9218c38bfbe2bedb50e45",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722426
+    },
+    {
+      "file": "base/snaps/desktop-security-center_151.snap",
+      "path": "var/lib/snapd/snaps/desktop-security-center_151.snap",
+      "bytes": 20930560,
+      "sha256": "a4584bd1cf43c549cc869ed4600333c69d1f3772da1e831960448ac6cd2ceb9e",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722425
+    },
+    {
+      "file": "base/snaps/firefox_8763.snap",
+      "path": "var/lib/snapd/snaps/firefox_8763.snap",
+      "bytes": 272957440,
+      "sha256": "f29dcac9ba739c603454550b8ca6db2b0de6ce75a497148a4247824fe8254aeb",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722431
+    },
+    {
+      "file": "base/snaps/firmware-updater_226.snap",
+      "path": "var/lib/snapd/snaps/firmware-updater_226.snap",
+      "bytes": 17301504,
+      "sha256": "2022fcb179cd02a8e8d26329f1e4e7bf8b3865467d5bbbefd0add8e497d6c6b9",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722434
+    },
+    {
+      "file": "base/snaps/gnome-46-2404_164.snap",
+      "path": "var/lib/snapd/snaps/gnome-46-2404_164.snap",
+      "bytes": 644382720,
+      "sha256": "42b7b1ef333784b7fb1c6188bd490b5f8e2fd52807a081e4591b8eb287b3f769",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722440
+    },
+    {
+      "file": "base/snaps/gtk-common-themes_1535.snap",
+      "path": "var/lib/snapd/snaps/gtk-common-themes_1535.snap",
+      "bytes": 96141312,
+      "sha256": "e64ec1ad03ac012ba3539a9e61cfe2007f102140dbb03a009e82a53fccf7f6a5",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722448
+    },
+    {
+      "file": "base/snaps/hwctl_123.snap",
+      "path": "var/lib/snapd/snaps/hwctl_123.snap",
+      "bytes": 1581056,
+      "sha256": "42d95336a5967df32e7145bf52b427bcd765e8e412186430795b927689a4b17e",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722450
+    },
+    {
+      "file": "base/snaps/mesa-2404_1839.snap",
+      "path": "var/lib/snapd/snaps/mesa-2404_1839.snap",
+      "bytes": 421507072,
+      "sha256": "8962b397993d74a452accdab3dc07696703d814ac480aa4fbeef5bde1a1dd236",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722455
+    },
+    {
+      "file": "base/snaps/prompting-client_222.snap",
+      "path": "var/lib/snapd/snaps/prompting-client_222.snap",
+      "bytes": 19746816,
+      "sha256": "c7d4eb9755cec71d5dffb354c334ca064de8a0251713bcc05fd4c872330cbf99",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722460
+    },
+    {
+      "file": "base/snaps/snap-store_1390.snap",
+      "path": "var/lib/snapd/snaps/snap-store_1390.snap",
+      "bytes": 12382208,
+      "sha256": "98547b1117a1690c7b9e3c574f10e61a212edf06c6d554c1f1bb3860cb2cd2e5",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722460
+    },
+    {
+      "file": "base/snaps/snapd-desktop-integration_391.snap",
+      "path": "var/lib/snapd/snaps/snapd-desktop-integration_391.snap",
+      "bytes": 847872,
+      "sha256": "0614bdab1466197d6bfaf131095c6ee6357192e1516255ed1dc1d7daad0fb889",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722461
+    },
+    {
+      "file": "base/snaps/snapd_27710.snap",
+      "path": "var/lib/snapd/snaps/snapd_27710.snap",
+      "bytes": 52535296,
+      "sha256": "62d5f40157079784d6aa78a1e41c894e078e71da6acb174005d5ce70bf15e630",
+      "mode": 384,
+      "uid": 0,
+      "gid": 0,
+      "mtime": 1787722427
+    }
+  ]
+}

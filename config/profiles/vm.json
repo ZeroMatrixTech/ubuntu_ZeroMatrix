@@ -1,0 +1,11 @@
+{
+  "packages": [
+    "virtualbox-guest-utils",
+    "virtualbox-guest-x11",
+    "open-vm-tools-desktop",
+    "spice-vdagent",
+    "qemu-guest-agent"
+  ],
+  "default_graphics": "safe",
+  "search_drivers": false
+}
