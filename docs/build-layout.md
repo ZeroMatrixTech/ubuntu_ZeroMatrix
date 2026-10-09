@@ -32,9 +32,9 @@ make isos
 修改裁剪清单、源目录或裁剪实现后旧缓存会拒绝复用。保留旧目录用于排查，通过新路径重新构建：
 
 ```bash
-make isos VERSION=0.2.0-rc3 ROOTFS_BUILD=build/rootfs-0.2.0-rc3
+make isos VERSION=0.2.0-rc4 ROOTFS_BUILD=build/rootfs-0.2.0-rc4
 ```
 
 产物或 partial 已存在时同样使用新版本，避免覆盖。中断的软件包修改不会自动继续；应使用新的缓存目录。根目录部分文件属于映射 UID，清理构建缓存时需要在同样的用户命名空间中操作。
 
-新的 ISO 使用合并裁剪后的安装系统层，以及保留 Ubuntu Live 安装器的独立叠加层。叠加层的删除标记、包数据库和软件清单一并处理。重复的可选语言/安装变体不打入新介质，安装语言包可在线获取。常规 BIOS/UEFI 启动保留，增强 TPM/Snap 型安装变体不作为这版基线的一部分。Secure Boot、完整安装和 F5 调试需要实际验收。
+新的 ISO 使用合并裁剪后的安装系统层，以及保留 Ubuntu Live 安装器的独立叠加层。叠加层的删除标记、包数据库和软件清单一并处理。重复的可选语言/安装变体不打入新介质，安装语言包可在线获取。常规 BIOS/UEFI 启动保留，增强 TPM/Snap 型安装变体不作为这版基线的一部分。0.2.0-rc3 的 VirtualBox 安装流程已由用户反馈跑通；Secure Boot、实体机、工具链和 F5 调试仍需分别实际验收。完整构建和安装操作见 `docs/build-and-install.md`。

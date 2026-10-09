@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := iso
 
-# Override at invocation: make iso VERSION=0.1.0-rc2 BASE_SHA256=...
+# Override at invocation: make iso PROFILE=vm VERSION=0.2.0-rc4
 # VERSION defaults to the VERSION file; relative paths are relative to this repo.
 VERSION ?=
 BASE_ISO ?= ubuntu-26.04.1-desktop-amd64.iso
@@ -29,6 +29,9 @@ iso-physical:
 isos:
 	$(MAKE) iso-vm
 	$(MAKE) iso-physical
+
+verify-iso:
+	cd dist && sha256sum --strict -c zeromatrix-*.iso.sha256
 
 base-import:
 	python3 scripts/media-tree.py import
@@ -74,6 +77,7 @@ help:
 	@printf '%s\n' \
 	  'make iso PROFILE=vm|physical  Build an online installation ISO (default: vm)' \
 	  'make isos      Build both profiles' \
+	  'make verify-iso Check generated ISO checksums' \
 	  'make base-import  Import original ISO as browsable files and boot records' \
 	  'make base-check Verify the expanded base/media tree' \
 	  'make check     Check online build tools and selected profile' \
@@ -86,9 +90,12 @@ help:
 	  'make acquire    Download the reviewed package and extension locks (network required)' \
 	  'VERSION defaults to the VERSION file.' \
 	  'Online builds default to the verified SHA256 in config/base-iso.json.' \
-	  'BASE_ISO defaults to ubuntu-26.04.1-desktop-amd64.iso.'
+	  'BASE_ISO is only needed to import a new upstream base.' \
+	  'Standard workflow: docs/build-and-install.md'
 
 .PHONY: iso-vm iso-physical isos base-import base-check legacy-iso
 .NOTPARALLEL:
 
 .PHONY: rootfs base-check
+
+.PHONY: verify-iso
