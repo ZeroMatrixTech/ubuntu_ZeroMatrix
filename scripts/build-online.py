@@ -25,8 +25,11 @@ def boot(original, profile, layer=None):
         entries += (f'menuentry "Install ZeroMatrix {profile} ({label}, online)" {{\n'
                     ' set gfxpayload=keep\n'
                     ' linux /casper/vmlinuz autoinstall '
-                    'subiquity.autoinstallpath=cdrom/zeromatrix/autoinstall.yaml '
+                    'subiquity.autoinstallpath=cdrom/autoinstall.yaml '
                     f'{flags} --- quiet splash\n initrd /casper/initrd\n}}\n')
+    # Every inherited Ubuntu entry must use the same provisioning configuration.
+    original=re.sub(r"(linux\s+/casper/vmlinuz)(\s)",
+        lambda m:m[1]+" autoinstall subiquity.autoinstallpath=cdrom/autoinstall.yaml"+m[2], original)
     combined=entries+original
     if layer:
         combined=re.sub(r"(linux\s+/casper/vmlinuz)(\s)",lambda m:m[1]+" layerfs-path="+layer+m[2],combined)
@@ -135,6 +138,8 @@ def build():
         shutil.copy2(cache/'packages.tsv',casper/'zeromatrix.manifest.full')
         (casper/'zeromatrix.size').write_text('8270364672\n')
         shutil.copytree(payload,stage/'zeromatrix')
+        # Canonical installation-media discovery also covers alternate boot paths.
+        shutil.copy2(payload/'autoinstall.yaml',stage/'autoinstall.yaml')
         grub=stage/'boot/grub/grub.cfg'
         media.replace_extracted_text(grub,boot(grub.read_text(),profile,'zeromatrix.live.squashfs'))
         md5=stage/'md5sum.txt'

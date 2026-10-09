@@ -7,7 +7,7 @@ Ubuntu 26.04.1 LTS amd64 开发系统，同一仓库维护两条可安装基线�
 | `vm`（默认） | VirtualBox / VMware / KVM | 默认安全图形启动；包含对应 guest agent |
 | `physical` | x86_64 实体机 | 正常图形启动、保留 Ubuntu firmware、允许安装器驱动检测 |
 
-共用 Ubuntu 官方 Desktop 安装器、完整 GNOME 桌面、C++/Python/Rust 工具链、标准目录和 VS Code 工作区。启动菜单两条基线均提供正常/安全图形入口，也保留 Ubuntu 原始入口。虚拟机 ISO 的 `nomodeset` 仅用于安装启动，不作为已安装系统的永久配置。VM guest agent 不保证与未来 VirtualBox/内核组合兼容，仍需验收。
+共用 Ubuntu 官方 Desktop 安装器、完整 GNOME 桌面、C++/Python/Rust 工具链、标准目录和 VS Code 工作区。启动菜单两条基线均提供正常/安全图形入口，也保留带相同配置的 Ubuntu 兼容入口。虚拟机 ISO 的 `nomodeset` 仅用于安装启动，不作为已安装系统的永久配置。VM guest agent 不保证与未来 VirtualBox/内核组合兼容，仍需验收。
 
 ## 构建 ISO（Linux）
 
@@ -48,10 +48,10 @@ wsl --install -d Ubuntu
 
 1. 校验 `dist/*.iso.sha256`；写入 USB 或挂到虚拟机光驱。
 2. VirtualBox 选择 Ubuntu 64-bit，**跳过 VirtualBox 无人值守安装**，建议 8 GB RAM、2 CPU、80 GB 动态 SATA 磁盘、VMSVGA/128 MB、先关闭 3D；网卡 NAT，网线已连接。BIOS/UEFI 安装模式安装后保持一致。
-3. 选择 **Install ZeroMatrix vm/physical** 入口。选择原始 Ubuntu 入口会绕过 ZeroMatrix 配置。按安装器提示选择语言、磁盘和用户；安装器格式化操作只针对你选中的目标磁盘。
+3. 选择 **Install ZeroMatrix vm/physical** 入口。所有 Ubuntu 启动入口均加载相同 ZeroMatrix 配置，介质根目录也提供 `autoinstall.yaml` 自动发现。按安装器提示选择语言、磁盘和用户；安装器格式化操作只针对你选中的目标磁盘。
 4. **安装阶段必须联网**。晚期配置从 Ubuntu 仓库安装开发工具，从 Microsoft 官方签名 APT 仓库获取 Code。失败会使安装报告失败，日志位于目标 `/var/log/zeromatrix/provision.log`，解决网络后可在目标系统运行 `sudo bash /opt/zeromatrix/offline/scripts/provision-online.sh /opt/zeromatrix/offline` 重试。
 5. 安装完成弹出 ISO，重启登录。首次登录联网获取锁定版本扩展及指定提交的 ACLt，创建 `~/workspace/ZeroMatrixTech` 和 Python `.venv`，自动打开工作区。初始化失败不会标记完成；联网后执行 `zeromatrix-code` 重试，查看 `~/.local/state/zeromatrix/first-login.log`。
-6. 在工作区选择 C++ GDB、Python debugpy、Rust LLDB 执行 F5。`bash /opt/zeromatrix/offline/verify.sh` 验证编译工具链，ACLt 全量验收另外运行。
+6. 先运行 `cat /var/log/zeromatrix/provision-complete`，确认系统配置成功；该文件不存在时不能视为开发环境安装完成。再在工作区选择 C++ GDB、Python debugpy、Rust LLDB 执行 F5。`bash /opt/zeromatrix/offline/verify.sh` 验证编译工具链，ACLt 全量验收另外运行。
 
 `/opt/zeromatrix/offline` 是兼容历史脚本的配置路径名称，新基线不具备完全离线安装保证。VS Code 使用独立 profile `~/.local/share/zeromatrix/vscode`，保留工作区信任机制。
 
@@ -65,3 +65,20 @@ wsl --install -d Ubuntu
 自有构建代码采用 Apache-2.0；英文 [LICENSE](LICENSE) 为准，中文说明见 [LICENSE.zh-CN.md](LICENSE.zh-CN.md)。Ubuntu 基底、固件和下载软件保留各自许可证。Code/扩展由最终用户机器从官方源下载，减少镜像二次分发范围，**不代表全部 ISO 自动获得公开分发许可**；Ubuntu 商标、第三方组件和 GPL 对应源码义务仍需审核。展开的 Ubuntu 基底及应用源文件同样属于再分发，不能把它声明为 Apache-2.0。
 
 历史离线部署说明保存在 `docs/legacy-offline-readme.md`，仅适用于 0.1.x。
+
+### 已安装系统缺少 Rust 或 Code
+
+先检查 `ls /opt/zeromatrix` 和 `sudo tail -n 80 /var/log/zeromatrix/provision.log`。
+如果已有 `/opt/zeromatrix/offline`，联网后重试：
+
+```bash
+sudo bash /opt/zeromatrix/offline/scripts/provision-online.sh /opt/zeromatrix/offline
+```
+
+如果该目录不存在，说明 ZeroMatrix 配置尚未落入目标系统。把 ZeroMatrix ISO 重新插入虚拟光驱，在文件管理器打开光盘，进入光盘目录打开终端，运行：
+
+```bash
+sudo bash ./zeromatrix/scripts/provision-online.sh ./zeromatrix
+```
+
+完成后注销再登录，运行 `rustc --version`、`cargo --version` 和 `code --version`。完整验收使用 `/opt/zeromatrix/offline/verify.sh`。在线安装需要能访问 Ubuntu、Microsoft 和 Marketplace；仅能打开普通网页并不足以证明这些地址可达。

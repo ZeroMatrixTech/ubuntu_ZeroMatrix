@@ -16,7 +16,11 @@ class OnlineBuildTests(unittest.TestCase):
         physical=online.boot(original,'physical')
         self.assertIn('nomodeset',vm.split('menuentry')[1])
         self.assertNotIn('nomodeset',physical.split('menuentry')[1])
-        self.assertTrue(vm.endswith(original))
+        for config in (vm, physical):
+            for line in config.splitlines():
+                if 'linux /casper/vmlinuz' in line:
+                    self.assertIn('autoinstall', line)
+                    self.assertIn('subiquity.autoinstallpath=cdrom/autoinstall.yaml', line)
 
     def test_reject_unexpected_base(self):
         with self.assertRaises(ValueError): online.boot('unknown','vm')
