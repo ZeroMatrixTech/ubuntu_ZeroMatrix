@@ -1,5 +1,7 @@
 # VS Code 与离线工作流
 
+> **历史说明：仅适用于 0.1.x 离线流程。** 当前 0.2.x 默认 `make iso` 使用在线构建入口；安装和首次登录需要联网。请使用[构建与安装规范](build-and-install.md)、[当前验收清单](acceptance.md)和[当前编辑器工作流](editor-online.md)。下文旧命令不适用于默认入口；保留正文用于历史追踪。
+
 ## 安装后的体验
 
 使用候选 ISO 默认的 **Install ZeroMatrix Development (offline setup)** 启动项。

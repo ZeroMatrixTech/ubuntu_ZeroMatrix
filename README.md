@@ -58,6 +58,14 @@ wsl --install -d Ubuntu
 
 `/opt/zeromatrix/offline` 是兼容历史脚本的配置路径名称，新基线不具备完全离线安装保证。VS Code 使用独立 profile `~/.local/share/zeromatrix/vscode`，保留工作区信任机制。
 
+## 文档导航
+
+- [构建与安装](docs/build-and-install.md)：当前标准入口和故障修复。
+- [构建目录](docs/build-layout.md)与[安装后目录](docs/layout.md)：输入、缓存和用户文件位置。
+- [编辑器工作流](docs/editor-online.md)：首次登录、重试和个人工作区。
+- [候选验收](docs/acceptance.md)：当前在线版本的验收项目。
+- [历史离线构建](docs/build-release.md)与[0.1.x 输入记录](docs/candidate-inputs.md)：仅供历史追踪。
+
 ## 维护与许可
 
 - `config/profiles/*.json`：两条基线差异；`config/packages.txt`：共用开发包；`config/remove-packages.txt`：裁剪包清单。

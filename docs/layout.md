@@ -1,21 +1,17 @@
-# 目录与权限
+# 当前目录与权限（0.2.x）
 
 | 路径 | 用途 | 所有者 |
 |---|---|---|
-| `/opt/zeromatrix/offline` | ISO 自带的软件包、索引与构建清单 | root，只供配置与修复 |
-| `/opt/zeromatrix/toolchains` | 未来单独管理的工具链；当前优先系统工具链 | root |
-| `/etc/zeromatrix` | 环境基线与系统配置 | root |
-| `/var/lib/zeromatrix` | 系统配置状态 | root |
-| `/var/log/zeromatrix` | 系统配置日志 | root |
-| `~/workspace/ZeroMatrixTech/ACLt` | 每位开发者独立源码副本 | 开发者 |
-| `~/.local/state/zeromatrix` | 用户验收记录 | 开发者 |
+| `/opt/zeromatrix/offline` | 安装载荷、配置、模板和修复脚本；名称兼容历史版本 | root |
+| `/etc/zeromatrix` | 系统环境基线 | root |
+| `/var/log/zeromatrix` | `provision.log` 与系统配置成功标记 `provision-complete` | root |
+| `~/workspace/ZeroMatrixTech` | 个人示例、工作区和 Python `.venv` | 开发者 |
+| `~/workspace/ZeroMatrixTech/ACLt` | 从固定提交建立的独立 Git 副本 | 开发者 |
+| `~/.local/share/zeromatrix/vscode` | 独立 VS Code 数据与扩展 | 开发者 |
+| `~/.local/state/zeromatrix` | 初始化锁、成功标记、扩展版本及用户日志 | 开发者 |
 
-系统工具链使用 `/usr/bin`，不全局覆写 PATH、PYTHONPATH、Rust flags。
-用户工作区从 `/etc/skel/workspace/ZeroMatrixTech` 创建；已有用户执行
-`mkdir -p "$HOME/workspace/ZeroMatrixTech"`。不迁移或改写现有 ACLt 工作区。
-ACLt 的 build、target、artifacts 和运行任务遵循上游规范，不把任务放在网络盘或共享目录。
-项目源码的离线交付应另行导出审核过的 commit / Git bundle，记录 SHA；本版不打包维护者的工作目录。
+当前默认在线安装不携带离线 Debian 软件源、VSIX 集合或公司 Git bundle。安装阶段及首次登录需要联网；载荷目录名称不构成离线保证。
 
-用户编辑器配置位于 `~/.local/share/zeromatrix/vscode`，用户初始化日志位于
-`~/.local/state/zeromatrix`。首次登录为已有安装账户创建个人工作区，
-不依赖 `/etc/skel` 对已创建账户生效。详见 [编辑器工作流](editor-workflow.md)。
+系统工具链使用系统路径，不全局覆写 PATH、PYTHONPATH 或 Rust flags。首次登录直接为当前普通账户合并缺失模板文件，并建立个人项目副本，不依赖 `/etc/skel` 对已有账户生效。已有文件和 ACLt checkout 保留，不修改全局 Git 身份。
+
+详见[构建目录](build-layout.md)、[构建与安装](build-and-install.md)及[编辑器工作流](editor-online.md)。

@@ -35,13 +35,13 @@ ACLt 日常检查、强制取证与全量验收任务。Live 桌面不保证预�
    bash /opt/zeromatrix/offline/verify.sh
    ```
 
-   检查证据默认保存到 `~/.local/state/zeromatrix/`。工具检查成功不等于实际装机、GUI 调试和 ACLt 全量验收全部完成。当前仍是候选镜像，先在断网虚拟机验收，再部署开发电脑。详见 [验收清单](docs/acceptance.md)。
+   检查证据默认保存到 `~/.local/state/zeromatrix/`。工具检查成功不等于实际装机、GUI 调试和 ACLt 全量验收全部完成。当前仍是候选镜像，先在断网虚拟机验收，再部署开发电脑。详见 [验收清单](acceptance.md)。
 
 ## 构建当前版本
 
 当前输入已按版本与摘要锁定。已有原始 ISO 和 VS Code `.deb` 时，可用 `make acquire`
 在联网构建机取得同一套离线输入；该命令不安装或升级宿主机软件。详细步骤见
-[VS Code 与工作流](docs/editor-workflow.md)及[构建与发布](docs/build-release.md)。
+[VS Code 与工作流](editor-workflow.md)及[构建与发布](build-release.md)。
 
 ```bash
 make acquire
@@ -129,7 +129,7 @@ explorer.exe .
 
 通过打开的资源管理器把三份产物复制到 Windows 存储目录，随后按上面的安装步骤使用。同版本产物已存在时构建会拒绝覆盖；制作新候选版可在仓库根执行 `make iso VERSION=0.1.0-rc3`。失败留下 `.iso.partial` 时，先查看错误并保存日志，再明确处理该临时文件后重试。磁盘空间不足时同时检查 Windows 所在磁盘与 WSL 内部空间。
 
-当前含官方 VS Code 的完整 ISO 按公司内部部署管理；构建成功不代表获得公开再分发授权，参见 [许可政策](docs/licensing.md)。
+当前含官方 VS Code 的完整 ISO 按公司内部部署管理；构建成功不代表获得公开再分发授权，参见 [许可政策](licensing.md)。
 
 ```text
 config/          包清单、版本基线、编辑器及安装器配置
@@ -141,18 +141,18 @@ tests/           构建与离线输入测试
 dist/            候选 ISO、摘要与构建清单（不提交 Git）
 ```
 
-[目录约定](docs/layout.md) · [验收清单](docs/acceptance.md) · [中英双语许可说明](docs/licensing.md)
+[目录约定](layout.md) · [验收清单](acceptance.md) · [中英双语许可说明](licensing.md)
 
 不提交密钥、个人配置、大体积镜像或包缓存。
 
 ## 许可 / License
 
-本项目原创构建代码、配置、模板、测试和文档采用 [Apache-2.0](LICENSE)，
-另有声明及第三方内容除外。[中文说明](LICENSE.zh-CN.md)和[中英双语许可政策](docs/licensing.md)明确适用范围。
+本项目原创构建代码、配置、模板、测试和文档采用 [Apache-2.0](../LICENSE)，
+另有声明及第三方内容除外。[中文说明](../LICENSE.zh-CN.md)和[中英双语许可政策](licensing.md)明确适用范围。
 随附软件及内部项目保留各自许可；包含官方 VS Code 的候选 ISO 当前按公司内部部署设计，不宣称可公开分发。
 
 Original project build code, configuration, templates, tests and documentation are licensed under
-[Apache-2.0](LICENSE), except separately licensed and third-party content. See the
-[bilingual licensing policy](docs/licensing.md) for scope. Bundled software and internal projects retain
+[Apache-2.0](../LICENSE), except separately licensed and third-party content. See the
+[bilingual licensing policy](licensing.md) for scope. Bundled software and internal projects retain
 their own licenses. The current candidate ISO containing official VS Code is prepared for internal
 company deployment; public redistribution is not claimed to be authorized.
