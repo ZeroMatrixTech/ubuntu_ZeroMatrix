@@ -1,0 +1,16 @@
+{
+  "advisory": "USN-8944-1",
+  "minimum_ca_version": "20260816ubuntu0.26.04.1",
+  "denied_root_sha256": [
+    "86a1ecba089c4a8d3bbe2734c612ba341d813e043cf9e8a862cd5c57a36bbe6b"
+  ],
+  "package": {
+    "file": "ca-certificates_20260816ubuntu0.26.04.1_all.deb",
+    "package": "ca-certificates",
+    "version": "20260816ubuntu0.26.04.1",
+    "architecture": "all",
+    "bytes": 137978,
+    "sha256": "5b6326f1932cfd7be57130561dc78192f09ed9f58bfbe6606ed0c50510c3b6cd",
+    "url": "https://security.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20260816ubuntu0.26.04.1_all.deb"
+  }
+}

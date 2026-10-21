@@ -14,6 +14,7 @@ import shutil
 import subprocess
 import sys
 import media
+import security_baseline
 
 ROOT=Path(__file__).resolve().parents[1]
 INPUT=ROOT/'base/media/casper'
@@ -139,7 +140,7 @@ def pack(source,output,pseudo_file):
 
 
 def fingerprint():
-    files=[ROOT/'base/tree-manifest.json',ROOT/'config/remove-packages.txt',ROOT/'scripts/rootfs-trim.py']
+    files=[ROOT/'base/tree-manifest.json',ROOT/'config/remove-packages.txt',ROOT/'scripts/rootfs-trim.py',ROOT/'scripts/security_baseline.py',ROOT/'config/security-baseline.json']
     return hashlib.sha256(b''.join(p.read_bytes() for p in files)).hexdigest()
 
 
@@ -186,6 +187,8 @@ def build(work):
                 (work/'mutation-started').touch()
                 run('chroot',str(root),'env','DEBIAN_FRONTEND=noninteractive','apt-get','--no-download','-y',
                     '-o','APT::Get::AutomaticRemove=false','purge',*requested)
+            (work/'mutation-started').touch()
+            security_baseline.update(root, live, work, ROOT)
             after=installed(root)
             removed=sorted(set(before)-set(after))
             # dpkg-query also lists config-files records; use the authoritative status.
@@ -207,7 +210,7 @@ def build(work):
             if live_status_old.exists(): live_status_old.unlink()
             report=dict(requested=requested,removed=removed,protected=sorted(PROTECTED),autoremove=False)
             (work/'removal-report.json').write_text(json.dumps(report,indent=2)+'\n')
-            (work/'packages.tsv').write_text(''.join(f'{p}\t{before[p]}\n' for p in sorted(before) if p.split(':')[0] in installed_names))
+            (work/'packages.tsv').write_text(''.join(f'{p}\t{after[p]}\n' for p in sorted(after) if p.split(':')[0] in installed_names))
             for tree in (root,live):
                 for relative in ('var/lib/apt/lists','var/cache/apt/archives','var/log'):
                     directory=tree/relative
@@ -221,6 +224,8 @@ def build(work):
         (work/'pruned.json').write_text(json.dumps(dict(fingerprint=fingerprint()))+'\n')
     else:
         report=json.loads((work/'removal-report.json').read_text())
+    security_baseline.verify(root, ROOT)
+    security_baseline.verify(live, ROOT)
     # Pack an actual install source and a Live installer overlay, each with metadata.
     pseudo(work/'target.pseudo',infos[layers[0]],source=root)
     pseudo(work/'live.pseudo',infos[LAYERS[2]],overlay=True,source=live)

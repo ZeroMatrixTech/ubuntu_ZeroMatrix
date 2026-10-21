@@ -25,6 +25,12 @@ class MakeBuildTests(unittest.TestCase):
         self.root_patch.stop()
         self.temp.cleanup()
 
+    def test_legacy_build_rejected_before_reading_old_inputs(self):
+        (self.root/'config').mkdir()
+        (self.root/'config/security-baseline.json').write_text('{}')
+        with self.assertRaisesRegex(ValueError,'Legacy ISO generation is disabled'):
+            build.check()
+
     def test_current_version_and_persisted_checksum(self):
         (self.root / 'config').mkdir()
         (self.root / 'config/base-iso.sha256').write_text('a' * 64 + '\n')
