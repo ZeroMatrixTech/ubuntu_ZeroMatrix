@@ -103,6 +103,8 @@ def customize_boot(original):
 
 
 def build(args):
+    if (ROOT/'config/security-baseline.json').is_file():
+        raise ValueError('Legacy ISO generation is disabled: its upstream Live filesystem is unpatched; use make iso or make isos')
     base = args.base.resolve(strict=True)
     if not re.fullmatch(r'[a-zA-Z0-9][a-zA-Z0-9.+-]*', args.version):
         raise ValueError('Invalid release version')

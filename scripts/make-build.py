@@ -41,6 +41,8 @@ def load_media():
 
 
 def check():
+    if (ROOT/'config/security-baseline.json').is_file():
+        raise ValueError('Legacy ISO generation is disabled: its upstream Live filesystem is unpatched; use make iso or make isos')
     missing = [tool for tool in ('bash', 'git', 'dpkg-deb', 'dpkg-scanpackages', 'xorriso')
                if shutil.which(tool) is None]
     if missing:
