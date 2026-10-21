@@ -10,6 +10,7 @@ import shutil
 import sys
 import tempfile
 import media
+import security_baseline
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -72,6 +73,8 @@ def build():
     cache_manifest=json.loads((cache/'complete.json').read_text())
     for name,key in [('zeromatrix.squashfs','target_sha256'),('zeromatrix.live.squashfs','live_sha256')]:
         if media.digest(cache/name)!=cache_manifest[key]: raise ValueError('Repacked rootfs checksum mismatch')
+    security_baseline.verify(cache/'rootfs', ROOT)
+    security_baseline.verify(cache/'live-overlay', ROOT)
     policy = json.loads((ROOT / f'config/profiles/{profile}.json').read_text())
     output.parent.mkdir(exist_ok=True)
     partial = Path(str(output) + '.partial')

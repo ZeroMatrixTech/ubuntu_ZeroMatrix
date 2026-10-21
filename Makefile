@@ -41,7 +41,7 @@ base-check:
 
 ROOTFS_BUILD ?=
 export ROOTFS_BUILD
-rootfs: base-check
+rootfs: base-check security-inputs
 	python3 scripts/rootfs-entry.py
 
 
@@ -99,3 +99,7 @@ help:
 .PHONY: rootfs base-check
 
 .PHONY: verify-iso
+
+.PHONY: security-inputs
+security-inputs:
+	python3 scripts/security_baseline.py acquire
