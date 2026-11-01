@@ -1,16 +1,32 @@
 {
-  "advisory": "USN-8944-1",
-  "minimum_ca_version": "20260816ubuntu0.26.04.1",
+  "denied_roots_pem": "config/security-denied-roots.pem",
   "denied_root_sha256": [
-    "86a1ecba089c4a8d3bbe2734c612ba341d813e043cf9e8a862cd5c57a36bbe6b"
+    "d7a7a0fb5d7e2731d771e9484ebcdef71d5f0c3e0a2948782bc83ee0ea699ef4",
+    "86a1ecba089c4a8d3bbe2734c612ba341d813e043cf9e8a862cd5c57a36bbe6b",
+    "7dd78d5f4f13459a83dff9abbba62edbaf6f2d102bf257fd712f4d9f2746ed8d",
+    "f2edaaff3d9b701fb4d14c9f285f8c0bad90fc3bcc1fa07d47f4718edaba34a5"
   ],
-  "package": {
-    "file": "ca-certificates_20260816ubuntu0.26.04.1_all.deb",
-    "package": "ca-certificates",
-    "version": "20260816ubuntu0.26.04.1",
-    "architecture": "all",
-    "bytes": 137978,
-    "sha256": "5b6326f1932cfd7be57130561dc78192f09ed9f58bfbe6606ed0c50510c3b6cd",
-    "url": "https://security.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20260816ubuntu0.26.04.1_all.deb"
-  }
+  "nss_builtins": "usr/lib/x86_64-linux-gnu/libnssckbi.so",
+  "packages": [
+    {
+      "advisory": "USN-8944-1",
+      "file": "ca-certificates_20260816ubuntu0.26.04.1_all.deb",
+      "package": "ca-certificates",
+      "version": "20260816ubuntu0.26.04.1",
+      "architecture": "all",
+      "bytes": 137978,
+      "sha256": "5b6326f1932cfd7be57130561dc78192f09ed9f58bfbe6606ed0c50510c3b6cd",
+      "url": "https://security.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20260816ubuntu0.26.04.1_all.deb"
+    },
+    {
+      "advisory": "resolute-security nss 2:3.120-1ubuntu2.2 (2026-10-20, eMudhra roots removed from builtins)",
+      "file": "libnss3_3.120-1ubuntu2.2_amd64.deb",
+      "package": "libnss3",
+      "version": "2:3.120-1ubuntu2.2",
+      "architecture": "amd64",
+      "bytes": 1513938,
+      "sha256": "7c5843f5e49c10c267893ae7f13af6032ed1b96e7c1ae586a5f44435f804dd85",
+      "url": "https://security.ubuntu.com/ubuntu/pool/main/n/nss/libnss3_3.120-1ubuntu2.2_amd64.deb"
+    }
+  ]
 }
