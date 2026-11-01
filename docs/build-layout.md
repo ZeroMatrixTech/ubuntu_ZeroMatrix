@@ -32,7 +32,7 @@ make isos
 修改裁剪清单、源目录或裁剪实现后旧缓存会拒绝复用。保留旧目录用于排查，通过新路径重新构建：
 
 ```bash
-make isos VERSION=0.2.0-rc4 ROOTFS_BUILD=build/rootfs-0.2.0-rc4
+make isos VERSION=0.2.0-rc5 ROOTFS_BUILD=build/rootfs-0.2.0-rc5
 ```
 
 产物或 partial 已存在时同样使用新版本，避免覆盖。中断的软件包修改不会自动继续；应使用新的缓存目录。根目录部分文件属于映射 UID，清理构建缓存时需要在同样的用户命名空间中操作。

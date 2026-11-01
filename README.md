@@ -9,7 +9,7 @@ Ubuntu 26.04.1 LTS amd64 开发系统，同一仓库维护两条可安装基线�
 
 共用 Ubuntu 官方 Desktop 安装器、完整 GNOME 桌面、C++/Python/Rust 工具链、标准目录和 VS Code 工作区。启动菜单两条基线均提供正常/安全图形入口，也保留带相同配置的 Ubuntu 兼容入口。虚拟机 ISO 的 `nomodeset` 仅用于安装启动，不作为已安装系统的永久配置。VM guest agent 不保证与未来 VirtualBox/内核组合兼容，仍需验收。
 
-当前基线为 **0.2.0-rc3**。用户已在 VirtualBox 中反馈安装流程跑通；启动时使用普通图形入口，并删除 `quiet splash`。工具版本、扩展/F5、实体机、UEFI/Secure Boot 和 WSL2 仍分别需要验收。完整操作规范见 [构建与安装流程](docs/build-and-install.md)。
+当前默认构建版本为 **0.2.0-rc5**，包含待构建验收的信任库安全修复，详见 [安全基线](docs/security-20261021.md)。此前 **0.2.0-rc3** 已由用户反馈在 VirtualBox 中安装流程跑通；启动时使用普通图形入口，并删除 `quiet splash`。该历史记录不代表 rc5 已通过安装验收；工具版本、扩展/F5、实体机、UEFI/Secure Boot 和 WSL2 仍分别需要验收。完整操作规范见 [构建与安装流程](docs/build-and-install.md)。
 
 ## 构建 ISO（Linux）
 
@@ -35,7 +35,7 @@ make verify-iso   # 校验 dist 中已有的镜像
 `make` 自动完成源目录校验、私有用户命名空间解包、APT 按包裁剪、重新压缩、生成安装源清单和 BIOS/UEFI ISO。首次重压缩需要较长时间，后续两条基线共用缓存。Linux/WSL2 需要允许 user namespace，并为当前用户配置 `/etc/subuid`、`/etc/subgid` 范围；`newuidmap` / `newgidmap` 由 `uidmap` 提供。可先用 `unshare --user --map-auto --map-root-user true` 检查。构建不需要真实 root，不会修改宿主机的软件包或软件源。
 
 文件布局和裁剪规则详见 [docs/build-layout.md](docs/build-layout.md)。
-产物：`dist/zeromatrix-<VERSION>-<PROFILE>-amd64.iso`，及 SHA256 和构建清单。已有产物/partial 不覆盖，可使用 `make iso PROFILE=vm VERSION=0.2.0-rc4`。版本默认读 `VERSION`。本仓库不承诺在线软件版本或 ISO 字节可重现；实际软件版本记录在目标系统日志。
+产物：`dist/zeromatrix-<VERSION>-<PROFILE>-amd64.iso`，及 SHA256 和构建清单。已有产物/partial 不覆盖，可使用 `make iso PROFILE=vm VERSION=0.2.0-rc5`。版本默认读 `VERSION`。本仓库不承诺在线软件版本或 ISO 字节可重现；实际软件版本记录在目标系统日志。
 
 ## Windows 构建
 
@@ -64,6 +64,7 @@ wsl --install -d Ubuntu
 - [构建目录](docs/build-layout.md)与[安装后目录](docs/layout.md)：输入、缓存和用户文件位置。
 - [编辑器工作流](docs/editor-online.md)：首次登录、重试和个人工作区。
 - [候选验收](docs/acceptance.md)：当前在线版本的验收项目。
+- [2026-11-01 例行维护](docs/maintenance-20261101.md)：本次更新范围、检查结果与待验收事项。
 - [历史离线构建](docs/build-release.md)与[0.1.x 输入记录](docs/candidate-inputs.md)：仅供历史追踪。
 
 ## 维护与许可

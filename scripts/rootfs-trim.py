@@ -140,7 +140,7 @@ def pack(source,output,pseudo_file):
 
 
 def fingerprint():
-    files=[ROOT/'base/tree-manifest.json',ROOT/'config/remove-packages.txt',ROOT/'scripts/rootfs-trim.py',ROOT/'scripts/security_baseline.py',ROOT/'config/security-baseline.json']
+    files=[ROOT/'base/tree-manifest.json',ROOT/'config/remove-packages.txt',ROOT/'scripts/rootfs-trim.py',ROOT/'scripts/security_baseline.py',ROOT/'config/security-baseline.json',ROOT/'config/security-denied-roots.pem']
     return hashlib.sha256(b''.join(p.read_bytes() for p in files)).hexdigest()
 
 
@@ -225,7 +225,7 @@ def build(work):
     else:
         report=json.loads((work/'removal-report.json').read_text())
     security_baseline.verify(root, ROOT)
-    security_baseline.verify(live, ROOT)
+    security_baseline.verify(live, ROOT, root)
     # Pack an actual install source and a Live installer overlay, each with metadata.
     pseudo(work/'target.pseudo',infos[layers[0]],source=root)
     pseudo(work/'live.pseudo',infos[LAYERS[2]],overlay=True,source=live)

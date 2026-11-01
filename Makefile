@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := iso
 
-# Override at invocation: make iso PROFILE=vm VERSION=0.2.0-rc4
+# Override at invocation: make iso PROFILE=vm VERSION=0.2.0-rc5
 # VERSION defaults to the VERSION file; relative paths are relative to this repo.
 VERSION ?=
 BASE_ISO ?= ubuntu-26.04.1-desktop-amd64.iso

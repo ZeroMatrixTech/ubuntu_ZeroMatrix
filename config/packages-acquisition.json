@@ -1692,13 +1692,13 @@
     "url": "https://archive.ubuntu.com/ubuntu/pool/main/n/nspr/libnspr4_4.38.2-1ubuntu1_amd64.deb"
   },
   {
-    "file": "libnss3_2%3a3.120-1ubuntu2.1_amd64.deb",
+    "file": "libnss3_2%3a3.120-1ubuntu2.2_amd64.deb",
     "package": "libnss3",
-    "version": "2:3.120-1ubuntu2.1",
+    "version": "2:3.120-1ubuntu2.2",
     "architecture": "amd64",
-    "bytes": 1515036,
-    "sha256": "27ae6a8dbc2b8b750731c9098abb8750c5d584c79c5a024316d0b3c9bb50971c",
-    "url": "https://archive.ubuntu.com/ubuntu/pool/main/n/nss/libnss3_3.120-1ubuntu2.1_amd64.deb"
+    "bytes": 1513938,
+    "sha256": "7c5843f5e49c10c267893ae7f13af6032ed1b96e7c1ae586a5f44435f804dd85",
+    "url": "https://security.ubuntu.com/ubuntu/pool/main/n/nss/libnss3_3.120-1ubuntu2.2_amd64.deb"
   },
   {
     "file": "libp11-kit0_0.26.2-2_amd64.deb",
